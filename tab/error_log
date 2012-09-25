@@ -1,0 +1,318 @@
+[23-Apr-2012 13:22:34] PHP Warning:  include_once(/home/tingog/public_html/tab/includes/head_script.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/index.php on line 4
+[23-Apr-2012 13:22:34] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/home/tingog/public_html/tab/includes/head_script.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/index.php on line 4
+[23-Apr-2012 13:22:34] PHP Warning:  include_once(/home/tingog/public_html/tab/includes/header_tabaco.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/index.php on line 91
+[23-Apr-2012 13:22:34] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/home/tingog/public_html/tab/includes/header_tabaco.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/index.php on line 91
+[23-Apr-2012 13:22:34] PHP Warning:  include_once(/home/tingog/public_html/tab/includes/left_sidebar_tabaco.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/index.php on line 93
+[23-Apr-2012 13:22:34] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/home/tingog/public_html/tab/includes/left_sidebar_tabaco.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/index.php on line 93
+[23-Apr-2012 13:22:35] PHP Warning:  include(includes/Snoopy.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/index.php on line 184
+[23-Apr-2012 13:22:35] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'includes/Snoopy.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/index.php on line 184
+[23-Apr-2012 13:22:35] PHP Fatal error:  Class 'Snoopy' not found in /home/tingog/public_html/tab/index.php on line 186
+[23-Apr-2012 13:23:28] PHP Warning:  include_once(/home/tingog/public_html/tab/includes/head_script.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/index.php on line 4
+[23-Apr-2012 13:23:28] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/home/tingog/public_html/tab/includes/head_script.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/index.php on line 4
+[23-Apr-2012 13:23:28] PHP Warning:  include_once(/home/tingog/public_html/tab/includes/header_tabaco.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/index.php on line 91
+[23-Apr-2012 13:23:28] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/home/tingog/public_html/tab/includes/header_tabaco.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/index.php on line 91
+[23-Apr-2012 13:23:28] PHP Warning:  include_once(/home/tingog/public_html/tab/includes/left_sidebar_tabaco.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/index.php on line 93
+[23-Apr-2012 13:23:28] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/home/tingog/public_html/tab/includes/left_sidebar_tabaco.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/index.php on line 93
+[23-Apr-2012 13:23:28] PHP Warning:  include(includes/Snoopy.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/index.php on line 184
+[23-Apr-2012 13:23:28] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'includes/Snoopy.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/index.php on line 184
+[23-Apr-2012 13:23:28] PHP Fatal error:  Class 'Snoopy' not found in /home/tingog/public_html/tab/index.php on line 186
+[27-Apr-2012 06:27:09] PHP Warning:  include(../../application/helpers/functions_helper.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/summaryreports.php on line 2
+[27-Apr-2012 06:27:09] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../../application/helpers/functions_helper.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/summaryreports.php on line 2
+[27-Apr-2012 06:27:09] PHP Fatal error:  Call to undefined function std2arr() in /home/tingog/public_html/tab/summaryreports.php on line 18
+[27-Apr-2012 06:55:45] PHP Warning:  include(../../application/helpers/functions_helper.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/summaryreports.php on line 2
+[27-Apr-2012 06:55:45] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../../application/helpers/functions_helper.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/summaryreports.php on line 2
+[27-Apr-2012 06:55:45] PHP Fatal error:  Call to undefined function std2arr() in /home/tingog/public_html/tab/summaryreports.php on line 18
+[27-Apr-2012 08:32:41] PHP Warning:  include(../../application/helpers/functions_helper.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/summaryreports.php on line 2
+[27-Apr-2012 08:32:41] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../../application/helpers/functions_helper.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/summaryreports.php on line 2
+[27-Apr-2012 08:32:42] PHP Fatal error:  Call to undefined function std2arr() in /home/tingog/public_html/tab/summaryreports.php on line 18
+[27-Apr-2012 08:33:21] PHP Warning:  include(/backend/application/helpers/functions_helper.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/summaryreports.php on line 2
+[27-Apr-2012 08:33:21] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/backend/application/helpers/functions_helper.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/summaryreports.php on line 2
+[27-Apr-2012 08:33:21] PHP Fatal error:  Call to undefined function std2arr() in /home/tingog/public_html/tab/summaryreports.php on line 18
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 77
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 88
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 99
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 110
+[27-Apr-2012 08:33:48] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 147
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 153
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 254
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 290
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 315
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 353
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 380
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 418
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 445
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 485
+[27-Apr-2012 08:33:48] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 527
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 77
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 88
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 99
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 110
+[27-Apr-2012 08:35:35] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 147
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 256
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 292
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 317
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 355
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 382
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 420
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 447
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 487
+[27-Apr-2012 08:35:35] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 529
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 77
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 88
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 99
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 110
+[27-Apr-2012 08:36:53] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 147
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 256
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 292
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 317
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 355
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 382
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 420
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 447
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 487
+[27-Apr-2012 08:36:53] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 529
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 76
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 87
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 98
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 109
+[27-Apr-2012 08:37:30] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 146
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 255
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 291
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 316
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 354
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 381
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 419
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 446
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 486
+[27-Apr-2012 08:37:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 528
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 78
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 89
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 100
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 111
+[27-Apr-2012 08:38:07] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 148
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 257
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 293
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 318
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 356
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 383
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 421
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 448
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 488
+[27-Apr-2012 08:38:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 530
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 76
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 87
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 98
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 109
+[27-Apr-2012 08:38:42] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 146
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 255
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 291
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 316
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 354
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 381
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 419
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 446
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 486
+[27-Apr-2012 08:38:42] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 528
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 76
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 87
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 98
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 109
+[27-Apr-2012 08:38:57] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 146
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 255
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 291
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 316
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 354
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 381
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 419
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 446
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 486
+[27-Apr-2012 08:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 528
+[27-Apr-2012 08:40:02] PHP Warning:  fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to 127.0.0.1:8081 (Connection refused) in /home/tingog/public_html/tab/includes/Snoopy.class.php on line 1142
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 75
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 86
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 97
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 108
+[27-Apr-2012 08:40:02] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 145
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 254
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 290
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 315
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 353
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 380
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 418
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 445
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 485
+[27-Apr-2012 08:40:02] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 527
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 74
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 85
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 96
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 107
+[27-Apr-2012 08:40:28] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 144
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 253
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 289
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 314
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 352
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 379
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 417
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 444
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 484
+[27-Apr-2012 08:40:28] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 526
+[27-Apr-2012 08:46:01] PHP Fatal error:  Call to undefined method Snoopy::result() in /home/tingog/public_html/tab/summaryreports.php on line 15
+[27-Apr-2012 08:46:19] PHP Fatal error:  Call to undefined method Snoopy::results() in /home/tingog/public_html/tab/summaryreports.php on line 15
+[27-Apr-2012 08:47:11] PHP Warning:  Missing argument 1 for Snoopy::fetchtext(), called in /home/tingog/public_html/tab/summaryreports.php on line 15 and defined in /home/tingog/public_html/tab/includes/Snoopy.class.php on line 492
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 74
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 85
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 96
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 107
+[27-Apr-2012 08:47:11] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 144
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 253
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 289
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 314
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 352
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 379
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 417
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 444
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 484
+[27-Apr-2012 08:47:11] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 526
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 74
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 85
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 96
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 107
+[27-Apr-2012 08:47:30] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 144
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 253
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 289
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 314
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 352
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 379
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 417
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 444
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 484
+[27-Apr-2012 08:47:30] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 526
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 74
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 85
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 96
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 107
+[27-Apr-2012 08:48:50] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 144
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 253
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 289
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 314
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 352
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 379
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 417
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 444
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 484
+[27-Apr-2012 08:48:50] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 526
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 75
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 86
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 97
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 108
+[27-Apr-2012 08:49:39] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 145
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 254
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 290
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 315
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 353
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 380
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 418
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 445
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 485
+[27-Apr-2012 08:49:39] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 527
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 74
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 85
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 96
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 107
+[27-Apr-2012 08:51:07] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 144
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 253
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 289
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 314
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 352
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 379
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 417
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 444
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 484
+[27-Apr-2012 08:51:07] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 526
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 74
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 85
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 96
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 107
+[07-May-2012 22:10:14] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 144
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 253
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 289
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 314
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 352
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 379
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 417
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 444
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 484
+[07-May-2012 22:10:14] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 526
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 74
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 85
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 96
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 107
+[10-May-2012 07:53:49] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 144
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 253
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 289
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 314
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 352
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 379
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 417
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 444
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 484
+[10-May-2012 07:53:49] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 526
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 74
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 85
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 96
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 107
+[10-May-2012 07:54:03] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 144
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 253
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 289
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 314
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 352
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 379
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 417
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 444
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 484
+[10-May-2012 07:54:03] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 526
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 74
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 85
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 96
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 107
+[31-May-2012 17:48:19] PHP Warning:  array_sum() [<a href='function.array-sum'>function.array-sum</a>]: The argument should be an array in /home/tingog/public_html/tab/summaryreports.php on line 144
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 254
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 290
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 315
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 353
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 380
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 418
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 445
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 485
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 527
+[31-May-2012 17:48:19] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 565
+[26-Jun-2012 06:09:03] PHP Warning:  include(404.html) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/tab/sms.php on line 202
+[26-Jun-2012 06:09:03] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '404.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/tab/sms.php on line 202
+[26-Jun-2012 06:09:03] PHP Warning:  mysql_close(): supplied argument is not a valid MySQL-Link resource in /home/tingog/public_html/tab/sms.php on line 204
+[26-Jun-2012 06:10:29] PHP Warning:  mysql_close(): supplied argument is not a valid MySQL-Link resource in /home/tingog/public_html/tab/sms.php on line 211
+[26-Jun-2012 06:11:24] PHP Warning:  mysql_select_db(): supplied argument is not a valid MySQL-Link resource in /home/tingog/public_html/tab/sms.php on line 45
+[26-Jun-2012 06:41:54] PHP Fatal error:  Using $this when not in object context in /home/tingog/public_html/tab/sms.php on line 176
+[26-Jun-2012 06:43:02] PHP Fatal error:  Using $this when not in object context in /home/tingog/public_html/tab/sms.php on line 176
+[12-Jul-2012 05:01:33 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/index.php on line 195
+[12-Jul-2012 08:58:36 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/index.php on line 195
+[13-Jul-2012 05:25:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/index.php on line 195
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 74
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 85
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 96
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 107
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  array_sum() expects parameter 1 to be array, null given in /home/tingog/public_html/tab/summaryreports.php on line 144
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 254
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 290
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 315
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 353
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 380
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 418
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 445
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 485
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 527
+[13-Jul-2012 05:25:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 565
+[13-Jul-2012 05:25:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 74
+[13-Jul-2012 05:25:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 85
+[13-Jul-2012 05:25:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 96
+[13-Jul-2012 05:25:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tingog/public_html/tab/summaryreports.php on line 107
+[13-Jul-2012 05:25:41 UTC] PHP Warning:  array_sum() expects parameter 1 to be array, null given in /home/tingog/public_html/tab/summaryreports.php o

@@ -1,0 +1,24 @@
+[23-Apr-2012 13:45:52] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'tingog_nmg'@'localhost' (using password: YES) in /home/tingog/public_html/tab/admin/login.php on line 12
+[02-May-2012 10:19:27] PHP Parse error:  syntax error, unexpected '}' in /home/tingog/public_html/tab/backend/application/views/cityaccess/ticket.php on line 237
+[02-May-2012 10:24:24] PHP Fatal error:  Call to undefined method Department_Model::markedTicketasRead() in /home/tingog/public_html/tab/backend/application/views/department/thread.php on line 3
+[02-May-2012 10:24:50] PHP Fatal error:  Call to undefined method Department_Model::markedTicketasRead() in /home/tingog/public_html/tab/backend/application/views/department/thread.php on line 3
+[12-Jul-2012 05:01:44 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[12-Jul-2012 05:02:11 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[12-Jul-2012 05:02:21 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[12-Jul-2012 05:04:44 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[12-Jul-2012 07:41:42 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[12-Jul-2012 08:58:41 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[12-Jul-2012 08:59:28 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[12-Jul-2012 09:21:03 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[12-Jul-2012 09:38:14 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[13-Jul-2012 05:30:39 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[13-Jul-2012 05:33:31 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[13-Jul-2012 06:02:50 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[13-Jul-2012 06:03:09 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/tingog/public_html/tab/backend/login.php on line 12
+[13-Aug-2012 11:04:31 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/tab/backend/application/controllers/admin.php on line 1075
+[13-Aug-2012 11:38:44 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/tingog/public_html/tab/backend/application/controllers/admin.php on line 470
+[13-Aug-2012 11:38:46 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/tingog/public_html/tab/backend/application/controllers/admin.php on line 470
+[13-Aug-2012 11:55:21 UTC] PHP Parse error:  syntax error, unexpected T_ELSE in /home/tingog/public_html/tab/backend/application/controllers/admin.php on line 395
+[13-Aug-2012 11:55:24 UTC] PHP Parse error:  syntax error, unexpected T_ELSE in /home/tingog/public_html/tab/backend/application/controllers/admin.php on line 395
+[17-Aug-2012 03:38:45 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/tingog/public_html/tab/backend/application/controllers/admin.php on line 602
+[17-Aug-2012 03:55:25 UTC] PHP Parse error:  syntax error, unexpected $end, expecting T_VARIABLE or T_DOLLAR_OPEN_CURLY_BRACES or T_CURLY_OPEN in /home/tingog/public_html/tab/backend/application/controllers/admin.php on line 426

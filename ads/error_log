@@ -1,0 +1,43 @@
+[16-Jul-2012 07:35:58 UTC] PHP Warning:  include(ads/backend/application/helpers/functions_helper.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/ads/summaryreports.php on line 2
+[16-Jul-2012 07:35:58 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'ads/backend/application/helpers/functions_helper.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/ads/summaryreports.php on line 2
+[16-Jul-2012 07:35:58 UTC] PHP Warning:  include(ads/backend/application/helpers/functions_helper.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/ads/summaryreports.php on line 2
+[16-Jul-2012 07:35:58 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'ads/backend/application/helpers/functions_helper.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/ads/summaryreports.php on line 2
+[16-Jul-2012 07:35:59 UTC] PHP Fatal error:  Call to undefined function std2arr() in /home/tingog/public_html/ads/summaryreports.php on line 17
+[16-Jul-2012 07:35:59 UTC] PHP Fatal error:  Call to undefined function std2arr() in /home/tingog/public_html/ads/summaryreports.php on line 17
+[16-Jul-2012 07:37:06 UTC] PHP Warning:  include(ads/backend/application/helpers/functions_helper.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/tingog/public_html/ads/summaryreports.php on line 2
+[16-Jul-2012 07:37:06 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'ads/backend/application/helpers/functions_helper.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tingog/public_html/ads/summaryreports.php on line 2
+[16-Jul-2012 07:37:06 UTC] PHP Fatal error:  Call to undefined function std2arr() in /home/tingog/public_html/ads/summaryreports.php on line 17
+[17-Aug-2012 10:32:38 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[18-Aug-2012 08:08:31 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[20-Aug-2012 14:14:44 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[23-Aug-2012 21:42:16 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[24-Aug-2012 09:49:53 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[24-Aug-2012 09:53:04 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[24-Aug-2012 09:53:47 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[26-Aug-2012 03:23:06 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[26-Aug-2012 03:55:22 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[26-Aug-2012 06:26:18 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[28-Aug-2012 00:32:34 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[28-Aug-2012 10:48:54 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[28-Aug-2012 13:04:28 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[30-Aug-2012 05:07:07 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[30-Aug-2012 05:09:24 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[30-Aug-2012 07:01:52 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[31-Aug-2012 07:29:30 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[03-Sep-2012 03:59:43 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[03-Sep-2012 04:28:59 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[03-Sep-2012 04:32:02 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[03-Sep-2012 04:42:50 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[03-Sep-2012 06:51:32 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[04-Sep-2012 21:40:56 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[05-Sep-2012 00:46:34 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[07-Sep-2012 05:59:54 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[07-Sep-2012 23:16:16 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[08-Sep-2012 09:45:15 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[10-Sep-2012 13:47:50 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[11-Sep-2012 16:49:51 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[17-Sep-2012 01:33:44 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[18-Sep-2012 19:38:31 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[26-Sep-2012 09:47:05 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[26-Sep-2012 11:59:09 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226
+[01-Oct-2012 01:24:46 UTC] PHP Parse error:  syntax error, unexpected $end in /home/tingog/public_html/ads/index.php on line 226

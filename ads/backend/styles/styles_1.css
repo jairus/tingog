@@ -1,0 +1,825 @@
+/*MAIN*/
+
+html, body{
+	scrollbar-face-color:#EBF5FF;
+	scrollbar-base-color:#EBF5FF;
+	scrollbar-arrow-color:black;
+	scrollbar-track-color:#F3F3F3;
+	scrollbar-shadow-color:#EBF5FF;
+	scrollbar-highlight-color:#EBF5FF;
+	scrollbar-3dlight-color:#78AAFF;
+	scrollbar-darkshadow-Color:#78AAFF;
+}
+
+*{margin:0px;padding:0px;}
+
+body{
+	background-color:#FFF;
+	margin:0px;
+	padding:0px;
+}
+
+p{padding:0px;}
+
+#outer{
+	width:1000px;
+	height:auto;
+	margin:0 auto;
+}
+
+#site_content_1{
+	float:left;
+	width:1000px;
+	height:auto;
+	padding:20px;
+}
+
+#site_content_2{
+	float:left;
+	width:1000px;
+	height:auto;
+	padding:0px 20px;
+}
+
+#logo_main{
+	float:left;
+	width:225px;
+	height:150px;
+}
+
+#header_right_content{
+	float:left;
+	width:755px;
+	height:130px;
+	padding-left:20px;
+	text-align:right;
+	padding-top:20px;
+}
+
+
+
+/*MENU BAR*/
+
+div#menu a{
+
+display:none;
+
+}
+
+
+
+div#menu {
+
+float:left;
+
+width:1000px;
+
+height:41px;
+
+background:url(../images/menubar/main-bg.png) repeat-x;
+
+}
+
+
+
+div#menu ul {
+
+margin: 0;
+
+padding: 0;
+
+list-style: none;
+
+float: left;
+
+}
+
+div#menu ul.menu {
+
+padding-left: 30px;
+
+}
+
+
+
+div#menu li {
+
+position: relative;
+
+z-index: 9;
+
+margin: 0;
+
+padding: 0 5px 0 0;
+
+display: block;
+
+float: left;
+
+}
+
+div#menu li:hover>ul {
+
+left: -2px;
+
+}
+
+
+
+div#menu a {
+
+position: relative;
+
+z-index: 10;
+
+height: 41px;
+
+display: block;
+
+float: left;
+
+line-height: 41px;
+
+text-decoration: none;
+
+font: normal 12px Trebuchet MS;
+
+}
+
+div#menu a:hover, div#menu a:hover span { color: #fff; }
+
+div#menu li.current a {}
+
+
+
+div#menu span {
+
+display: block;
+
+cursor: pointer;
+
+background-repeat: no-repeat;
+
+background-position: 95% 0;
+
+}
+
+div#menu ul ul a.parent span {
+
+background-position:95% 8px;
+
+background-image: url(../images/menubar/item-pointer.gif);
+
+}
+
+div#menu ul ul a.parent:hover span {
+
+background-image: url(../images/menubar/item-pointer-mover.gif);
+
+}
+
+
+
+/* menu::level1 */
+
+div#menu a {
+
+padding: 0 10px 0 10px;
+
+line-height: 30px;
+
+color: #e5e5e5;
+
+}
+
+div#menu span {
+
+margin-top: 5px;
+
+}/**@replace#1*/
+
+div#menu li { background: url(../images/menubar/main-delimiter.png) 98% 4px no-repeat; }
+
+div#menu li.last { background: none; }
+
+
+
+/* menu::level2 */
+
+div#menu ul ul li { background: none; }
+
+div#menu ul ul {
+
+position: absolute;
+
+top: 38px;
+
+left: -999em;
+
+width: 163px;
+
+padding: 5px 0 0 0;
+
+background: rgb(45,45,45);
+
+margin-top:1px;
+
+}
+
+div#menu ul ul a {
+
+padding: 0 0 0 15px;
+
+height: auto;
+
+float: none;
+
+display: block;
+
+line-height: 24px;
+
+color: rgb(169,169,169);
+
+}
+
+div#menu ul ul span {
+
+margin-top: 0;
+
+padding-right: 15px;
+
+_padding-right: 20px;
+
+color: rgb(169,169,169);
+
+}
+
+div#menu ul ul a:hover span {
+
+color: #fff;
+
+}
+
+div#menu ul ul li.last { background: none; }
+
+div#menu ul ul li {
+
+width: 100%;
+
+}
+
+
+
+/* menu::level3 */
+
+div#menu ul ul ul {
+
+padding: 0;
+
+margin: -38px 0 0 163px !important;
+
+margin-left:172px;
+
+}
+
+
+
+/* colors */
+
+div#menu ul ul ul { background: rgb(41,41,41); }
+
+div#menu ul ul ul ul { background: rgb(38,38,38); }
+
+div#menu ul ul ul ul { background: rgb(35,35,35); }
+
+
+
+/* lava lamp */
+
+div#menu li.back {
+
+background: url(../images/menubar/lava.png) no-repeat right -44px !important;
+
+background-image: url(../images/menubar/lava.gif);
+
+width: 13px;
+
+height: 44px;
+
+z-index: 8;
+
+position: absolute;
+
+margin: -1px 0 0 -5px;
+
+}
+
+div#menu li.back .left {
+
+background: url(../images/menubar/lava.png) no-repeat top left !important;
+
+background-image: url(../images/menubar/lava.gif);
+
+height: 44px;
+
+margin-right: 8px;
+
+}
+
+/*END OF MENU BAR*/
+
+
+
+/*THREAD*/
+
+
+
+
+
+
+
+
+
+/*END OF THREAD*/
+
+/*END OF MAIN*/
+
+
+
+/*LOGIN.PHP*/
+
+#login_outer{
+
+width:400px;
+
+height:auto;
+
+margin:0 auto;
+
+}
+
+
+
+#login_content{
+
+float:left;
+
+width:400px;
+
+height:auto;
+
+padding-top:50px;
+
+}
+
+
+
+#login_logo{
+
+float:left;
+
+width:400px;
+
+height:150px;
+
+text-align:center;
+
+padding-bottom:20px;
+
+}
+
+
+
+#login_corners{
+
+float:left;
+
+width:10px;
+
+height:10px;
+
+}
+
+
+
+#login_top{
+
+float:left;
+
+width:380px;
+
+height:9px;
+
+border-top:1px solid #CCC;
+
+}
+
+
+
+#login_bottom{
+
+float:left;
+
+width:380px;
+
+height:9px;
+
+border-bottom:1px solid #CCC;
+
+}
+
+
+
+#login_inside{
+
+float:left;
+
+width:360px;
+
+height:auto;
+
+padding:20px 19px;
+
+border-left:1px solid #CCC;
+
+border-right:1px solid #CCC;
+font-family:Verdana, Geneva, sans-serif; font-size:11px; font-weight:bold;
+
+}
+
+
+
+#login_inputs{
+
+float:left;
+
+width:360px;
+
+height:30px;
+
+}
+
+
+
+#login_text{
+
+float:left;
+
+width:80px;
+
+height:auto;
+
+padding-left:20px;
+
+padding-top:2px;
+
+}
+
+.login_loc{
+font-family:Verdana, Geneva, sans-serif; font-size:15px; font-weight:bold; text-align:center;
+}
+
+
+#login_textbox{
+
+float:left;
+
+width:260px;
+
+height:auto;
+
+}
+
+/*END OF LOGIN.PHP*/
+
+
+
+/*CLASSES*/
+
+.text_1{
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:11px;
+
+font-weight:normal;
+
+color:#666;
+
+text-decoration:none;
+
+}
+
+
+
+.text_2{
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:12px;
+
+font-weight:normal;
+
+color:#666;
+
+text-decoration:none;
+
+}
+
+
+
+.text_3{
+
+font-family:"Times New Roman", Times, serif;
+
+font-size:24px;
+
+font-weight:bold;
+
+color:#333;
+
+text-decoration:none;
+
+}
+
+
+
+.text_4{
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:11px;
+
+font-weight:normal;
+
+color:#900;
+
+text-decoration:none;
+
+}
+
+
+
+.link_1{
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:11px;
+
+font-weight:normal;
+
+color:#030;
+
+text-decoration:none;
+
+}
+
+
+
+.link_1:hover{
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:11px;
+
+font-weight:normal;
+
+color:#060;
+
+text-decoration:underline;
+
+}
+
+
+
+.link_2{
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:13px;
+
+font-weight:bold;
+
+color:#FFFFFF;
+
+text-decoration:none;
+
+}
+
+
+
+.link_2:hover{
+
+color:#999999;
+
+}
+
+
+
+td div .link_3{
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:11px;
+
+font-weight:bold;
+
+color:#060;
+
+text-decoration:none;
+
+}
+
+
+
+td div .link_3:hover{
+
+color:#030;
+
+}
+
+
+
+.msg_text_1{
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:11px;
+
+font-weight:normal;
+
+color:#F00;
+
+text-decoration:none;
+
+}
+
+
+
+.input_1{
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:11px;
+
+font-weight:normal;
+
+color:#666;
+
+text-decoration:none;
+
+padding:3px;
+
+border:1px solid #666;
+
+}
+
+
+
+.btn_1{
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:11px;
+
+font-weight:normal;
+
+color:#060;
+
+text-decoration:none;
+
+padding:2px 5px;
+
+border:1px solid #CCC;
+
+cursor:pointer;
+
+}
+
+
+
+.btn_1_active{
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:11px;
+
+font-weight:bold;
+
+color:#CCC;
+
+text-decoration:none;
+
+padding:2px 5px;
+
+border:1px solid #CCC;
+
+cursor:pointer;
+
+background-color:#333;
+
+}
+
+
+
+.btn_2{
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:11px;
+
+font-weight:normal;
+
+color:#060;
+
+text-decoration:none;
+
+padding:2px;
+
+border:1px solid #CCC;
+
+cursor:pointer;
+
+}
+
+
+
+.btn_3{
+
+width:80px;
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:12px;
+
+font-weight:normal;
+
+color:#060;
+
+text-decoration:none;
+
+padding:2px 5px;
+
+border:1px solid #CCC;
+
+cursor:pointer;
+
+}
+
+.pagination{
+display:none;
+}
+
+.ticket_list td{
+vertical-align:top;
+}
+/*END OF CLASSES*/
+
+#ui-datepicker-div{
+background-color:#FFF;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#000;
+padding:10px 20px 10px 10px;
+border:1px solid #999;
+}
+
+#ui-datepicker-div a{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#09F;
+}
+
+#ui-datepicker-div a:hover{
+color:#06C;
+}
+
+#ui-datepicker-div span{
+font-weight:bold;
+font-size:13px;
+}
+
+#ui-datepicker-div .ui-datepicker-prev span{
+font-weight:bold;
+font-size:13px;
+cursor:pointer;
+}
+
+#ui-datepicker-div .ui-datepicker-next span{
+font-weight:bold;
+font-size:13px;
+cursor:pointer;
+}
+
+.smsonly{
+display:none;
+}
+
+.InfoContainer {
+background-color: #E34603;
+border-radius: 2px 2px 2px 2px;
+color: #FFFFFF;
+font-size: 10px;
+padding: 1px 2px;
+white-space: nowrap;
+}

@@ -1,0 +1,3508 @@
+no queries
+no queries
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0.001]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0.001]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0.001]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0]
+
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+SELECT *
+FROM (`tickets`)
+===[took:0.001]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+INSERT INTO `tickets` (`name`, `description`, `email`, `number`, `location`, `date`) VALUES ('', '', '', '', '', NOW())
+===[took:0]
+
+INSERT INTO `tickets` (`name`, `description`, `email`, `number`, `location`, `date`) VALUES ('Jairus', '', '', '', '', NOW())
+===[took:0]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0.001]
+
+INSERT INTO `tickets` (`name`, `description`, `email`, `number`, `location`, `date`) VALUES ('Haifa', 'testing', 'test@test.com', '123', 'Poblacion', NOW())
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0.005]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0.003]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0.001]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0.001]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`settings`)
+===[took:0.001]
+
+INSERT INTO `tickets` (`name`, `description`, `email`, `number`, `location`, `date`) VALUES ('', '', '', '', '', NOW())
+===[took:0.049]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0.004]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0.003]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+===[took:0.001]
+
+select * from `personnel` ORDER BY `person`
+SELECT *
+FROM (`users`)
+ORDER BY `access_level` asc
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '22'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '39'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '40'
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='3' ORDER BY `department`
+select * from `departments` where id='2' ORDER BY `department`
+select * from `departments` where id='0' ORDER BY `department`
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0.003]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0.003]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+===[took:0.003]
+
+select * from `personnel` ORDER BY `person`
+SELECT *
+FROM (`users`)
+ORDER BY `access_level` asc
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '22'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '39'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '40'
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='3' ORDER BY `department`
+select * from `departments` where id='2' ORDER BY `department`
+select * from `departments` where id='0' ORDER BY `department`
+===[took:0]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0.004]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`settings`)
+===[took:0.001]
+
+select * from `personnel` ORDER BY `person`
+SELECT *
+FROM (`users`)
+ORDER BY `access_level` asc
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '22'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '39'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '40'
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='3' ORDER BY `department`
+select * from `departments` where id='2' ORDER BY `department`
+select * from `departments` where id='0' ORDER BY `department`
+===[took:0]
+
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+SELECT *
+FROM (`tickets`)
+===[took:0.001]
+
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+SELECT *
+FROM (`tickets`)
+===[took:0]
+
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+SELECT *
+FROM (`tickets`)
+===[took:0]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0.025]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0.001]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0.001]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0]
+
+SELECT *
+FROM (`access_level`)
+ORDER BY `name` asc
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '22'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '22'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '39'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '39'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '38'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '38'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '40'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '40'
+===[took:0]
+
+SELECT *
+FROM (`access_level`)
+ORDER BY `name` asc
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '22'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '22'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '39'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '39'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '38'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '38'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '40'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '40'
+===[took:0]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0]
+
+no queries
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0]
+
+SELECT *
+FROM (`users`)
+ORDER BY `access_level` asc
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '22'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '39'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '40'
+===[took:0]
+
+SELECT *
+FROM (`users`)
+ORDER BY `access_level` asc
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '22'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '39'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '40'
+===[took:0]
+
+SELECT *
+FROM (`access_level`)
+ORDER BY `name` asc
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '22'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '22'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '39'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '39'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '38'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '38'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '40'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '40'
+SELECT *
+FROM (`users`)
+WHERE `id` =  '17'
+select * from `departments` where `deleted`=0 ORDER BY `department`
+===[took:0]
+
+SELECT *
+FROM (`access_level`)
+ORDER BY `name` asc
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '22'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '22'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '39'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '39'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '38'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '38'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '40'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '40'
+===[took:0]
+
+SELECT *
+FROM (`access_level`)
+ORDER BY `name` asc
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '22'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '22'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '39'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '39'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '38'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '38'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '40'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '40'
+===[took:0]
+
+SELECT *
+FROM (`users`)
+ORDER BY `access_level` asc
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '22'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '39'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '40'
+===[took:0]
+
+SELECT *
+FROM (`users`)
+ORDER BY `access_level` asc
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '22'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '39'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '40'
+===[took:0]
+
+SELECT *
+FROM (`access_level`)
+ORDER BY `name` asc
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '22'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '22'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '39'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '39'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '38'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '38'
+SELECT *
+FROM (`users`)
+WHERE `access_level` =  '40'
+SELECT *
+FROM (`access_level_option`)
+WHERE `access_level_id` =  '40'
+select * from `departments` where `deleted`=0 ORDER BY `department`
+===[took:0]
+
+SELECT *
+FROM (`users`)
+WHERE `user_login` =  'ads_co'
+INSERT INTO `users` (`user_login`, `user_password`, `access_level`, `fname`, `mname`, `lname`, `address`, `department`, `mobile`, `email`) VALUES ('ads_co', '81dc9bdb52d04dc20036dbd8313ed055', '38', 'ads', 'ads', 'ads', '123 nhg', '3', '', '')
+===[took:0.001]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0.007]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0.001]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0]
+
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+SELECT *
+FROM (`tickets`)
+select * from `departments` where `deleted`=0 ORDER BY `department`
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`settings`)
+===[took:0.037]
+
+SELECT *
+FROM (`tickets`)
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0.009]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'assigned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'resolved'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+select * from `categories` where `deleted`=0
+select * from `departments` where `deleted`=0
+select * from `personnel`
+select * from `issues` where `deleted`=0
+SELECT *
+FROM (`issues`)
+WHERE `id` IS NULL
+SELECT *
+FROM (`personnel`)
+WHERE `id` IS NULL
+SELECT *
+FROM (`personnel`)
+WHERE `id` IS NULL
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+===[took:0]
+
+SELECT *
+FROM (`settings`)
+===[took:0.007]
+
+select * from `personnel` ORDER BY `person`
+SELECT *
+FROM (`users`)
+ORDER BY `access_level` asc
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '22'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '39'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '40'
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='3' ORDER BY `department`
+select * from `departments` where id='2' ORDER BY `department`
+select * from `departments` where id='0' ORDER BY `department`
+===[took:0]
+
+SELECT *
+FROM (`users`)
+WHERE `id` =  '8'
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='closed' order by `date` asc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'resolved'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0.008]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '4'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '4'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='4' order by `date` asc
+===[took:0]
+
+select * from `personnel` ORDER BY `person`
+SELECT *
+FROM (`users`)
+ORDER BY `access_level` asc
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '22'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '38'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '39'
+SELECT *
+FROM (`access_level`)
+WHERE `id` =  '40'
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='1' ORDER BY `department`
+select * from `departments` where id='3' ORDER BY `department`
+select * from `departments` where id='2' ORDER BY `department`
+select * from `departments` where id='0' ORDER BY `department`
+===[took:0]
+
+insert into `a_sms` set 
+					`sms` = '',
+					`dateadded` = NOW()
+				
+===[took:0]
+
+insert into `a_sms` set 
+					`sms` = '',
+					`dateadded` = NOW()
+				
+===[took:0]
+
+INSERT INTO `tickets` (`name`, `description`, `email`, `number`, `location`, `date`) VALUES ('', '', '', '', '', NOW())
+===[took:0.016]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog ads / hjdjjd/hshdhd', '117', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Welcome+sa+TINGOG+2015%21+Ipadinig+ang+boses+sa+kinauukulan%21%0D%0AList+of+keywords%3A%0D%0ATINGOG+REG+%3CLOCATION%3E%2F%3Cusername%3E%2F%3Cbarangay%3E%2F%0D%0A%3Cage%3E%2F+%3Cgender%3E+-+para+makapag-register%0D%0ATINGOG+%3CLOCATION%3E%2F%3Cbarangay%3E%2F%3Creport%3E-+para+magpadala+ng+report.+%0D%0ATINGOG+REP+%3Creport%23%3E%3Creport+code%3E%2F%3Cmessage%3E-para+mag-reply+o+mag+follow-up+sa+report%0D%0ATINGOG+LOCATION+-++para+sa+listahan+ng+mga+lokasyon%0D%0A%0D%0AI-text+%3Ckeyword%3E+at+i-send+sa+2015.+P1%2Ftxt.%0D%0A&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Welcome sa TINGOG 2015! Ipadinig ang boses sa kinauukulan!\r\nList of keywords:\r\nTINGOG REG <LOCATION>/<username>/<barangay>/\r\n<age>/ <gender> - para makapag-register\r\nTINGOG <LOCATION>/<barangay>/<report>- para magpadala ng report. \r\nTINGOG REP <report#><report code>/<message>-para mag-reply o mag follow-up sa report\r\nTINGOG LOCATION -  para sa listahan ng mga lokasyon\r\n\r\nI-text <keyword> at i-send sa 2015. P1/txt.\r\n',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog ads / hshdhs / jsjskd', '118', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Welcome+sa+TINGOG+2015%21+Ipadinig+ang+boses+sa+kinauukulan%21%0D%0AList+of+keywords%3A%0D%0ATINGOG+REG+%3CLOCATION%3E%2F%3Cusername%3E%2F%3Cbarangay%3E%2F%0D%0A%3Cage%3E%2F+%3Cgender%3E+-+para+makapag-register%0D%0ATINGOG+%3CLOCATION%3E%2F%3Cbarangay%3E%2F%3Creport%3E-+para+magpadala+ng+report.+%0D%0ATINGOG+REP+%3Creport%23%3E%3Creport+code%3E%2F%3Cmessage%3E-para+mag-reply+o+mag+follow-up+sa+report%0D%0ATINGOG+LOCATION+-++para+sa+listahan+ng+mga+lokasyon%0D%0A%0D%0AI-text+%3Ckeyword%3E+at+i-send+sa+2015.+P1%2Ftxt.%0D%0A&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Welcome sa TINGOG 2015! Ipadinig ang boses sa kinauukulan!\r\nList of keywords:\r\nTINGOG REG <LOCATION>/<username>/<barangay>/\r\n<age>/ <gender> - para makapag-register\r\nTINGOG <LOCATION>/<barangay>/<report>- para magpadala ng report. \r\nTINGOG REP <report#><report code>/<message>-para mag-reply o mag follow-up sa report\r\nTINGOG LOCATION -  para sa listahan ng mga lokasyon\r\n\r\nI-text <keyword> at i-send sa 2015. P1/txt.\r\n',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog ads / hjdjjd/hshdhd', '117', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'hshdhd', '639423690526', 'hjdjjd', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+report.+Ito+ay+ipaparating+sa+kinauukulan+para+sa+kanilang+aksyon.+Tandaan+ang+iyong+report+number+ads6.+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong report. Ito ay ipaparating sa kinauukulan para sa kanilang aksyon. Tandaan ang iyong report number ads6. P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog ads / badus/ wala Lang', '119', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'wala Lang', '639423690526', 'badus', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+report.+Ito+ay+ipaparating+sa+kinauukulan+para+sa+kanilang+aksyon.+Tandaan+ang+iyong+report+number+ads7.+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong report. Ito ay ipaparating sa kinauukulan para sa kanilang aksyon. Tandaan ang iyong report number ads7. P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+no queries
+no queries
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0.01]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0.002]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog rep ads7 / reply reply din', '120', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makakatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+P1%2Ftxt.%0D%0A%09%0D%0A%09Para+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makakatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt.\r\n	\r\n	Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('7', 'reply reply din', 'SMS Reply', '', '639423690526', 0, NOW())
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0.001]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0.004]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog rep ads7 / test', '121', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makakatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+P1%2Ftxt.%0D%0A%09%0D%0A%09Para+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makakatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt.\r\n	\r\n	Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('7', 'test', 'SMS Reply', '', '639423690526', 0, NOW())
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog rep ads7 / test', '122', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makakatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+P1%2Ftxt.%0D%0A%09%0D%0A%09Para+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makakatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt.\r\n	\r\n	Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('7', 'test', 'SMS Reply', '', '639423690526', 0, NOW())
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog rep ads7 / test', '123', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makakatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+P1%2Ftxt.%0A%09%0A%09Para+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makakatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt.\n	\n	Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('7', 'test', 'SMS Reply', '', '639423690526', 0, NOW())
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog rep ads7 / test', '124', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makakatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+P1%2Ftxt.%09%09Para+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makakatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt.		Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('7', 'test', 'SMS Reply', '', '639423690526', 0, NOW())
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog rep ads7 / test', '125', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makakatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makakatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('7', 'test', 'SMS Reply', '', '639423690526', 0, NOW())
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0.001]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog rep ads7 / testwpdjfb', '126', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makakatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makakatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('7', 'testwpdjfb', 'SMS Reply', '', '639423690526', 0, NOW())
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog action ads7 / testhduhd', '127', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+pagresponde.+Ipaaalam+namin+agad+ang+resulta+ng+estado+ng+report+na+naiulat.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong pagresponde. Ipaaalam namin agad ang resulta ng estado ng report na naiulat. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('7', 'testhduhd', 'SMS Action', '', '639423690526', 0, NOW())
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0.001]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='7' order by `date` asc
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog ads basud/message', '131', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'message', '639423690526', 'basud', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+report.+Ito+ay+ipaparating+sa+kinauukulan+para+sa+kanilang+aksyon.+Tandaan+ang+iyong+report+number+ads8.+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong report. Ito ay ipaparating sa kinauukulan para sa kanilang aksyon. Tandaan ang iyong report number ads8. P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '8'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '8'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='8' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '8'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '8'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='8' order by `date` asc
+===[took:0.001]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog ads/basud/message', '132', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'message', '639423690526', 'basud', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+report.+Ito+ay+ipaparating+sa+kinauukulan+para+sa+kanilang+aksyon.+Tandaan+ang+iyong+report+number+ads9.+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong report. Ito ay ipaparating sa kinauukulan para sa kanilang aksyon. Tandaan ang iyong report number ads9. P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '9'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '9'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='9' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '9'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '9'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='9' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0.001]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '9'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '9'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='9' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0.002]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '9'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '9'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='9' order by `date` asc
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog ads/basud/message', '134', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'message', '639423690526', 'basud', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+report.+Ito+ay+ipaparating+sa+kinauukulan+para+sa+kanilang+aksyon.+Tandaan+ang+iyong+report+number+ads10.+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong report. Ito ay ipaparating sa kinauukulan para sa kanilang aksyon. Tandaan ang iyong report number ads10. P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0.001]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog rep ads7 / testes', '136', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makakatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makakatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('7', 'testes', 'SMS Reply', '', '639423690526', 0, NOW())
+===[took:0.002]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog rep ads7 / test', '135', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makakatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makakatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('7', 'test', 'SMS Reply', '', '639423690526', 0, NOW())
+===[took:0.001]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639423690526', 'Tingog rep ads7 / test', '133', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '7'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '7'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639423690526&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makakatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639423690526',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makakatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('7', 'test', 'SMS Reply', '', '639423690526', 0, NOW())
+===[took:0.002]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639209468690', 'Tingog ads brgy sample from oren', '103', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=0&SUB_Mobtel=639209468690&SMS_Message_String=Sorry%2C+mali+ang+format+na+iyong+ginamit.+%0D%0A%0D%0APara+magpadala+ng+report%2C+i-text+ang+TINGOG+%3CLOCATION%3E%2F%3Cbarangay%3E%2F%3Creport+%3E.+Ex.+TINGOG+TAB+basud%2F+maganda+ang+inyong+serbisyo.+Ipadala+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '639209468690',
+			`message` = 'Sorry, mali ang format na iyong ginamit. \r\n\r\nPara magpadala ng report, i-text ang TINGOG <LOCATION>/<barangay>/<report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0.022]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=0&SUB_Mobtel=&SMS_Message_String=Sorry%2C+invalid+location.+Ito+ang+mga+valid+Tingog+Locations%3A%0D%0A%0D%0ATAB+-+Tabaco%2C%0D%0AADS+-+Agusan+del+Sur.%0D%0A%0D%0APara+magpadala+ng+report%2C+i-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E%2F%3Creport%3E.+Ex.+TINGOG+TAB+basud%2F+walang+tao+sa+opisina.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, invalid location. Ito ang mga valid Tingog Locations:\r\n\r\nTAB - Tabaco,\r\nADS - Agusan del Sur.\r\n\r\nPara magpadala ng report, i-text ang TINGOG <LOCATION> <barangay>/<report>. Ex. TINGOG TAB basud/ walang tao sa opisina. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0.009]
+
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'tester', '639228772727', 'baranggay', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=0&SUB_Mobtel=639228772727&SMS_Message_String=Salamat+sa+iyong+report.+Ito+ay+ipaparating+sa+kinauukulan+para+sa+kanilang+aksyon.+Tandaan+ang+iyong+report+number+ads11.+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '639228772727',
+			`message` = 'Salamat sa iyong report. Ito ay ipaparating sa kinauukulan para sa kanilang aksyon. Tandaan ang iyong report number ads11. P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '11'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '11'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=0&SUB_Mobtel=639228772727&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makakatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639228772727',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makakatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('11', 'hello world', 'SMS Reply', '', '639228772727', 0, NOW())
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639394472381', 'TINGOG Ads hello world', '112', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', '-', '639394472381', '-', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=0&SUB_Mobtel=639394472381&SMS_Message_String=Salamat+sa+pag-report+sa+TINGOG+2015.+Ito+ay+bibigyan+pansin+ng+kinauukulan+para+sa+tamang+aksyon.+Tandaan+ang+iyong+report+number+ads12&CSP_Txid=1',
+			`number` = '639394472381',
+			`message` = 'Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ads12',
+			`dateadded` = NOW()
+		
+===[took:0.018]
+
+no queries
+select * from `departments` where `deleted`=0 ORDER BY `department`
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `issues` where `deleted`=0 ORDER BY `issue`
+SELECT DISTINCT location FROM tickets
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0.01]
+
+SELECT * FROM tickets WHERE `status`='parked' OR `status`='resolved'
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'dispatched'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'returned'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'parked'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'closed'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` IS NULL
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` IS NULL
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='' order by `date` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `status` =  'new'
+ORDER BY `id` desc
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '12'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '12'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='12' order by `date` asc
+select * from `categories` where `deleted`=0 ORDER BY `category`
+select * from `departments` where `deleted`=0 ORDER BY `department`
+SELECT *
+FROM (`barangay`)
+ORDER BY `name` asc
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '12'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '12'
+select a.*, b.user_login from `tickets_msg` as `a` left join `users` as `b` on (`a`.`user`=`b`.`id`) where `tid`='12' order by `date` asc
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639322520052', 'TINGOG ADS/BAYAN/LALA', '147', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'LALA', '639322520052', 'BAYAN', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639322520052&SMS_Message_String=Salamat+sa+iyong+report.+Ito+ay+ipaparating+sa+kinauukulan+para+sa+kanilang+aksyon.+Tandaan+ang+iyong+report+number+ads13.+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '639322520052',
+			`message` = 'Salamat sa iyong report. Ito ay ipaparating sa kinauukulan para sa kanilang aksyon. Tandaan ang iyong report number ads13. P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0.191]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639322520052', 'TINGOG REP ads13/LALA', '150', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '13'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '13'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639322520052&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makakatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639322520052',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makakatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('13', 'LALA', 'SMS Reply', '', '639322520052', 0, NOW())
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639322520052', 'TINGOG REP ads13', '152', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639322520052&SMS_Message_String=Sorry%2C+mali+ang+format+na+iyong+ginamit.+%0D%0A%0D%0APara+mag-reply%2C+i-text+ang+TINGOG+REP%3Creport%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+REP+12345%2F+salamat%21+Para+sa+listahan+ng+iba+pang+keywords%2C+text+TINGOG+HELP.+P1%2Ftxt.%0D%0A&CSP_Txid=1',
+			`number` = '639322520052',
+			`message` = 'Sorry, mali ang format na iyong ginamit. \r\n\r\nPara mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ salamat! Para sa listahan ng iba pang keywords, text TINGOG HELP. P1/txt.\r\n',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639322520052', 'TINGOG ACTION ads13/lala', '153', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '13'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '13'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639322520052&SMS_Message_String=Salamat+sa+iyong+pagresponde.+Ipaaalam+namin+agad+ang+resulta+ng+estado+ng+report+na+naiulat.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639322520052',
+			`message` = 'Salamat sa iyong pagresponde. Ipaaalam namin agad ang resulta ng estado ng report na naiulat. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('13', 'lala', 'SMS Action', '', '639322520052', 0, NOW())
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639322520052', 'TINGOG ACTION ads13', '155', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=0&SUB_Mobtel=639322520052&SMS_Message_String=Sorry%2C+mali+ang+format+na+iyong+ginamit.+Para+magbigay+ulat+tungkol+sa+isang+report%2C+i-text+ang+TINGOG+ACTION+%3Creport%23%3E%3Creport+code%3E%2F%3Cmessage%3E.+Ex.+TINGOG+ACTION+TAB12345%2F+salamat%21+Para+sa+listahan+ng+iba+pang+keywords%2C+text+TINGOG+HELP.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '639322520052',
+			`message` = 'Sorry, mali ang format na iyong ginamit. Para magbigay ulat tungkol sa isang report, i-text ang TINGOG ACTION <report#><report code>/<message>. Ex. TINGOG ACTION TAB12345/ salamat! Para sa listahan ng iba pang keywords, text TINGOG HELP. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0.004]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=globe&tariff=1&SUB_Mobtel=639228772727&SMS_Message_String=Keywords%3A%0D%0ATINGOG+REG-paano+mag+register%0D%0ATINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport%3E-para+mag+report+%0D%0ATINGOG+REP-paano+mag-reply%0D%0AI-text+ang+keyword+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '639228772727',
+			`message` = 'Keywords:\r\nTINGOG REG-paano mag register\r\nTINGOG <LOCATION> <barangay> <report>-para mag report \r\nTINGOG REP-paano mag-reply\r\nI-text ang keyword sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0.01]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=globe&tariff=1&SUB_Mobtel=639228772727&SMS_Message_String=Keywords%3A%0D%0ATINGOG+REG-paano+mag+register%0D%0ATINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport%3E-para+mag+report+%0D%0ATINGOG+REP-paano+mag-reply%0D%0AI-text+ang+keyword+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '639228772727',
+			`message` = 'Keywords:\r\nTINGOG REG-paano mag register\r\nTINGOG <LOCATION> <barangay> <report>-para mag report \r\nTINGOG REP-paano mag-reply\r\nI-text ang keyword sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0.001]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+invalid+location.+Ito+ang+mga+valid+Tingog+Locations%3A%0D%0A%0D%0ATAB+-+Tabaco%2C%0D%0AADS+-+Agusan+del+Sur.%0D%0A%0D%0APara+magpadala+ng+report%2C+i-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E%2F%3Creport%3E.+Ex.+TINGOG+TAB+basud%2F+walang+tao+sa+opisina.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, invalid location. Ito ang mga valid Tingog Locations:\r\n\r\nTAB - Tabaco,\r\nADS - Agusan del Sur.\r\n\r\nPara magpadala ng report, i-text ang TINGOG <LOCATION> <barangay>/<report>. Ex. TINGOG TAB basud/ walang tao sa opisina. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+invalid+location.+Ito+ang+mga+valid+Tingog+Locations%3A%0D%0A%0D%0ATAB+-+Tabaco%2C%0D%0AADS+-+Agusan+del+Sur.%0D%0A%0D%0APara+magpadala+ng+report%2C+i-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E%2F%3Creport%3E.+Ex.+TINGOG+TAB+basud%2F+walang+tao+sa+opisina.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, invalid location. Ito ang mga valid Tingog Locations:\r\n\r\nTAB - Tabaco,\r\nADS - Agusan del Sur.\r\n\r\nPara magpadala ng report, i-text ang TINGOG <LOCATION> <barangay>/<report>. Ex. TINGOG TAB basud/ walang tao sa opisina. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+invalid+location.+Ito+ang+mga+valid+Tingog+Locations%3A%0D%0A%0D%0ATAB+-+Tabaco%2C%0D%0AADS+-+Agusan+del+Sur.%0D%0A%0D%0APara+magpadala+ng+report%2C+i-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E%2F%3Creport%3E.+Ex.+TINGOG+TAB+basud%2F+walang+tao+sa+opisina.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, invalid location. Ito ang mga valid Tingog Locations:\r\n\r\nTAB - Tabaco,\r\nADS - Agusan del Sur.\r\n\r\nPara magpadala ng report, i-text ang TINGOG <LOCATION> <barangay>/<report>. Ex. TINGOG TAB basud/ walang tao sa opisina. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+invalid+location.+Ito+ang+mga+valid+Tingog+Locations%3A%0D%0A%0D%0ATAB+-+Tabaco%2C%0D%0AADS+-+Agusan+del+Sur.%0D%0A%0D%0APara+magpadala+ng+report%2C+i-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E%2F%3Creport%3E.+Ex.+TINGOG+TAB+basud%2F+walang+tao+sa+opisina.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, invalid location. Ito ang mga valid Tingog Locations:\r\n\r\nTAB - Tabaco,\r\nADS - Agusan del Sur.\r\n\r\nPara magpadala ng report, i-text ang TINGOG <LOCATION> <barangay>/<report>. Ex. TINGOG TAB basud/ walang tao sa opisina. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Invalid+location.Locations%3A%0D%0ATAB-Tabaco%2C%0D%0AADS-Agusan+del+Sur.Reply+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport%3E+Ex.TINGOG+ADS+Basud+walang+tubig.+Send+to+2015.P1%2Ftxt&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Invalid location.Locations:\r\nTAB-Tabaco,\r\nADS-Agusan del Sur.Reply TINGOG <LOCATION> <barangay> <report> Ex.TINGOG ADS Basud walang tubig. Send to 2015.P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0.003]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Keywords%3A%0D%0ATINGOG+REG-paano+mag+register%0D%0ATINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport%3E-para+mag+report+%0D%0ATINGOG+REP-paano+mag-reply%0D%0AI-text+ang+keyword+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Keywords:\r\nTINGOG REG-paano mag register\r\nTINGOG <LOCATION> <barangay> <report>-para mag report \r\nTINGOG REP-paano mag-reply\r\nI-text ang keyword sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Para+mag-register+sa+Tingog+2015%2C+i-text+ang+TINGOG+REG+%3CLOCATION%3E%2F%3Cbarangay%3E%2F%3Cname%3E%2F%3Cage%3E%2F%3Cgender%3E.+Ex.+TINGOG+REG+ADS%2Fmapaga%2Fmscruz%2F30%2FF+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Para mag-register sa Tingog 2015, i-text ang TINGOG REG <LOCATION>/<barangay>/<name>/<age>/<gender>. Ex. TINGOG REG ADS/mapaga/mscruz/30/F sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0.001]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Invalid+location.Locations%3A%0D%0ATAB-Tabaco%2C%0D%0AADS-Agusan+del+Sur.Reply+TINGOG+REG+%3CLOCATION%3E%2F%3Cname%3E%2F%3Cbarangay%3E%2F%3Cage%3E%2F%3Cgender%3E+Ex.TINGOG+REG+ADS%2Fmscruz%2Fmapaga%2F30%2FF&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Invalid location.Locations:\r\nTAB-Tabaco,\r\nADS-Agusan del Sur.Reply TINGOG REG <LOCATION>/<name>/<barangay>/<age>/<gender> Ex.TINGOG REG ADS/mscruz/mapaga/30/F',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Invalid+location.Locations%3A%0D%0ATAB-Tabaco%2C%0D%0AADS-Agusan+del+Sur.Reply+TINGOG+REG+%3CLOCATION%3E%2F%3Cname%3E%2F%3Cbarangay%3E%2F%3Cage%3E%2F%3Cgender%3E+Ex.TINGOG+REG+ADS%2Fmscruz%2Fmapaga%2F30%2FF&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Invalid location.Locations:\r\nTAB-Tabaco,\r\nADS-Agusan del Sur.Reply TINGOG REG <LOCATION>/<name>/<barangay>/<age>/<gender> Ex.TINGOG REG ADS/mscruz/mapaga/30/F',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Invalid+location.Locations%3A%0D%0ATAB-Tabaco%2C%0D%0AADS-Agusan+del+Sur.Reply+TINGOG+REG+%3CLOCATION%3E%2F%3Cname%3E%2F%3Cbarangay%3E%2F%3Cage%3E%2F%3Cgender%3E+Ex.TINGOG+REG+ADS%2Fmscruz%2Fmapaga%2F30%2FF&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Invalid location.Locations:\r\nTAB-Tabaco,\r\nADS-Agusan del Sur.Reply TINGOG REG <LOCATION>/<name>/<barangay>/<age>/<gender> Ex.TINGOG REG ADS/mscruz/mapaga/30/F',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Invalid+location.Locations%3A%0D%0ATAB-Tabaco%2C%0D%0AADS-Agusan+del+Sur.Reply+TINGOG+REG+%3CLOCATION%3E%2F%3Cname%3E%2F%3Cbarangay%3E%2F%3Cage%3E%2F%3Cgender%3E+Ex.TINGOG+REG+ADS%2Fmscruz%2Fmapaga%2F30%2FF&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Invalid location.Locations:\r\nTAB-Tabaco,\r\nADS-Agusan del Sur.Reply TINGOG REG <LOCATION>/<name>/<barangay>/<age>/<gender> Ex.TINGOG REG ADS/mscruz/mapaga/30/F',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Invalid+location.Locations%3A%0D%0ATAB-Tabaco%2C%0D%0AADS-Agusan+del+Sur.Reply+TINGOG+REG+%3CLOCATION%3E%2F%3Cname%3E%2F%3Cbarangay%3E%2F%3Cage%3E%2F%3Cgender%3E+Ex.TINGOG+REG+ADS%2Fmscruz%2Fmapaga%2F30%2FF&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Invalid location.Locations:\r\nTAB-Tabaco,\r\nADS-Agusan del Sur.Reply TINGOG REG <LOCATION>/<name>/<barangay>/<age>/<gender> Ex.TINGOG REG ADS/mscruz/mapaga/30/F',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Para+mag-reply+sa+Tingog%2C+reply+TINGOG+REP+%3Creport%23%3E%2F%3Cmessage%3E.Ex.+TINGOG+REP+12345%2Fsalamat%21+P1%2Ftxt+%0D%0A%0D%0APara+sa+updates+ng+iyong+report+i-check+sa+www.tingog.ph&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Para mag-reply sa Tingog, reply TINGOG REP <report#>/<message>.Ex. TINGOG REP 12345/salamat! P1/txt \r\n\r\nPara sa updates ng iyong report i-check sa www.tingog.ph',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+REP%3Creport%23%3E%2F%3Cmessage%3E.Ex.+TINGOG+REP+12345%2F+salamat%21%0D%0APara+sa+listahan+ng+keywords%2Creply+TINGOG+HELP.P1%2Ftxt.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG REP<report#>/<message>.Ex. TINGOG REP 12345/ salamat!\r\nPara sa listahan ng keywords,reply TINGOG HELP.P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '12212'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '12212'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+mali+ang+report+number.+I-check+ang+report+number.+Para+mag-reply%2C+i-text+ang+TINGOG+REP%3Creport%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+REP+12345%2F+salamat%21+P1%2Ftxt&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, mali ang report number. I-check ang report number. Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ salamat! P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0.003]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+mali+ang+report+number.+I-check+ang+report+number.+Para+mag-reply%2C+i-text+ang+TINGOG+REP%3Creport%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+REP+12345%2F+salamat%21+P1%2Ftxt&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, mali ang report number. I-check ang report number. Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ salamat! P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0.002]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+mali+ang+report+number.+I-check+ang+report+number.+Para+mag-reply%2C+i-text+ang+TINGOG+REP%3Creport%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+REP+12345%2F+salamat%21+P1%2Ftxt&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, mali ang report number. I-check ang report number. Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ salamat! P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+REP%3Creport%23%3E%2F%3Cmessage%3E.Ex.+TINGOG+REP+12345%2F+salamat%21%0D%0APara+sa+listahan+ng+keywords%2Creply+TINGOG+HELP.P1%2Ftxt.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG REP<report#>/<message>.Ex. TINGOG REP 12345/ salamat!\r\nPara sa listahan ng keywords,reply TINGOG HELP.P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.+I-text+ang+TINGOG+ACTION+%3Creport%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+ACTION+1234%2Fsalamat%21+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Mali ang format na iyong ginamit. I-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 1234/salamat! P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=TINGOG+REG-paano+mag+register%0D%0ATINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport%3E-para+mag+report+%0D%0ATINGOG+REP-paano+mag-reply%0D%0AI-text+ang+keyword+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'TINGOG REG-paano mag register\r\nTINGOG <LOCATION> <barangay> <report>-para mag report \r\nTINGOG REP-paano mag-reply\r\nI-text ang keyword sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=TINGOG+REG-paano+mag+register%0D%0ATINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport%3E-para+mag+report+%0D%0ATINGOG+REP-paano+mag-reply%0D%0AI-text+ang+keyword+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'TINGOG REG-paano mag register\r\nTINGOG <LOCATION> <barangay> <report>-para mag report \r\nTINGOG REP-paano mag-reply\r\nI-text ang keyword sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'bayan', '09285073268', '-', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Salamat+sa+pag-report+sa+TINGOG+2015.+Ito+ay+bibigyan+pansin+ng+kinauukulan+para+sa+tamang+aksyon.+Tandaan+ang+iyong+report+number+ads14&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ads14',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Para+mag-register+sa+Tingog+2015%2C+i-text+ang+TINGOG+REG+%3CLOCATION%3E%2F%3Cbarangay%3E%2F%3Cname%3E%2F%3Cage%3E%2F%3Cgender%3E.+Ex.+TINGOG+REG+ADS%2Fmapaga%2Fmscruz%2F30%2FF+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Para mag-register sa Tingog 2015, i-text ang TINGOG REG <LOCATION>/<barangay>/<name>/<age>/<gender>. Ex. TINGOG REG ADS/mapaga/mscruz/30/F sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Maling+format.+Para+mag-register%2C+i-text+ang+TINGOG+REG+%3CLOCATION%3E%2F%3Cbarangay%3E%2F%3Cname%3E%2F%3Cage%3E%2F%3Cgender%3E.+Ex.+TINGOG+REG+ADS%2Fmapaga%2Fjennycruz%2F30%2FF+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Maling format. Para mag-register, i-text ang TINGOG REG <LOCATION>/<barangay>/<name>/<age>/<gender>. Ex. TINGOG REG ADS/mapaga/jennycruz/30/F sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Maling+format.+Para+mag-register%2C+i-text+ang+TINGOG+REG+%3CLOCATION%3E%2F%3Cbarangay%3E%2F%3Cname%3E%2F%3Cage%3E%2F%3Cgender%3E.+Ex.+TINGOG+REG+ADS%2Fmapaga%2Fjennycruz%2F30%2FF+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Maling format. Para mag-register, i-text ang TINGOG REG <LOCATION>/<barangay>/<name>/<age>/<gender>. Ex. TINGOG REG ADS/mapaga/jennycruz/30/F sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0.001]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Invalid+location.Locations%3A%0D%0ATAB-Tabaco%2C%0D%0AADS-Agusan+del+Sur.Reply+TINGOG+REG+%3CLOCATION%3E%2F%3Cname%3E%2F%3Cbarangay%3E%2F%3Cage%3E%2F%3Cgender%3E+Ex.TINGOG+REG+ADS%2Fmscruz%2Fmapaga%2F30%2FF&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Invalid location.Locations:\r\nTAB-Tabaco,\r\nADS-Agusan del Sur.Reply TINGOG REG <LOCATION>/<name>/<barangay>/<age>/<gender> Ex.TINGOG REG ADS/mscruz/mapaga/30/F',
+			`dateadded` = NOW()
+		
+===[took:0.001]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Invalid+location.Locations%3A%0D%0ATAB-Tabaco%2C%0D%0AADS-Agusan+del+Sur.Reply+TINGOG+REG+%3CLOCATION%3E%2F%3Cname%3E%2F%3Cbarangay%3E%2F%3Cage%3E%2F%3Cgender%3E+Ex.TINGOG+REG+ADS%2Fmscruz%2Fmapaga%2F30%2FF&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Invalid location.Locations:\r\nTAB-Tabaco,\r\nADS-Agusan del Sur.Reply TINGOG REG <LOCATION>/<name>/<barangay>/<age>/<gender> Ex.TINGOG REG ADS/mscruz/mapaga/30/F',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+invalid+location.+Ito+ang+mga+valid+Tingog+Locations%3A%0D%0A%0D%0ATAB+-+Tabaco%2C%0D%0AADS+-+Agusan+del+Sur.%0D%0A%0D%0APara+magpadala+ng+report%2C+i-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E%2F%3Creport%3E.+Ex.+TINGOG+TAB+basud%2F+walang+tao+sa+opisina.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, invalid location. Ito ang mga valid Tingog Locations:\r\n\r\nTAB - Tabaco,\r\nADS - Agusan del Sur.\r\n\r\nPara magpadala ng report, i-text ang TINGOG <LOCATION> <barangay>/<report>. Ex. TINGOG TAB basud/ walang tao sa opisina. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+invalid+location.+Ito+ang+mga+valid+Tingog+Locations%3A%0D%0A%0D%0ATAB+-+Tabaco%2C%0D%0AADS+-+Agusan+del+Sur.%0D%0A%0D%0APara+magpadala+ng+report%2C+i-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E%2F%3Creport%3E.+Ex.+TINGOG+TAB+basud%2F+walang+tao+sa+opisina.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, invalid location. Ito ang mga valid Tingog Locations:\r\n\r\nTAB - Tabaco,\r\nADS - Agusan del Sur.\r\n\r\nPara magpadala ng report, i-text ang TINGOG <LOCATION> <barangay>/<report>. Ex. TINGOG TAB basud/ walang tao sa opisina. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+invalid+location.+Ito+ang+mga+valid+Tingog+Locations%3A%0D%0A%0D%0ATAB+-+Tabaco%2C%0D%0AADS+-+Agusan+del+Sur.%0D%0A%0D%0APara+magpadala+ng+report%2C+i-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E%2F%3Creport%3E.+Ex.+TINGOG+TAB+basud%2F+walang+tao+sa+opisina.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, invalid location. Ito ang mga valid Tingog Locations:\r\n\r\nTAB - Tabaco,\r\nADS - Agusan del Sur.\r\n\r\nPara magpadala ng report, i-text ang TINGOG <LOCATION> <barangay>/<report>. Ex. TINGOG TAB basud/ walang tao sa opisina. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Para+mag-reply+sa+Tingog%2C+reply+TINGOG+REP+%3Creport%23%3E%2F%3Cmessage%3E.Ex.+TINGOG+REP+12345%2Fsalamat%21+P1%2Ftxt+%0D%0A%0D%0APara+sa+updates+ng+iyong+report+i-check+sa+www.tingog.ph&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Para mag-reply sa Tingog, reply TINGOG REP <report#>/<message>.Ex. TINGOG REP 12345/salamat! P1/txt \r\n\r\nPara sa updates ng iyong report i-check sa www.tingog.ph',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Sorry%2C+mali+ang+format+na+iyong+ginamit.+%0D%0A%0D%0APara+mag-reply%2C+i-text+ang+TINGOG+REP%3Creport%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+REP+12345%2F+salamat%21+Para+sa+listahan+ng+iba+pang+keywords%2C+text+TINGOG+HELP.+P1%2Ftxt.%0D%0A&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Sorry, mali ang format na iyong ginamit. \r\n\r\nPara mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ salamat! Para sa listahan ng iba pang keywords, text TINGOG HELP. P1/txt.\r\n',
+			`dateadded` = NOW()
+		
+===[took:0.001]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+REP%3Creport%23%3E%2F%3Cmessage%3E.Ex.+TINGOG+REP+12345%2F+salamat%21%0D%0APara+sa+listahan+ng+keywords%2Creply+TINGOG+HELP.P1%2Ftxt.&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG REP<report#>/<message>.Ex. TINGOG REP 12345/ salamat!\r\nPara sa listahan ng keywords,reply TINGOG HELP.P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '14'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '14'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makatatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+reply+TINGOG+HELP.P1%2Ftxt&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makatatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. \r\n\r\nPara sa listahan ng keywords, reply TINGOG HELP.P1/txt',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('14', 'hello', 'SMS Reply', '', '09285073268', 0, NOW())
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Para+mag-reply+sa+Tingog%2C+reply+TINGOG+REP+%3Creport%23%3E%2F%3Cmessage%3E.Ex.+TINGOG+REP+12345%2Fsalamat%21+P1%2Ftxt+%0D%0A%0D%0APara+sa+updates+ng+iyong+report+i-check+sa+www.tingog.ph&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Para mag-reply sa Tingog, reply TINGOG REP <report#>/<message>.Ex. TINGOG REP 12345/salamat! P1/txt \r\n\r\nPara sa updates ng iyong report i-check sa www.tingog.ph',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Invalid+location.Locations%3A%0D%0ATAB-Tabaco%2C%0D%0AADS-Agusan+del+Sur.Reply+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport%3E+Ex.TINGOG+ADS+Basud+walang+tubig.+Send+to+2015.P1%2Ftxt&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Invalid location.Locations:\r\nTAB-Tabaco,\r\nADS-Agusan del Sur.Reply TINGOG <LOCATION> <barangay> <report> Ex.TINGOG ADS Basud walang tubig. Send to 2015.P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Invalid+location.Locations%3A%0D%0ATAB-Tabaco%2C%0D%0AADS-Agusan+del+Sur.Reply+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport%3E+Ex.TINGOG+ADS+Basud+walang+tubig.+Send+to+2015.P1%2Ftxt&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Invalid location.Locations:\r\nTAB-Tabaco,\r\nADS-Agusan del Sur.Reply TINGOG <LOCATION> <barangay> <report> Ex.TINGOG ADS Basud walang tubig. Send to 2015.P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'BAYAN', '09285073268', '-', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Salamat+sa+pag-report+sa+TINGOG+2015.+Ito+ay+bibigyan+pansin+ng+kinauukulan+para+sa+tamang+aksyon.+Tandaan+ang+iyong+report+number+ads15&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ads15',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Tingog+Locations%3ATAB-Tabaco%2C+ADS-Agusan+del+Sur.Para+magpadala+ng+report%2C+reply+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport%3E+Ex.TINGOG+TAB+basud+galing+niyo%21&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Tingog Locations:TAB-Tabaco, ADS-Agusan del Sur.Para magpadala ng report, reply TINGOG <LOCATION> <barangay> <report> Ex.TINGOG TAB basud galing niyo!',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Para+rumesponde+sa+ulat+na+natanggap%2C+reply+TINGOG+ACTION+%3Creport+%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+ACTION+1234%2FIto+po+ay+natugunan+na.&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Para rumesponde sa ulat na natanggap, reply TINGOG ACTION <report #>/<message>. Ex. TINGOG ACTION 1234/Ito po ay natugunan na.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '14'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '14'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Salamat+sa+iyong+pagresponde.+Ipaaalam+namin+agad+ang+resulta+ng+estado+ng+report+na+naiulat.Para+sa+listahan+ng+keywords%2Ci-text+ang+TINGOG+HELP+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Salamat sa iyong pagresponde. Ipaaalam namin agad ang resulta ng estado ng report na naiulat.Para sa listahan ng keywords,i-text ang TINGOG HELP sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('14', 'testing lang', 'SMS Action', '', '09285073268', 0, NOW())
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Para+rumesponde+sa+ulat+na+natanggap%2C+reply+TINGOG+ACTION+%3Creport+%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+ACTION+1234%2FIto+po+ay+natugunan+na.&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Para rumesponde sa ulat na natanggap, reply TINGOG ACTION <report #>/<message>. Ex. TINGOG ACTION 1234/Ito po ay natugunan na.',
+			`dateadded` = NOW()
+		
+===[took:0.001]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.+I-text+ang+TINGOG+ACTION+%3Creport%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+ACTION+1234%2Fsalamat%21+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Mali ang format na iyong ginamit. I-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 1234/salamat! P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+mali+ang+report+number.+Para+magbigay+ulat+tungkol+sa+isang+report%2C+i-text+ang+TINGOG+ACTION+%3Creport%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+REP+12345%2F+salamat%21+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, mali ang report number. Para magbigay ulat tungkol sa isang report, i-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG REP 12345/ salamat! P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Para+rumesponde+sa+ulat+na+natanggap%2C+reply+TINGOG+ACTION+%3Creport+%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+ACTION+1234%2FIto+po+ay+natugunan+na.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Para rumesponde sa ulat na natanggap, reply TINGOG ACTION <report #>/<message>. Ex. TINGOG ACTION 1234/Ito po ay natugunan na.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+mali+ang+report+number.+Para+magbigay+ulat+tungkol+sa+isang+report%2C+i-text+ang+TINGOG+ACTION+%3Creport%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+REP+12345%2F+salamat%21+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, mali ang report number. Para magbigay ulat tungkol sa isang report, i-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG REP 12345/ salamat! P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.+I-text+ang+TINGOG+ACTION+%3Creport%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+ACTION+1234%2Fsalamat%21+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Mali ang format na iyong ginamit. I-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 1234/salamat! P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+mali+ang+report+number.+Para+magbigay+ulat+tungkol+sa+isang+report%2C+i-text+ang+TINGOG+ACTION+%3Creport%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+REP+12345%2F+salamat%21+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, mali ang report number. Para magbigay ulat tungkol sa isang report, i-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG REP 12345/ salamat! P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport+%3E.+Ex.+TINGOG+TAB+basud%2F+maganda+ang+inyong+serbisyo.+Ipadala+sa+2015&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639228772727&SMS_Message_String=Invalid+location.Locations%3A%0D%0ATAB-Tabaco%2C%0D%0AADS-Agusan+del+Sur.Reply+TINGOG+REG+%3CLOCATION%3E%2F%3Cname%3E%2F%3Cbarangay%3E%2F%3Cage%3E%2F%3Cgender%3E+Ex.TINGOG+REG+ADS%2Fmscruz%2Fmapaga%2F30%2FF&CSP_Txid=1',
+			`number` = '639228772727',
+			`message` = 'Invalid location.Locations:\r\nTAB-Tabaco,\r\nADS-Agusan del Sur.Reply TINGOG REG <LOCATION>/<name>/<barangay>/<age>/<gender> Ex.TINGOG REG ADS/mscruz/mapaga/30/F',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=&SMS_Message_String=Sorry%2C+invalid+location.+Ito+ang+mga+valid+Tingog+Locations%3A%0D%0A%0D%0ATAB+-+Tabaco%2C%0D%0AADS+-+Agusan+del+Sur.%0D%0A%0D%0APara+magpadala+ng+report%2C+i-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E%2F%3Creport%3E.+Ex.+TINGOG+TAB+basud%2F+walang+tao+sa+opisina.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '',
+			`message` = 'Sorry, invalid location. Ito ang mga valid Tingog Locations:\r\n\r\nTAB - Tabaco,\r\nADS - Agusan del Sur.\r\n\r\nPara magpadala ng report, i-text ang TINGOG <LOCATION> <barangay>/<report>. Ex. TINGOG TAB basud/ walang tao sa opisina. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0.033]
+
+SELECT *
+FROM (`sms_user`)
+WHERE `mobile` =  '09285073268'
+INSERT INTO `sms_user` (`mobile`, `name`, `barangay`, `age`, `gender`) VALUES ('09285073268', 'AILEEN', 'BAYAN', '12', 'F')
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Maraming+salamat+sa+pag-register+sa+Tingog.+Ang+pagbibigay+mo+ng+iyong+impormasyon+ay+makakatulong+upang+mas+mapabuti+ang+aming+serbisyo.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Maraming salamat sa pag-register sa Tingog. Ang pagbibigay mo ng iyong impormasyon ay makakatulong upang mas mapabuti ang aming serbisyo. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+SELECT *
+FROM (`sms_user`)
+WHERE `mobile` =  '09285073268'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Hi%21+Ikaw+ay+naka-register+na+sa+TINGOG+2015.+Para+makapagpadala+ng+report%2C+i-txt+ang+TINGOG+%3CLOCATION%3E%2F%3Cbarangay%3E%2F%3Creport%3E+Ex.+TINGOG+ADS%2Fmscruz%2Fwalang+tao+sa+health+center+at+i-send+sa+2015.+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Hi! Ikaw ay naka-register na sa TINGOG 2015. Para makapagpadala ng report, i-txt ang TINGOG <LOCATION>/<barangay>/<report> Ex. TINGOG ADS/mscruz/walang tao sa health center at i-send sa 2015. P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Sorry%2C+mali+ang+report+number.+I-check+ang+report+number+na+ibinigay+sa+iyo.++Para+mag-reply%2C+i-text+ang+TINGOG+REP+%3Creport%23%3E%3Creport+code%3E%2F%3Cmessage%3E.+Ex.+TINGOG+REP+12345%2F+salamat%21+P1%2Ftxt.%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+i-text+ang+TINGOG+sa+2015+for+free.&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Sorry, mali ang report number. I-check ang report number na ibinigay sa iyo.  Para mag-reply, i-text ang TINGOG REP <report#><report code>/<message>. Ex. TINGOG REP 12345/ salamat! P1/txt.\r\n\r\nPara sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Sorry%2C+mali+ang+format+na+iyong+ginamit.+%0D%0A%0D%0APara+magpadala+ng+report%2C+i-text+ang+TINGOG+%3CLOCATION%3E%2F%3Cbarangay%3E%2F%3Creport+%3E.+Ex.+TINGOG+TAB+basud%2F+maganda+ang+inyong+serbisyo.+Ipadala+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Sorry, mali ang format na iyong ginamit. \r\n\r\nPara magpadala ng report, i-text ang TINGOG <LOCATION>/<barangay>/<report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=09285073268&SMS_Message_String=Sorry%2C+mali+ang+format+na+iyong+ginamit.+%0D%0A%0D%0APara+magpadala+ng+report%2C+i-text+ang+TINGOG+%3CLOCATION%3E%2F%3Cbarangay%3E%2F%3Creport+%3E.+Ex.+TINGOG+TAB+basud%2F+maganda+ang+inyong+serbisyo.+Ipadala+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '09285073268',
+			`message` = 'Sorry, mali ang format na iyong ginamit. \r\n\r\nPara magpadala ng report, i-text ang TINGOG <LOCATION>/<barangay>/<report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0.002]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639285073268', 'Tingog ads bayan testing', '148', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'bayan', '639285073268', '-', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639285073268&SMS_Message_String=Salamat+sa+pag-report+sa+TINGOG+2015.+Ito+ay+bibigyan+pansin+ng+kinauukulan+para+sa+tamang+aksyon.+Tandaan+ang+iyong+report+number+ads16&CSP_Txid=1',
+			`number` = '639285073268',
+			`message` = 'Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ads16',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639285073268', 'Tingog reg ads/lol', '150', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639285073268&SMS_Message_String=Maling+format.+Para+mag-register%2C+i-text+ang+TINGOG+REG+%3CLOCATION%3E%2F%3Cbarangay%3E%2F%3Cname%3E%2F%3Cage%3E%2F%3Cgender%3E.+Ex.+TINGOG+REG+ADS%2Fmapaga%2Fjennycruz%2F30%2FF+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '639285073268',
+			`message` = 'Maling format. Para mag-register, i-text ang TINGOG REG <LOCATION>/<barangay>/<name>/<age>/<gender>. Ex. TINGOG REG ADS/mapaga/jennycruz/30/F sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639285073268', 'Tingog reg ads/bayan/aileen/12/f', '152', NOW())
+SELECT *
+FROM (`sms_user`)
+WHERE `mobile` =  '639285073268'
+INSERT INTO `sms_user` (`mobile`, `name`, `barangay`, `age`, `gender`) VALUES ('639285073268', 'aileen', 'bayan', '12', 'f')
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639285073268&SMS_Message_String=Salamat+sa+pag-register+sa+Tingog.+Ang+pagbibigay+mo+ng+iyong+impormasyon+ay+makatutulong+upang+mas+mapabuti+ang+aming+serbisyo.&CSP_Txid=1',
+			`number` = '639285073268',
+			`message` = 'Salamat sa pag-register sa Tingog. Ang pagbibigay mo ng iyong impormasyon ay makatutulong upang mas mapabuti ang aming serbisyo.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639285073268', 'Tingog reg ads/bayan/aileen/12/f', '153', NOW())
+SELECT *
+FROM (`sms_user`)
+WHERE `mobile` =  '639285073268'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639285073268&SMS_Message_String=Ikaw+ay+naka-register+na.+Para+magpadala+ng+report%2C+reply+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport%3E+Ex.+TINGOG+TAB+Cormidal+Walang+tao+sa+health+center.&CSP_Txid=1',
+			`number` = '639285073268',
+			`message` = 'Ikaw ay naka-register na. Para magpadala ng report, reply TINGOG <LOCATION> <barangay> <report> Ex. TINGOG TAB Cormidal Walang tao sa health center.',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639285073268', 'Tingog rep ads16/hello?', '155', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '16'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '16'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639285073268&SMS_Message_String=Salamat+sa+iyong+mensahe.+Ikaw+ay+makatatanggap+ng+sagot+mula+sa+TINGOG+2015+maya-maya+lamang.+%0D%0A%0D%0APara+sa+listahan+ng+keywords%2C+reply+TINGOG+HELP.P1%2Ftxt&CSP_Txid=1',
+			`number` = '639285073268',
+			`message` = 'Salamat sa iyong mensahe. Ikaw ay makatatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. \r\n\r\nPara sa listahan ng keywords, reply TINGOG HELP.P1/txt',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('16', 'hello?', 'SMS Reply', '', '639285073268', 0, NOW())
+===[took:0.001]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639285073268', 'Tingog rep ads16', '157', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639285073268&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+REP%3Creport%23%3E%2F%3Cmessage%3E.Ex.+TINGOG+REP+12345%2F+salamat%21%0D%0APara+sa+listahan+ng+keywords%2Creply+TINGOG+HELP.P1%2Ftxt.&CSP_Txid=1',
+			`number` = '639285073268',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG REP<report#>/<message>.Ex. TINGOG REP 12345/ salamat!\r\nPara sa listahan ng keywords,reply TINGOG HELP.P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0.044]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639285073268', 'Tingog ads', '159', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639285073268&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport+%3E.+Ex.+TINGOG+TAB+basud%2F+maganda+ang+inyong+serbisyo.+Ipadala+sa+2015&CSP_Txid=1',
+			`number` = '639285073268',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639285073268', 'Tingog action ads16/testing lang', '162', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '16'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '16'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639285073268&SMS_Message_String=Salamat+sa+iyong+pagresponde.+Ipaaalam+namin+agad+ang+resulta+ng+estado+ng+report+na+naiulat.Para+sa+listahan+ng+keywords%2Ci-text+ang+TINGOG+HELP+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '639285073268',
+			`message` = 'Salamat sa iyong pagresponde. Ipaaalam namin agad ang resulta ng estado ng report na naiulat.Para sa listahan ng keywords,i-text ang TINGOG HELP sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('16', 'testing lang', 'SMS Action', '', '639285073268', 0, NOW())
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639285073268', 'Tingog action ads16', '165', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639285073268&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.+I-text+ang+TINGOG+ACTION+%3Creport%23%3E%2F%3Cmessage%3E.+Ex.+TINGOG+ACTION+1234%2Fsalamat%21+P1%2Ftxt.&CSP_Txid=1',
+			`number` = '639285073268',
+			`message` = 'Mali ang format na iyong ginamit. I-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 1234/salamat! P1/txt.',
+			`dateadded` = NOW()
+		
+===[took:0.001]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639322520052', 'TINGOG ADS LALA', '178', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'LALA', '639322520052', '-', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=1&SUB_Mobtel=639322520052&SMS_Message_String=Salamat+sa+pag-report+sa+TINGOG+2015.+Ito+ay+bibigyan+pansin+ng+kinauukulan+para+sa+tamang+aksyon.+Tandaan+ang+iyong+report+number+ads17&CSP_Txid=1',
+			`number` = '639322520052',
+			`message` = 'Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ads17',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639322520052', 'TINGOG ADS', '180', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=1&SUB_Mobtel=639322520052&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport+%3E.+Ex.+TINGOG+TAB+basud%2F+maganda+ang+inyong+serbisyo.+Ipadala+sa+2015&CSP_Txid=1',
+			`number` = '639322520052',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015',
+			`dateadded` = NOW()
+		
+===[took:0.003]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639228772727', 'tingog action ads014/testing', '190', NOW())
+SELECT *
+FROM (`tickets`)
+WHERE `id` =  '014'
+UPDATE `tickets_msg` SET `read` = 1 WHERE `tid` =  '014'
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=sun&tariff=1&SUB_Mobtel=639228772727&SMS_Message_String=Salamat+sa+iyong+pagresponde.+Ipaaalam+namin+agad+ang+resulta+ng+estado+ng+report+na+naiulat.Para+sa+listahan+ng+keywords%2Ci-text+ang+TINGOG+HELP+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '639228772727',
+			`message` = 'Salamat sa iyong pagresponde. Ipaaalam namin agad ang resulta ng estado ng report na naiulat.Para sa listahan ng keywords,i-text ang TINGOG HELP sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+INSERT INTO `tickets_msg` (`tid`, `msg`, `type`, `name`, `smsno`, `user`, `date`) VALUES ('014', 'testing', 'SMS Action', '', '639228772727', 0, NOW())
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639077771664', '<tingog ads basud agusan walang tubig>', '217', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'basud', '639077771664', '-', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639077771664&SMS_Message_String=Salamat+sa+pag-report+sa+TINGOG+2015.+Ito+ay+bibigyan+pansin+ng+kinauukulan+para+sa+tamang+aksyon.+Tandaan+ang+iyong+report+number+ads18&CSP_Txid=1',
+			`number` = '639077771664',
+			`message` = 'Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ads18',
+			`dateadded` = NOW()
+		
+===[took:0.01]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639077771664', '<TINGOG ADS BASUD WALANG TUBIG>', '219', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'BASUD', '639077771664', '-', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639077771664&SMS_Message_String=Salamat+sa+pag-report+sa+TINGOG+2015.+Ito+ay+bibigyan+pansin+ng+kinauukulan+para+sa+tamang+aksyon.+Tandaan+ang+iyong+report+number+ads19&CSP_Txid=1',
+			`number` = '639077771664',
+			`message` = 'Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ads19',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639209250086', 'tingog ads san luis test message', '239', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'san', '639209250086', '-', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639209250086&SMS_Message_String=Salamat+sa+pag-report+sa+TINGOG+2015.+Ito+ay+bibigyan+pansin+ng+kinauukulan+para+sa+tamang+aksyon.+Tandaan+ang+iyong+report+number+ads20&CSP_Txid=1',
+			`number` = '639209250086',
+			`message` = 'Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ads20',
+			`dateadded` = NOW()
+		
+===[took:0.021]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639301000058', 'TINGOG ADS', '240', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639301000058&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport+%3E.+Ex.+TINGOG+TAB+basud%2F+maganda+ang+inyong+serbisyo.+Ipadala+sa+2015&CSP_Txid=1',
+			`number` = '639301000058',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015',
+			`dateadded` = NOW()
+		
+===[took:0.002]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639301000058', 'TINGOG ADS', '250', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639301000058&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport+%3E.+Ex.+TINGOG+TAB+basud%2F+maganda+ang+inyong+serbisyo.+Ipadala+sa+2015&CSP_Txid=1',
+			`number` = '639301000058',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015',
+			`dateadded` = NOW()
+		
+===[took:0.029]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639301000058', 'TINGOG ADS', '273', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639301000058&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport+%3E.+Ex.+TINGOG+TAB+basud%2F+maganda+ang+inyong+serbisyo.+Ipadala+sa+2015&CSP_Txid=1',
+			`number` = '639301000058',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015',
+			`dateadded` = NOW()
+		
+===[took:0.217]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639209250086', 'tingog ads san luis test message', '275', NOW())
+INSERT INTO `tickets` (`name`, `description`, `number`, `location`, `source`, `date`) VALUES ('', 'san', '639209250086', '-', 'SMS', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639209250086&SMS_Message_String=Salamat+sa+pag-report+sa+TINGOG+2015.+Ito+ay+bibigyan+pansin+ng+kinauukulan+para+sa+tamang+aksyon.+Tandaan+ang+iyong+report+number+ads21&CSP_Txid=1',
+			`number` = '639209250086',
+			`message` = 'Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ads21',
+			`dateadded` = NOW()
+		
+===[took:0.02]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639301000058', 'TINGOG REG ADS/SAN JOSEFA/KEILA LUU', '277', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639301000058&SMS_Message_String=Maling+format.+Para+mag-register%2C+i-text+ang+TINGOG+REG+%3CLOCATION%3E%2F%3Cbarangay%3E%2F%3Cname%3E%2F%3Cage%3E%2F%3Cgender%3E.+Ex.+TINGOG+REG+ADS%2Fmapaga%2Fjennycruz%2F30%2FF+sa+2015.+P1%2Ftxt&CSP_Txid=1',
+			`number` = '639301000058',
+			`message` = 'Maling format. Para mag-register, i-text ang TINGOG REG <LOCATION>/<barangay>/<name>/<age>/<gender>. Ex. TINGOG REG ADS/mapaga/jennycruz/30/F sa 2015. P1/txt',
+			`dateadded` = NOW()
+		
+===[took:0]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639301000058', 'TINGOG ADS', '281', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639301000058&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport+%3E.+Ex.+TINGOG+TAB+basud%2F+maganda+ang+inyong+serbisyo.+Ipadala+sa+2015&CSP_Txid=1',
+			`number` = '639301000058',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015',
+			`dateadded` = NOW()
+		
+===[took:0.032]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('639285073269', 'tingog ads', '288', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=smart&tariff=1&SUB_Mobtel=639285073269&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport+%3E.+Ex.+TINGOG+TAB+basud%2F+maganda+ang+inyong+serbisyo.+Ipadala+sa+2015&CSP_Txid=1',
+			`number` = '639285073269',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015',
+			`dateadded` = NOW()
+		
+===[took:0.016]
+
+INSERT INTO `sms_router` (`SUB_Mobtel`, `SMS_Message_String` , `CSP_Txid`, `date`) VALUES ('09164054456', 'Tingog ads', '1', NOW())
+insert into `sms_replies` set
+			`url` = 'http://74.86.63.102/~txtcircu/sms_out.php?telco=&tariff=1&SUB_Mobtel=09164054456&SMS_Message_String=Mali+ang+format+na+iyong+ginamit.I-text+ang+TINGOG+%3CLOCATION%3E+%3Cbarangay%3E+%3Creport+%3E.+Ex.+TINGOG+TAB+basud%2F+maganda+ang+inyong+serbisyo.+Ipadala+sa+2015&CSP_Txid=1',
+			`number` = '09164054456',
+			`message` = 'Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015',
+			`dateadded` = NOW()
+		
+===[took:0]
+

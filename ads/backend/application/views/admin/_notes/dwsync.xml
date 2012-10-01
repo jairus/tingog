@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="accesslevel.php" local="129799260619526958" remote="129799260620000000" testing="0" />
+<file name="accesslevel_add.php" local="129799260620887035" remote="129799260640000000" testing="0" />
+<file name="accesslevel_edit.php" local="129799260611606505" remote="129799260620000000" testing="0" />
+<file name="accesslevel_list.php" local="129799260610986469" remote="129799260620000000" testing="0" />
+<file name="adminAddUserLevel.php" local="129799260602025957" remote="129799260620000000" testing="0" />
+<file name="barangay_list.php" local="129799260600945895" remote="129799260620000000" testing="0" />
+<file name="categories.php" local="129799260594275513" remote="129799260600000000" testing="0" />
+<file name="category_add.php" local="129799260591195337" remote="129799260600000000" testing="0" />
+<file name="category_edit.php" local="129799260585224996" remote="129799260600000000" testing="0" />
+<file name="departments.php" local="129804068185016531" remote="129804068200000000" testing="0" />
+<file name="department_add.php" local="129804067946742903" remote="129804067960000000" testing="0" />
+<file name="department_edit.php" local="129804068024077326" remote="129804068040000000" testing="0" />
+<file name="department_list.php" local="129799260577154534" remote="129799260580000000" testing="0" />
+<file name="directory.php" local="129804068290872586" remote="129804068300000000" testing="0" />
+<file name="issues.php" local="129799260536752223" remote="129799260540000000" testing="0" />
+<file name="issue_add.php" local="129799260552393118" remote="129799260560000000" testing="0" />
+<file name="issue_edit.php" local="129799260548322885" remote="129799260560000000" testing="0" />
+<file name="masterlist.php" local="129799936175706306" remote="129799936180000000" testing="0" />
+<file name="option_list.php" local="129799260526401631" remote="129799260540000000" testing="0" />
+<file name="personnel.php" local="129799260526111615" remote="129799260540000000" testing="0" />
+<file name="personnel_add.php" local="129804068704606250" remote="129804068720000000" testing="0" />
+<file name="personnel_edit.php" local="129804068769269949" remote="129804068780000000" testing="0" />
+<file name="user_accounts.php" local="129799260498180017" remote="129799260500000000" testing="0" />
+<file name="user_add.php" local="129804068912028114" remote="129804068920000000" testing="0" />
+<file name="user_edit.php" local="129804068981822106" remote="129804069000000000" testing="0" />
+<file name="user_list.php" local="129799260475988748" remote="129799260480000000" testing="0" />
+</dwsync>

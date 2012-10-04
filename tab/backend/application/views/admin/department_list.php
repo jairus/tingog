@@ -50,7 +50,7 @@ function departmentDelete(id,form){
     <td class="text_2" width="100"><div style="padding:10px;"><? echo $r['user_login']; ?></div></td>
     <td class="text_2" width="400"><div style="padding:10px;"><? echo $r['user_level']; ?></div></td>
     <td class="text_2" align="center"><div style="padding:10px;">
-      <input type="button" id="btn_spam_id" name="btn_spam" class="btn_1" value="edit" onclick="window.location='backend/admin/adminEditAccount/<? echo $r['id']; ?>'" />
+      <input type="button" id="btn_spam_id" name="btn_spam" class="btn_1" value="edit" onclick="window.location='/backend/admin/adminEditAccount/<? echo $r['id']; ?>'" />
       &nbsp;
       <input type="button" id="btn_tag_id" name="btn_tag" class="btn_1" value="delete" />
     </div></td>

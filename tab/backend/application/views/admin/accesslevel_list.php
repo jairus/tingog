@@ -51,7 +51,7 @@ function addDelete(id){
 				$oc = "alert('There are ".$v['users']." Users using this Access Level and you cannot delete this.');";
 			}
 		}else{
-			#$oc = "window.location='/admin/access/delete/".$v['access']['id']."'";
+			#$oc = "window.location='/backend/admin/access/delete/".$v['access']['id']."'";
 			$oc = "addDelete(".$v['access']['id'].")";
 		}
   ?>
@@ -66,7 +66,7 @@ function addDelete(id){
 		}
 	?></div></td>
     <td align="center" valign="top" class="text_1" style="border-bottom:1px solid #CCC; padding-top:10px;">
-      <input type="button" id="btn_spam_id" name="btn_spam" class="btn_1" value="edit" onclick="window.location='/admin/adminAccessLevelEdit/<? echo($v['access']['id']); ?>'" />
+      <input type="button" id="btn_spam_id" name="btn_spam" class="btn_1" value="edit" onclick="window.location='/backend/admin/adminAccessLevelEdit/<? echo($v['access']['id']); ?>'" />
 &nbsp;
 <input type="button" id="btn_tag_id" name="btn_tag" class="btn_1" value="delete" onclick="<? echo $oc; ?>" /></td>
   </tr>

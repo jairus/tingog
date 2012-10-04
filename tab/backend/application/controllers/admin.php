@@ -576,7 +576,7 @@ class Admin extends CI_Controller {
 				#$r[$i]['id'] = $v['id'];
 				#$r[$i]['name'] = $v['department'];
 				$v['name'] = $v['category'];
-				$v['edit_link'] = "/admin/categoryEdit/".$v['id'];
+				$v['edit_link'] = "/backend/admin/categoryEdit/".$v['id'];
 				#$v['delete_link'] = "/admin/categoryDelete/".$v['id'];
 				$v['tickets'] = $this->admin->checkCategoryTicketNo($v['id']);
 				if($v['tickets']){

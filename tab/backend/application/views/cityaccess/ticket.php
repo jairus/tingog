@@ -24,9 +24,9 @@ function submitMessage(id){
 			data: jQuery("#ticketform").serialize(),
 			success: function(html){
 				jQuery("#ninjadiv").html(html);
+				jQuery("#btn_message_submit_id").show();
 			},
 		});
-		jQuery("#btn_message_submit_id").show();
 	}
 	else if(mtype=='park'){
 		if(!confirm("Are you sure?")){
@@ -50,9 +50,10 @@ function submitMessage(id){
 			data: jQuery("#ticketform").serialize(),
 			success: function(html){
 				jQuery("#ninjadiv").html(html);
+				jQuery("#btn_message_submit_id").show();
 			},
 		});
-		jQuery("#btn_message_submit_id").show();
+		
 	}
 	
 	else if(mtype=='dispatch'){

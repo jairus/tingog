@@ -92,10 +92,10 @@ function submitMessage(id){
 			data: jQuery("#ticketform").serialize(),
 			success: function(html){
 				jQuery("#ninjadiv").html(html);
-				jQuery("#btn_message_submit_id").hide();
+				jQuery("#btn_message_submit_id").show();
 			},
 		});
-		jQuery("#btn_message_submit_id").show();
+		
 	}
 	else if(mtype=='internalwsms'){
 		jQuery.ajax({
@@ -104,10 +104,9 @@ function submitMessage(id){
 			data: jQuery("#ticketform").serialize()+"&sms[]=<?php echo $personnelcomplete1['mobile']; ?>&sms[]=<?php echo $personnelcomplete2['mobile']; ?>&ticket_id=<?php echo $ticket['id']; ?>",
 			success: function(html){
 				jQuery("#ninjadiv").html(html);
-				jQuery("#btn_message_submit_id").hide();
+				jQuery("#btn_message_submit_id").show();
 			},
 		});
-		jQuery("#btn_message_submit_id").show();
 	}
 	else if(mtype=='reply'){
 		jQuery.ajax({
@@ -116,10 +115,9 @@ function submitMessage(id){
 			data: jQuery("#ticketform").serialize(),
 			success: function(html){
 				jQuery("#ninjadiv").html(html);
-				jQuery("#btn_message_submit_id").hide();
+				jQuery("#btn_message_submit_id").show();
 			},
 		});
-		jQuery("#btn_message_submit_id").show();
 	}
 	window.parent.department_tickets();
 }

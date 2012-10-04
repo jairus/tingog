@@ -52,7 +52,7 @@ function brgyDelete(id){
     <td valign="top" class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><? echo $v['long']; ?></div></td>
     <td valign="top" class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><? echo $v['lat']; ?></div></td>
     <td align="center" valign="top" class="text_1" style="border-bottom:1px solid #CCC; padding-top:10px;">
-      <input type="button" id="btn_spam_id" name="btn_spam" class="btn_1" value="edit" onclick="window.location='/admin/barangayEdit/<? echo($v['id']); ?>'" />
+      <input type="button" id="btn_spam_id" name="btn_spam" class="btn_1" value="edit" onclick="window.location='/backend/admin/barangayEdit/<? echo($v['id']); ?>'" />
 &nbsp;
 <input type="button" id="btn_tag_id" name="btn_tag" class="btn_1" value="delete" onclick="brgyDelete(<? echo $v['id']; ?>);" /></td>
   </tr>

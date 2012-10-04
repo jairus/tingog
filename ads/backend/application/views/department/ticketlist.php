@@ -54,7 +54,7 @@ function tabToggle(n){
         	<input type="button" id="btn_new_id" name="btn_new" class="btn_1_active" value="New" style="width:100px;" onclick="tabToggle(1);" /> &nbsp; 
             <input type="button" id="btn_assigned_id" name="btn_assigned" class="btn_1" value="Assigned" style="width:100px;" onclick="tabToggle(2);" /> &nbsp; 
             <input type="button" id="btn_responded_id" name="btn_responded" class="btn_1" value="Resolved" style="width:100px;" onclick="tabToggle(3);" /> &nbsp; 
-            <input type="button" id="btn_parked_id" name="btn_parked" class="btn_1" value="Parked" style="width:100px;" onclick="tabToggle(4);" />
+            <input type="button" id="btn_parked_id" name="btn_parked" class="btn_1" value="Others" style="width:100px;" onclick="tabToggle(4);" />
         </div>
     </td>
   </tr>
@@ -103,7 +103,7 @@ function tabToggle(n){
     <td class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><? echo $r['department']; ?></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode($r['description'])), 20); ?><br>
     <a href="#" onclick="openThreadDialog('<?php echo $r['id']; ?>');" class="link_3">Assign Report</a></div></td>
-    <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><!--<?php echo $r['name']; ?>--->&nbsp;</div></td>
+    <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><!--<?php echo $r['name']; ?>-->&nbsp;</div></td>
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><!--<?php if($r['number']) echo $r['number']; else echo $r['email']; ?>-->&nbsp;</div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo $r['barangay']; ?></div></td>
   </tr>

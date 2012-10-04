@@ -75,7 +75,7 @@ function openThread() {window.open("thread.php",'thread','width=643px, height=72
     	<div id="menu">
             <ul class="menu">
 			  <li><a href="/backend/report"><span>Full Report</span></a></li>
-               <?
+<?php
 					if(isset($_SESSION['access_levels']['cityaccess'])){
 						#$city = $_SESSION['access_levels']['cityaccess'];
 						#if(validate_nav($city,'cityaccess')) echo '<li><a href="'.base_url().'cityaccess"><span>City Access</span></a></li>';
@@ -118,9 +118,9 @@ function openThread() {window.open("thread.php",'thread','width=643px, height=72
     </div>
     <div id="site_content_2" class="text_3"><?php echo $page_title; ?></div>
     <div id="site_content_1">
-		<?php
-			echo $content;
-		?>
+<?php
+	echo $content;
+?>
     </div>
     <div id="site_content_1" style="text-align:center;" class="text_1">
     	<p>&nbsp;</p>
@@ -128,6 +128,7 @@ function openThread() {window.open("thread.php",'thread','width=643px, height=72
     </div>
 </div>
 </body>
-</html><?
+</html>
+<?php
 #pre($_SESSION);
 ?>

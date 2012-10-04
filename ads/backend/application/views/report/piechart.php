@@ -13,21 +13,26 @@
             <tr>
             	<td class="text_2" colspan="2">&nbsp;</td>
             </tr>
-            <? foreach($status as $k=>$v){ ?>
+            <? foreach($status as $k=>$v){ 
+				$label = $k;
+				if($k=='parked'){
+					$label = "Others";
+				}
+				?>
                 <tr>
-                    <td class="text_5" style="text-indent:50px; padding-bottom:5px;"><b><? echo ucwords($k); ?></b></td>
+                    <td class="text_5" style="text-indent:50px; padding-bottom:5px;"><b><? echo ucwords($label); ?></b></td>
                     <td class="text_5"><b>:</b> <? echo $v; ?></td>
                 </tr>
                 <?
                 if($k=='closed'){
                     foreach($closed as $kk=>$vv){
                         if($kk){
-                ?>
-                <tr>
-                    <td class="text_4" style="text-indent:70px; padding-bottom:5px;"><b>- <? echo ucwords(array_tag($kk)); ?></b></td>
-                    <td class="text_4"><b>:</b> <? echo $vv; ?></td>
-                </tr>
-                <?
+							?>
+							<tr>
+								<td class="text_4" style="text-indent:70px; padding-bottom:5px;"><b>- <? echo ucwords(array_tag($kk)); ?></b></td>
+								<td class="text_4"><b>:</b> <? echo $vv; ?></td>
+							</tr>
+							<?
                         }
                     }
                 }
@@ -35,12 +40,12 @@
                 if($k=='parked'){
                     foreach($parked as $kk=>$vv){
                         if($kk){
-                ?>
-                <tr>
-                    <td class="text_4" style="text-indent:70px; padding-bottom:5px;"><b>- <? echo ucwords(array_parked($kk)); ?></b></td>
-                    <td class="text_4"><b>:</b> <? echo $vv; ?></td>
-                </tr>
-                <?
+							?>
+							<tr>
+								<td class="text_4" style="text-indent:70px; padding-bottom:5px;"><b>- <? echo ucwords(array_parked($kk)); ?></b></td>
+								<td class="text_4"><b>:</b> <? echo $vv; ?></td>
+							</tr>
+							<?
                         }
                     }
                 }
@@ -77,7 +82,7 @@
         ['Returned',<?php echo $status['returned']; ?>],
         ['Assigned',<?php echo $status['assigned']; ?>],
         ['Resolved',<?php echo $status['resolved']; ?>],
-        ['Parked',<?php echo $status['parked']; ?>],
+        ['Others',<?php echo $status['parked']; ?>],
         ['Closed',<?php echo $status['closed']; ?>]
     ]);
     

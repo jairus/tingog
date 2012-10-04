@@ -471,7 +471,6 @@ Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
 				*/
 				$municipality = explode(".", $_SERVER['HTTP_HOST']); //lower case
 				$municipality  = trim($municipality[0]);
-
 				$municipality = strtolower($municipality);
 				if(strpos($smstemp, "tingog ".$municipality)!==false){
 					$smsarr = explode("/", $sms);

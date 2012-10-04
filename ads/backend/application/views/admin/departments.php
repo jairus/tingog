@@ -4,7 +4,7 @@ function viewDepartments(){
 	jQuery("#viewDepartments").html("Loading...");
 	jQuery.ajax({
 		type: 'POST',
-		url: "/backend/admin/departmentsList",
+		url: "/backend/admin/departmentsList?sadas",
 		data: "",
 		success: function(message){
 			jQuery("#viewDepartments").html(message);

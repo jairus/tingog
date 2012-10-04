@@ -8,7 +8,10 @@ class Department_Model extends CI_Model{
 	function getTicketList($status=NULL){
 		if($status) $this->db->where('status',$status);
 		$this->db->order_by('id','desc');
-		if($_SESSION['access_level']!='admin'){
+		
+		//echo $_SESSION['access_level'];
+		
+		if($_SESSION['access_level']!='admin'&&$_SESSION['access_level']!='viewer'){
 			$this->db->where('department',$_SESSION['department']);
 		}
 		$result = $this->db->get('tickets');
@@ -69,6 +72,16 @@ class Department_Model extends CI_Model{
 		if($query->num_rows() > 0){
 			$r = $query->result_array();
 			return $r[0]['person'];
+		}else{
+			return "";
+		}
+	}
+	function getPersonnelByIdComplete($id){
+		$this->db->where("id",$id);
+		$query = $this->db->get('personnel');
+		if($query->num_rows() > 0){
+			$r = $query->result_array();
+			return $r[0];
 		}else{
 			return "";
 		}

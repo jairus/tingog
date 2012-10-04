@@ -65,12 +65,13 @@ function tabToggle(n){
         <input type="button" id="btn_dispatched_id" name="btn_dispatched" class="btn_1" value="Dispatched" style="width:100px;" onclick="tabToggle(2);" />
         &nbsp;
         <input type="button" id="btn_returned_id" name="btn_returned" class="btn_1" value="Returned" style="width:100px;" onclick="tabToggle(3);" />
-        &nbsp;
-        <input type="button" id="btn_parked_id" name="btn_parked" class="btn_1" value="Parked" style="width:100px;" onclick="tabToggle(4);" />
+        
         &nbsp;
 		<input type="button" id="btn_responded_id" name="btn_responded" class="btn_1" value="Resolved" style="width:100px;" onclick="tabToggle(6);" /> 
 		&nbsp; 
         <input type="button" id="btn_closed_id" name="btn_closed_id" class="btn_1" value="Closed" style="width:100px;" onclick="tabToggle(5);" />
+		&nbsp;
+        <input type="button" id="btn_parked_id" name="btn_parked" class="btn_1" value="Others" style="width:100px;" onclick="tabToggle(4);" />
       </div></td>
   </tr>
 </table>
@@ -120,7 +121,7 @@ function tabToggle(n){
     <td bgcolor="<?php echo $row_color; ?>" class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode($r['description'])), 20); ?><br>
     <a href="#" onclick="openThreadDialog('<?php echo $r['id']; ?>');">Open Report</a> </div></td>
     <td class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><!--<?php echo $r['name']; ?>-->&nbsp;</div></td>
-    <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><!--<?php if($r['number']) echo $r['number']; else echo $r['email']; ?>-->&nbsp;</div></td>
+    <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><!--<?php if($r['number']) echo $r['number']; else echo $r['email']; ?>--></div></td>
     <td class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><?php echo $r['location']; ?></div></td>
   </tr>
   <?php
@@ -274,7 +275,7 @@ function tabToggle(n){
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo date("M d, Y H:i",strtotime($r['date'])); ?></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo $r['department']; ?></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode($r['description'])), 20); ?><br>
-        <a href="#" onclick="openThreadDialog('<?php echo $r['id']; ?>');">Edit Report</a></div></td>
+        <a href="#" onclick="openThreadDialog('<?php echo $r['id']; ?>');">Open Report</a></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><!--<?php echo $r['name']; ?>-->&nbsp;</div></td>
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><!--<?php if($r['number']) echo $r['number']; else echo $r['email']; ?>-->&nbsp;</div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo $r['barangay']; ?></div></td>
@@ -350,7 +351,7 @@ function tabToggle(n){
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo date("M d, Y H:i",strtotime($r['date'])); ?></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo 'Not for Action'; ?></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode($r['description'])), 20); ?><br>
-        <a href="#" onclick="openThreadDialog('<?php echo $r['id']; ?>');">Edit Report</a></div></td>
+        <a href="#" onclick="openThreadDialog('<?php echo $r['id']; ?>');">Open Report</a></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><!--<?php echo $r['name']; ?>-->&nbsp;</div></td>
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><!--<?php if($r['number']) echo $r['number']; else echo $r['email']; ?>-->&nbsp;</div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo $r['barangay']; ?></div></td>

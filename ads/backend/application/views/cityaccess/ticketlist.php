@@ -59,9 +59,10 @@ function reOpenReport(id){
         &nbsp;
         <input type="button" id="btn_dispatched_id" name="btn_dispatched" class="btn_1" value="Dispatched" style="width:100px;" onclick="tabToggle(2);" />
         &nbsp;
-        <input type="button" id="btn_parked_id" name="btn_parked" class="btn_1" value="Parked" style="width:100px;" onclick="tabToggle(4);" />
-        &nbsp;
         <input type="button" id="btn_closed_id" name="btn_closed_id" class="btn_1" value="Closed" style="width:100px;" onclick="tabToggle(5);" />
+		&nbsp;
+        <input type="button" id="btn_parked_id" name="btn_parked" class="btn_1" value="Others" style="width:100px;" onclick="tabToggle(4);" />
+
       </div></td>
   </tr>
 </table>

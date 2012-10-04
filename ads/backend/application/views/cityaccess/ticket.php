@@ -28,7 +28,7 @@ function submitMessage(id){
 		});
 	}
 	else if(mtype=='park'){
-		if(!confirm("Are you sure you want to park this report?")){
+		if(!confirm("Are you sure?")){
 			jQuery("#btn_message_submit_id").hide();
 			return false;
 		}
@@ -304,7 +304,7 @@ function check_barangay(v){
                         <td colspan="3" class='parkonly'>&nbsp;</td>
                       </tr>
 					  <tr class='parkonly' style="display:none;">
-                        <td width="100"><b>Park:</b></td>
+                        <td width="100"><b>Others:</b></td>
                         <td align="center"><b>:</b></td>
                         <td>&nbsp;<select name="park_tag" id="park_tag" class="input_1" style="width:150px;">
                           <?
@@ -390,21 +390,24 @@ function check_barangay(v){
 	<?php
 	if($ticket['status']!='closed'){
 		if($ticket['status']!='dispatched'){
-	?>
-	<input id="option" name="option" type="radio" value="dispatch" checked="checked" onclick="showDropdown(1);" /> 
-    Dispatch &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-	<?
+			?>
+			<input id="option" name="option" type="radio" value="dispatch" checked="checked" onclick="showDropdown(1);" /> 
+			Dispatch &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<?
+		}
+		?><input id="option" name="option" type="radio" value="internal" onclick="showDropdown(0);" />
+		 Internal Note &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		 <input id="option" name="option" type="radio" value="reply" onclick="showDropdown(0);" /> 
+		Reply to Sender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<?
+		if($ticket['status']!='dispatched'){
 			if($ticket['status']!='parked'){
-	?>
-	<input id="option" name="option" type="radio" value="park" onclick="showDropdown(2);" /> 
-    Park &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php
+				?>
+				<input id="option" name="option" type="radio" value="park" onclick="showDropdown(2);" /> 
+				Others &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				<?php
 			}
 		}
-	?><input id="option" name="option" type="radio" value="internal" onclick="showDropdown(0);" />
-     Internal Note &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-     <input id="option" name="option" type="radio" value="reply" onclick="showDropdown(0);" /> 
-    Reply to Sender
-	<?
 	}
 	?>
     </div>

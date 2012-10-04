@@ -363,45 +363,95 @@ class Admin extends CI_Controller {
 		}
 	}
 	
-	
-	function createTicket($type='email'){
-		//$desc=NULL,$email=NULL,$number=NULL
-		#if(checkPermission(get_class($this), __FUNCTION__)){
-			
+	public function smsReply($number,$array, $mun){
+		$ticket_id = trim($array[0]);
+		$msg = trim($array[1]);
+		$name = $this->sms->getNameFromNumber($number);
+		
+		if(!$ticket_id && !$msg){
+			$text = "Para mag-reply sa Tingog, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP ".$mun."12345/ salamat! 1P/txt Maaari ding alamin ang updates sa iyong report sa website ng TINGOG 2015 http://www.tingog.ph/tab/.";
+			$this->sms->sendSMS($number,$text);
+			return false;
+		}
+		else if(!$ticket_id || !$msg){
+			$text = "Sorry, mali ang format na iyong ginamit. 
 
+Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ salamat! Para sa listahan ng iba pang keywords, text TINGOG HELP. P1/txt.
+";
+			$this->sms->sendSMS($number,$text);
+			return false;
+		}
+		else{
+			$ticket_id = preg_replace("/[^0-9]/iUs","", $ticket_id);
+			$ticket = std2arr($this->citymodel->getTicketDetails($ticket_id));
+			if(!isset($ticket[0])){
+				$text = "Sorry, mali ang report number. I-check ang report number na ibinigay sa iyo.  Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP ".$mun."12345/ salamat! P1/txt";
+				$this->sms->sendSMS($number,$text);
+				return false;
+			}else{
+				if($ticket[0]['number']!=$number){
+					$text = "Sorry, mali ang report number. I-check ang report number na ibinigay sa iyo.  Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP ".$mun."12345/ salamat! P1/txt";
+					$this->sms->sendSMS($number,$text);
+					return false;
+				}
+			}
+		}
+		$this->admin->ticketWriteMsgFromSMS(array('tid'=>$ticket_id,'msg'=>$msg,'type'=>'SMS Reply','name'=>$name,'smsno'=>$number));
+	}
+	
+	public function smsAction($number,$array, $mun){
+		$ticket_id = trim($array[0]);
+		$msg = trim($array[1]);
+		$name = $this->sms->getNameFromNumber($number);
+		
+		if(!$ticket_id || !$msg){
+			$text = "Sorry, mali ang format na iyong ginamit. Para magbigay ulat tungkol sa isang report, i-text ang TINGOG ACTION <report#><report code>/<message>. Ex. TINGOG ACTION TAB12345/ salamat! Para sa listahan ng iba pang keywords, text TINGOG HELP. P1/txt.
+
+Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
+			$this->sms->sendSMS($number,$text);
+			return false;
+		}
+		else{
+			$ticket_id = preg_replace("/[^0-9]/iUs","", $ticket_id);
+			$ticket = std2arr($this->citymodel->getTicketDetails($ticket_id));
+			if(!isset($ticket[0])){
+				$text = "Sorry, mali ang report number. I-check ang report number na iyong nais bigyan ng ulat. Para magbigay ulat tungkol sa isang report, i-text ang TINGOG ACTION <report#><report code>/<message>. Ex. TINGOG ACTION 12345/ salamat! P1/txt.
+
+Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free";
+				$this->sms->sendSMS($number,$text);
+				return false;
+			}
+		}
+		$this->admin->ticketWriteMsgFromSMS(array('tid'=>$ticket_id,'msg'=>$msg,'type'=>'SMS Action','name'=>$name,'smsno'=>$number));
+	}
+	function createTicket($type='email'){
+			if(isset($_GET['SUB_Mobtel']) && isset($_GET['SMS_Message_String']) && isset($_GET['CSP_Txid'])){
+				$number = trim($_GET['SUB_Mobtel']);
+				$sms = trim($_GET['SMS_Message_String']);
+				$smstemp = strtolower($sms);
+				$this->sms->recordTicket($number, urldecode($sms), $_GET['CSP_Txid']);
+			}
 			
-			/*
-			$random_name = array('Jason','Jairus','Zoilo','Kim','Bing','Rhev','Neil','Kat','John','Anne');
-			$random_loc = array('Albay','Surigao','Agusan','Davao','Quiapo','Navotas','Makati','Manila');
-			$array = array();
-			$array['name'] = $random_name[rand(0,(count($random_name)-1))];
-			$array['description'] = $desc;
-			$array['email'] = $email;
-			$array['number'] = $number;
-			$array['location'] = $random_loc[rand(0,(count($random_loc)-1))];
-			*/
+			if($_GET['smstest']){
+				$number = trim($_GET['SUB_Mobtel']);
+				$sms = trim($_GET['smstest']);
+				$smstemp = strtolower($sms);
+				//pre($_SERVER);
+				//exit();	
+			
+			}
 			
 			if($type=='sms'){
-				$number = trim($_POST['number']);
-				$sms = trim($_POST['sms']);
+			
+				$tingog_url = "http://www.tingog.ph/";
 				
-				//jairus logs
-				$sql = "insert into `a_sms` set 
-					`sms` = '".mysql_escape_string($sms)."',
-					`dateadded` = NOW()
-				";
-				$query = $this->db->query($sql);
-				//return $query->result();
-				
-				
-				$smstemp = strtolower($sms);
-				
-				$tingog_url = "http://www.tingog.ph/tab/";
 				//phone send report message. "tab" is for tabacco
 				/*
 				TINGOG <LOCATION> /<barangay> /<report>
 				*/
-				if(strpos($smstemp, "tingog tab")!==false){
+				$municipality = "tab"; //lower case
+				$municipality = strtolower($municipality);
+				if(strpos($smstemp, "tingog ".$municipality)!==false){
 					$smsarr = explode("/", $sms);
 					
 					if(!trim($smsarr[1])||!trim($smsarr[2])){
@@ -417,12 +467,106 @@ Para magpadala ng report, i-text ang TINGOG <LOCATION>/<barangay>/<report >. Ex.
 						$array['description'] = trim($smsarr[2]);
 						$array['number'] = $number;
 						$array['location'] = trim($smsarr[1]);
+						$array['source'] = 'SMS';
 						$ticketno = $this->admin->addTicket($array);
-						$ticketno = substr("000000".$ticketno, -6);
+						//$ticketno = $municipality.substr("000000".$ticketno, -6);
+						$ticketno = $municipality.$ticketno;
 						$rep = "Salamat sa iyong report. Ito ay ipaparating sa kinauukulan para sa kanilang aksyon. Tandaan ang iyong report number ".$ticketno.". Makakatanggap ka pa ng mga mensahe tungkol sa iyong report. Maaari ding alamin ang updates sa iyong report sa website ng TINGOG 2015 ".$tingog_url;
 						$this->sms->sendSMS($number, $rep);
 					}
 				}
+				else if(strpos($smstemp, "tingog ads")!==false){
+					echo "nothing to do";
+				}
+				//tingog reg
+				/*
+				TINGOG REG
+				*/
+				else if(strpos($smstemp, "tingog reg")!==false){
+					$sms = substr($sms, strlen("tingog reg"));
+					$smsarr = explode("/", $sms);
+					$mun = strtolower(trim($smsarr[0]));
+					if($mun==$municipality){
+						if(!trim($smsarr[1]) || !trim($smsarr[2]) || !trim($smsarr[3]) || !trim($smsarr[4])){
+							$rep = "Sorry, mali ang format na iyong ginamit sa pag-register. I-text ang TINGOG REG <LOCATION>/<username>/<barangay>/<age>/<gender> Ex. TINGOG REG ADS/mscruz/mapaga/30/F sa 2015. P1/txt.
+	
+	Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
+							$this->sms->sendSMS($number, $rep);
+						}else{
+							$check = $this->sms->checkUser($number);
+							if($check){
+								$rep = "Hi! Ikaw ay naka-register na sa TINGOG 2015. Para makapagpadala ng report, i-txt ang TINGOG <LOCATION>/<barangay>/<report> Ex. TINGOG ADS/mscruz/walang tao sa health center at i-send sa 2015. P1/txt.
+	
+	Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
+								$this->sms->sendSMS($number, $rep);
+							}else{
+								$this->sms->createUser($number, $smsarr[1],$smsarr[2],$smsarr[3],$smsarr[4]);
+								$rep = "Maraming salamat sa pag-register sa Tingog. Ang pagbibigay mo ng iyong impormasyon ay makakatulong upang mas mapabuti ang aming serbisyo. P1/txt.
+	
+	Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
+								$this->sms->sendSMS($number, $rep);
+							}
+						}
+					}
+					else if($mun=='ads'){
+						echo "nothing to do";
+					}
+					else{
+						$rep = "Sorry, mali ang format na iyong ginamit sa pag-register. I-text ang TINGOG REG <LOCATION>/<username>/<barangay>/<age>/<gender> Ex. TINGOG REG ADS/mscruz/mapaga/30/F sa 2015. P1/txt.
+	
+	Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
+							$this->sms->sendSMS($number, $rep);
+					}
+				}
+				//TINGOG REP 
+				/*
+				TINGOG REP 
+				*/
+				else if(strpos($smstemp, "tingog rep")!==false){
+					$sms = trim($sms);
+					$sms = substr($sms,10);
+					$smsarr = explode("/", $sms);
+					//$smsarr[0] is the ticket id and it might be prefixed by ads or tab...
+					$mun = preg_replace("/[0-9]/iUs", "", $smsarr[0]);
+					$mun = strtolower(trim($mun));
+					if($mun==$municipality){
+						$this->smsReply($number,$smsarr, $municipality);
+					}
+					else if($mun=="ads"){
+						echo "nothing to do";
+					}
+					else{
+						$text = "Sorry, mali ang report number. I-check ang report number na ibinigay sa iyo.  Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP ".$mun."12345/ salamat! P1/txt";
+						$this->sms->sendSMS($number,$text);
+					}
+				}
+				
+				//TINGOG ACTION 
+				/*
+				TINGOG ACTION
+				*/
+				else if(strpos($smstemp, "tingog action")!==false){
+					$sms = trim($sms);
+					$sms = substr($sms,13);
+					$smsarr = explode("/", $sms);
+					//$smsarr[0] is the ticket id and it might be prefixed by ads or tab...
+					$mun = preg_replace("/[0-9]/iUs", "", $smsarr[0]);
+					$mun = strtolower(trim($mun));
+					if($mun==$municipality){
+						$this->smsAction($number,$smsarr, $municipality);
+					}
+					else if($mun=="ads"){
+						echo "nothing to do";
+					}
+					else{
+						$text = "Sorry, mali ang report number. I-check ang report number na iyong nais bigyan ng ulat. Para magbigay ulat tungkol sa isang report, i-text ang TINGOG ACTION <report#><report code>/<message>. Ex. TINGOG ACTION TAB12345/ salamat! P1/txt.
+
+Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free";
+						$this->sms->sendSMS($number,$text);
+					}
+				}
+				
+				
 				//tingog help
 				/*
 				TINGOG HELP
@@ -442,7 +586,7 @@ Para magpadala ng report, i-text ang TINGOG <LOCATION>/<barangay>/<report >. Ex.
 				TINGOG LOCATION
 				*/
 				else if(strpos($smstemp, "tingog location")!==false){
-					$rep = "Ito ang mga kasaling Tingog Locations. TAB – Tabaco, ADS – Agusan del Sur. Para magpadala ng report, txt TINGOG <LOCATION>/<barangay>/<report >. Ex. TINGOG TAB/basud/ maganda ang inyong serbisyo. Para sa listahan ng iba pang keywords, text TINGOG HELP. P1/txt";
+					$rep = "Ito ang mga kasaling Tingog Locations. TAB - Tabaco, ADS - Agusan del Sur. Para magpadala ng report, txt TINGOG <LOCATION>/<barangay>/<report >. Ex. TINGOG TAB/basud/ maganda ang inyong serbisyo. Para sa listahan ng iba pang keywords, text TINGOG HELP. P1/txt";
 					$this->sms->sendSMS($number, $rep);
 				}
 				//tingog on
@@ -465,22 +609,14 @@ Para sa iba pang impormasyon, mag-log on sa website ng TINGOG 2015 ".$tingog_url
 Para sa iba pang impormasyon, mag-log on sa website ng TINGOG 2015 ".$tingog_url;
 					$this->sms->sendSMS($number, $rep);
 				}
-				//TINGOG REP 
-				/*
-				TINGOG REP 
-				*/
-				else if(strpos($smstemp, "tingog rep")!==false){
-					$sms = trim($sms);
-					$sms = substr($sms,10);
-					$smsarr = explode("/", $sms);
-					$this->smsReply($number,$smsarr);
-				}
+				
 				//tingog
 				/*
 				TINGOG
 				*/
 				else if(strpos($smstemp, "tingog")!==false){
-					$rep = "Welcome sa TINGOG 2015! Para magpadala ng report, i-text ang TINGOG <LOCATION>/<barangay>/<report>. Ex. TINGOG TAB/ basud/ walang tao sa opisina. I-send sa 2015. Para sa listahan ng Tingog location, text TINGOG LOCATION. Para makatanggap ng advisory, announcement at balita mula sa Tingog 2015, reply TINGOG ON. Para sa iba pang keywords, text TINGOG HELP. P1/txt";
+					$rep = "Welcome sa TINGOG 2015! Para magpadala ng report, i-text ang TINGOG <LOCATION>/<barangay>/<report>. Ex. TINGOG TAB/basud/ walang tao sa opisina. I-send sa 2015. Para sa listahan ng Tingog location, text TINGOG LOCATION. Para makatanggap ng advisory, announcement at balita mula sa Tingog 2015, reply TINGOG ON. Para sa iba pang keywords, text TINGOG HELP. P1/txt";
+					
 					$this->sms->sendSMS($number, $rep);
 				}
 				//mysubs
@@ -493,7 +629,8 @@ TINGOG
 To unsubscribe from a service, text <service name> OFF Ex.TINGOG OFF.";
 					$this->sms->sendSMS($number, $rep);
 				}
-			
+				
+				//pre(htmlentities($rep));
 			}
 			else{
 			
@@ -502,6 +639,7 @@ To unsubscribe from a service, text <service name> OFF Ex.TINGOG OFF.";
 				$array['email'] = $_POST['email'];
 				$array['number'] = $_POST['contactnumber'];
 				$array['location'] = $_POST['location'];
+				$array['source'] = $type;
 				$this->admin->addTicket($array);
 				echo "Thank you for submitting your report.";
 			}
@@ -1133,38 +1271,7 @@ To unsubscribe from a service, text <service name> OFF Ex.TINGOG OFF.";
 		}
 	}
 	
-	public function smsReply($number,$array){
-		$ticket_id = trim($array[0]);
-		$msg = trim($array[1]);
-		$name = $this->sms->getNameFromNumber($number);
-		
-		if(!$ticket_id && !$msg){
-			$text = "Para mag-reply sa Tingog, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ salamat! 1P/txt Maaari ding alamin ang updates sa iyong report sa website ng TINGOG 2015 http://www.tingog.ph/tab/.";
-			$this->sms->sendSMS($number,$text);
-		}
-		else if(!$ticket_id || !$msg){
-			$text = "Sorry, mali ang format na iyong ginamit. 
-
-Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ salamat! Para sa listahan ng iba pang keywords, text TINGOG HELP. P1/txt.
-";
-			$this->sms->sendSMS($number,$text);
-		}
-		else{
-			$ticket = std2arr($this->citymodel->getTicketDetails($ticket_id));
-			if(!isset($ticket[0])){
-				$text = "Sorry, mali ang report number. I-check ang report number na ibinigay sa iyo.  Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ salamat! P1/txt";
-				$this->sms->sendSMS($number,$text);
-			}else{
-				if($ticket[0]['number']!=$number){
-					$text = "Sorry, mali ang report number. I-check ang report number na ibinigay sa iyo.  Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ salamat! P1/txt";
-					$this->sms->sendSMS($number,$text);
-				}
-			}
-		}
-		
-		$this->admin->ticketWriteMsgFromSMS(array('tid'=>$ticket_id,'msg'=>$msg,'type'=>'SMS Reply','name'=>$name,'smsno'=>$number));
-		
-	}
+	
 	
 	function barangay(){
 		if(checkPermission(get_class($this), __FUNCTION__)){

@@ -32,7 +32,7 @@ jQuery(function(){
 	//OPEN THREAD
 	jQuery('#dialog_thread_id').dialog({
 		autoOpen: false,
-		width: 655
+		width: 1100
 	});
 	//END OF OPEN THREAD
 });
@@ -47,7 +47,7 @@ function showDropdown(x){
 }
 
 function cityaccess_tickets(){
-	jQuery("#cityaccess_tickets").html("Loading Reports...");
+	jQuery("#cityaccess_tickets").html('<img src="/backend/images/loading.gif">');
 	jQuery.ajax({
 		type: 'POST',
 		url: "/backend/cityaccess/viewTicketList",
@@ -59,7 +59,7 @@ function cityaccess_tickets(){
 }
 
 function masterList(){
-	jQuery("#cityaccess_masterlist").html("Loading...");
+	jQuery("#cityaccess_masterlist").html('<img src="/backend/images/loading.gif">');
 	jQuery.ajax({
 		type: 'POST',
 		url: "/backend/cityaccess/masterList",
@@ -71,7 +71,7 @@ function masterList(){
 }
 
 function directory(){
-	jQuery("#cityaccess_directory").html("Loading...");
+	jQuery("#cityaccess_directory").html('<img src="/backend/images/loading.gif">');
 	jQuery.ajax({
 		type: 'POST',
 		url: "/backend/cityaccess/directory",
@@ -83,7 +83,7 @@ function directory(){
 }
 
 function summary(){
-	jQuery("#cityaccess_summary").html("Loading...");
+	jQuery("#cityaccess_summary").html('<img src="/backend/images/loading.gif">');
 	jQuery.ajax({
 		type: 'POST',
 		url: "/backend/cityaccess/summary",
@@ -95,7 +95,7 @@ function summary(){
 }
 
 function myAccount(){
-	jQuery("#cityaccess_myaccount").html("Loading...");
+	jQuery("#cityaccess_myaccount").html('<img src="/backend/images/loading.gif">');
 	jQuery.ajax({
 		type: 'POST',
 		url: "/backend/cityaccess/myAccount",

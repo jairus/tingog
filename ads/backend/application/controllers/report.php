@@ -27,7 +27,7 @@ class Report extends CI_Controller {
 		$data['departments'] = std2arr($this->admin->getDepartments());
 		$data['categories'] = std2arr($this->admin->getCategory());
 		$data['issues'] = std2arr($this->admin->getIssues());
-		$data['locations'] = $this->report->getLocation();
+		$data['locations'] = $this->admin->getBarangay();
 		$data['filter_ajax'] = '/backend/report/filter';
 		$data['report_container_id'] = 'ticket_list';
 		$this->load->view('report/filter', $data);
@@ -72,7 +72,6 @@ class Report extends CI_Controller {
 				if(!isset($closed[$v['tag']])) $closed[$v['tag']] = 1;
 				else $closed[$v['tag']]++;
 			}
-			
 			if($v['status']=="parked"){
 				if(!isset($parked[$v['tag_park']])) $parked[$v['tag_park']] = 1;
 				else $parked[$v['tag_park']]++;
@@ -199,6 +198,13 @@ class Report extends CI_Controller {
 			if($v['status']=="closed"){
 				if(!isset($closed[$v['tag']])) $closed[$v['tag']] = 1;
 				else $closed[$v['tag']]++;
+				
+				/*if(strtotime($v['date']) && strtotime($v['resolve_date'])){
+					#pre(strtotime($v['resolve_date']));
+					#pre($v['id']);
+					$diff = round((strtotime($v['resolve_date']) - strtotime($v['date'])) / 60 / 60 / 24, 2);
+					$response[] = $diff;
+				}*/
 			}
 			
 			if($v['status']=="parked"){
@@ -244,6 +250,11 @@ class Report extends CI_Controller {
 				if($v['status']=='resolved'){
 					if(isset($barangays[$v['barangay']]['resolved'])) $barangays[$v['barangay']]['resolved']++;
 					else $barangays[$v['barangay']]['resolved'] = 1;
+					
+					if(strtotime($v['date']) && strtotime($v['resolve_date'])){
+						$diff = round((strtotime($v['resolve_date']) - strtotime($v['date'])) / 60 / 60 / 24, 2);
+						$barangays[$v['barangay']]['response'] = $diff;
+					}
 				}
 				
 				
@@ -300,11 +311,11 @@ class Report extends CI_Controller {
 			
 		}
 		#pre(count($result));
-		
 		if(count($response)){
 			$data['average_response'] = (round(array_sum($response) / count($response)));
 		}
 		#pre($closed);
+		#pre($data['average_response']);
 		foreach($status as $k=>$v){
 			#pre($v);
 			if(isset($tickets[$v])){
@@ -323,7 +334,7 @@ class Report extends CI_Controller {
 			'barangays'=>$barangays,
 			'office'=>$office
 		);
-		#pre($data['chart']);
+		//pre($barangays);
 		
 		#$content['content'] = $this->load->view('report/filter', $data, TRUE);
 		#$content['content'] .= $this->load->view('report/piechart', $data, TRUE);

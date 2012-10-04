@@ -15,7 +15,6 @@ class SMS_Model extends CI_Model{
 		else{
 			$url = "http://74.86.63.102/~txtcircu/sms_out.php?telco=".$_GET['telco']."&tariff=1&SUB_Mobtel=".$number."&SMS_Message_String=".$sms."&CSP_Txid=1";
 		}
-		
 		$sql = "insert into `sms_replies` set
 			`url` = '".mysql_escape_string($url)."',
 			`number` = '".mysql_escape_string($number)."',

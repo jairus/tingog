@@ -1,7 +1,7 @@
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
 function report(){
-	jQuery("#report").html("Loading...");
+	jQuery("#report").html('<img src="/backend/images/loading.gif">');
 	jQuery.ajax({
 		type: 'POST',
 		url: "/backend/report/basic",

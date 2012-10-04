@@ -24,7 +24,7 @@ jQuery(function(){
 	//OPEN THREAD
 	jQuery('#dialog_thread_id').dialog({
 		autoOpen: false,
-		width: 655
+		width: 1100
 	});
 	//END OF OPEN THREAD
 });

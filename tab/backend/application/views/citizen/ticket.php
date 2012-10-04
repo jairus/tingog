@@ -28,7 +28,7 @@ function submitMessage(id){
 		});
 	}
 	window.parent.citizen_tickets();
-	window.parent.jQuery('#dialog_thread_id').dialog('close');
+	//window.parent.jQuery('#dialog_thread_id').dialog('close');
 }
 
 function viewThread(id){

@@ -75,7 +75,7 @@ function submitMessage(id){
 		});
 	}
 	window.parent.cityaccess_tickets();
-	window.parent.jQuery('#dialog_thread_id').dialog('close');
+	//window.parent.jQuery('#dialog_thread_id').dialog('close');
 }
 
 function submitTag(id){

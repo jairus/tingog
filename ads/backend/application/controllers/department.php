@@ -288,7 +288,7 @@ Anong masasabi mo sa aming serbisyo? Para sumagot, i-text ang TINGOG REP<report#
 				}
 			}
 			if(count($numbers)){
-				$message_head = "Sent SMS to ".implode(", ", $numbers)."<br><br>";
+				$message_head = "Sent SMS to ".implode(", ", $numbers)."\n\n";
 			}
 		}
 		$message_foot = "";

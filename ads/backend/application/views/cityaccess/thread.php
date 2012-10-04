@@ -129,7 +129,7 @@
 				</td>
 				<td class='message'>
 					<?php
-						echo '<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#fff; text-decoration:none;">'.$messages[$i]['msg'].'</span>';
+						echo '<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#fff; text-decoration:none;">'.nl2br(htmlentities($messages[$i]['msg'])).'</span>';
 					?>
 				</td>
 			</tr>

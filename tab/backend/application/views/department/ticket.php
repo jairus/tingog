@@ -115,7 +115,7 @@ function submitMessage(id){
 		});
 	}
 	window.parent.department_tickets();
-	window.parent.jQuery('#dialog_thread_id').dialog('close');
+	//window.parent.jQuery('#dialog_thread_id').dialog('close');
 }
 
 function viewThread(id){

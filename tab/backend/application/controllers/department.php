@@ -177,8 +177,8 @@ class Department extends CI_Controller {
 		$data['personnels'] = $this->departmentmodel->getPersonnels();
 		$data['issues'] = $this->departmentmodel->getIssues();
 		$data['issue'] = $this->departmentmodel->getIssuesById($data['ticket'][0]['issue']);
-		$data['personnel'] = $this->departmentmodel->getPersonnelById($data['ticket'][0]['assign1']);
-		$data['personnel2'] = $this->departmentmodel->getPersonnelById($data['ticket'][0]['assign2']);
+		$data['personnelcomplete1'] = $this->departmentmodel->getPersonnelByIdComplete($data['ticket'][0]['assign1']);
+		$data['personnelcomplete2'] = $this->departmentmodel->getPersonnelByIdComplete($data['ticket'][0]['assign2']);
 		
 		if(isset($data['ticket'][0]['barangay']) && $data['ticket'][0]['barangay']){
 			$brgy = $this->admin->getBarangay($data['ticket'][0]['barangay']);
@@ -275,7 +275,28 @@ Anong masasabi mo sa aming serbisyo? Para sumagot, i-text ang TINGOG REP<report#
 			$this->load->view('layout/main', $content);
 			exit();
 		}	
-		$this->departmentmodel->internalMessage($id, $_POST['message']);
+		$message = $_POST['message'];
+		$sms = $_POST['sms'];
+		$ticket_id = $_POST['ticket_id'];
+		$message_head = "";
+		if(is_array($sms)){
+			$numbers = array();
+			foreach($sms as $number){
+				//send sms
+				if(trim($number)&&!in_array($number, $numbers)){
+					$numbers[] = $number;
+				}
+			}
+			if(count($numbers)){
+				$message_head = "Sent SMS to ".implode(", ", $numbers)."<br><br>";
+			}
+		}
+		$message_foot = "";
+		if($ticket_id){
+			$message_foot = "";
+		}
+		
+		$this->departmentmodel->internalMessage($id, $message_head.$message.$message_foot);
 		//refresh thread
 		?>
 		<script>

@@ -76,6 +76,16 @@ class Department_Model extends CI_Model{
 			return "";
 		}
 	}
+	function getPersonnelByIdComplete($id){
+		$this->db->where("id",$id);
+		$query = $this->db->get('personnel');
+		if($query->num_rows() > 0){
+			$r = $query->result_array();
+			return $r[0];
+		}else{
+			return "";
+		}
+	}
 	
 	function assignTicket($id, $message, $issue, $personnel, $personnel2, $duedate){
 		if(!$id){

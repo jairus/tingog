@@ -1,4 +1,5 @@
 <?php
+@session_start();
 	$ticket = $ticket[0];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -91,6 +92,17 @@ function submitMessage(id){
 			},
 		});
 	}
+	else if(mtype=='internalwsms'){
+		jQuery.ajax({
+			type: 'POST',
+			url: "/backend/department/internalMessage/"+id,
+			data: jQuery("#ticketform").serialize()+"&sms[]=<?php echo $personnelcomplete1['mobile']; ?>&sms[]=<?php echo $personnelcomplete2['mobile']; ?>&ticket_id=<?php echo $ticket['id']; ?>",
+			success: function(html){
+				jQuery("#ninjadiv").html(html);
+				jQuery("#btn_message_submit_id").hide();
+			},
+		});
+	}
 	else if(mtype=='reply'){
 		jQuery.ajax({
 			type: 'POST',
@@ -127,6 +139,14 @@ function showDropdown(flag){
 	if(flag==1){
 		jQuery(".dispatchonly").show();
 		jQuery(".dispatchonly *").attr("disabled", false);
+	}
+	//internal with sms
+	else if(flag==3){
+		jQuery(".dispatchonly").show();
+		jQuery(".dispatchonly *").attr("disabled", false);
+		jQuery("#textarea_message_id").val("<?php
+		echo "Para mag-reply sa Tingog, i-text ang TINGOG REP ".$_SESSION['municipality'].$ticket['id']."/<message>";
+		?>");
 	}
 	else if(flag==0){
 		jQuery(".dispatchonly").hide();
@@ -234,7 +254,19 @@ function showDropdown(flag){
                         <td>&nbsp;
                             <?php
 							if($ticket['status']=='assigned' || $ticket['status']=='resolved'){
-								echo $personnel;
+								if($personnelcomplete1){
+									//Array ( [id] => 5 [person] => Jason Diaz [department] => 1 [mobile] => 09273779066 )
+									echo $personnelcomplete1['person'];
+									if(trim($personnelcomplete1['mobile'])){
+										echo " (".trim($personnelcomplete1['mobile']).")";
+									}
+									else{
+										echo " (no mobile name)";
+									}
+								}
+								else{
+									echo $personnel;
+								}
 							}else{
 								$t = count($personnels);
 								if($t){
@@ -263,7 +295,19 @@ function showDropdown(flag){
                         <td>&nbsp;
                             <?php
 							if($ticket['status']=='assigned' || $ticket['status']=='resolved'){
-								echo $personnel2;
+								if($personnelcomplete2){
+									//Array ( [id] => 5 [person] => Jason Diaz [department] => 1 [mobile] => 09273779066 )
+									echo $personnelcomplete2['person'];
+									if(trim($personnelcomplete2['mobile'])){
+										echo " (".trim($personnelcomplete2['mobile']).")";
+									}
+									else{
+										echo " (no mobile name)";
+									}
+								}
+								else{
+									echo $personnel2;
+								}
 							}else{
 								$t = count($personnels);
 								if($t){
@@ -425,9 +469,11 @@ Resolve &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ?>
 <input name="option" type="radio" value="return" onclick="showDropdown(0);" />
 Return to dispatcher &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input name="option" type="radio" value="internal" onclick="showDropdown(0);" />
- Internal Note &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <input name="option" type="radio" value="reply" onclick="showDropdown(0);" /> 
+<input name="option" type="radio" value="internal" onclick="showDropdown(1);" />
+Internal Note &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="option" type="radio" value="internalwsms" onclick="showDropdown(3);" />
+Internal Note (SMS to assignee) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="option" type="radio" value="reply" onclick="showDropdown(0);" /> 
 Reply to Sender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 <input name="option" type="radio" value="park" onclick="showDropdown(2);" />
 Others &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 

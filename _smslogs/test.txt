@@ -1,0 +1,1 @@
+http://tab.tingog.ph/backend/admin/createticket/sms/?SUB_Mobtel=639391234024&SMS_Message_String=15&CSP_Txid=291&telco=smart

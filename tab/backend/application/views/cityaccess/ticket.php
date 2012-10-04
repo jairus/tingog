@@ -26,6 +26,7 @@ function submitMessage(id){
 				jQuery("#ninjadiv").html(html);
 			},
 		});
+		jQuery("#btn_message_submit_id").show();
 	}
 	else if(mtype=='park'){
 		if(!confirm("Are you sure?")){
@@ -40,6 +41,7 @@ function submitMessage(id){
 				jQuery("#ninjadiv").html(html);
 			},
 		});
+		window.parent.jQuery('#dialog_thread_id').dialog('close');
 	}
 	else if(mtype=='reply'){
 		jQuery.ajax({
@@ -50,6 +52,7 @@ function submitMessage(id){
 				jQuery("#ninjadiv").html(html);
 			},
 		});
+		jQuery("#btn_message_submit_id").show();
 	}
 	
 	else if(mtype=='dispatch'){
@@ -61,6 +64,7 @@ function submitMessage(id){
 				jQuery("#ninjadiv").html(html);
 			},
 		});
+		window.parent.jQuery('#dialog_thread_id').dialog('close');
 	}
 
 	else if(mtype=='tag'){
@@ -73,6 +77,7 @@ function submitMessage(id){
 				
 			},
 		});
+		window.parent.jQuery('#dialog_thread_id').dialog('close');
 	}
 	window.parent.cityaccess_tickets();
 	//window.parent.jQuery('#dialog_thread_id').dialog('close');

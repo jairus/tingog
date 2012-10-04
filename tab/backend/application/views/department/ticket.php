@@ -35,6 +35,7 @@ function submitMessage(id){
 				jQuery("#btn_message_submit_id").hide();
 			},
 		});
+		window.parent.jQuery('#dialog_thread_id').dialog('close');
 	}
 	else if(mtype=='park'){
 		if(!confirm("Are you sure?")){
@@ -50,6 +51,7 @@ function submitMessage(id){
 				jQuery("#btn_message_submit_id").hide();
 			},
 		});
+		window.parent.jQuery('#dialog_thread_id').dialog('close');
 	}
 	else if(mtype=='return'){
 		if(!confirm("Are you sure you want to return this report to dispatcher?")){
@@ -65,6 +67,7 @@ function submitMessage(id){
 				jQuery("#btn_message_submit_id").hide();
 			},
 		});
+		window.parent.jQuery('#dialog_thread_id').dialog('close');
 	}
 	else if(mtype=='resolve'){
 		if(!confirm("Are you sure you want to resolve this report?")){
@@ -80,6 +83,7 @@ function submitMessage(id){
 				jQuery("#btn_message_submit_id").hide();
 			},
 		});
+		window.parent.jQuery('#dialog_thread_id').dialog('close');
 	}
 	else if(mtype=='internal'){
 		jQuery.ajax({
@@ -91,6 +95,7 @@ function submitMessage(id){
 				jQuery("#btn_message_submit_id").hide();
 			},
 		});
+		jQuery("#btn_message_submit_id").show();
 	}
 	else if(mtype=='internalwsms'){
 		jQuery.ajax({
@@ -102,6 +107,7 @@ function submitMessage(id){
 				jQuery("#btn_message_submit_id").hide();
 			},
 		});
+		jQuery("#btn_message_submit_id").show();
 	}
 	else if(mtype=='reply'){
 		jQuery.ajax({
@@ -113,9 +119,9 @@ function submitMessage(id){
 				jQuery("#btn_message_submit_id").hide();
 			},
 		});
+		jQuery("#btn_message_submit_id").show();
 	}
 	window.parent.department_tickets();
-	//window.parent.jQuery('#dialog_thread_id').dialog('close');
 }
 
 function viewThread(id){

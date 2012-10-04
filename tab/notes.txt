@@ -1,0 +1,39 @@
+//include barangay in the main message
+
+ticket interface
+ - show chracter limit 
+
+
+
+dispatcher on "Others"
+ - Spam
+ - Duplicate 
+ 
+
+
+concerned office 
+Others
+ - Positive feedback (send sms)
+ - Not for action -> Note for immediate Action (send sms)
+ - Spam
+
+Resolve
+  - Prefill using second message "Na-askyunan ..."
+Reply to sender 
+  - Prefill using "<question>..."
+
+//populate database with a lot of reports
+//same summary report in web to backend
+
+
+------------------------------------------------------------------------------
+
+//do not allow report to be assigned when dropdowns are not selected
+//do not allow report to be othersed when dropdowns are not selected
+//do not allow dispatching when dropdowns are not selected
+//if there are new replies have an alert mechanism
+//assigned to must be put to thread as well along with assign message
+//category parents issues
+
+http://tab.tingog.ph/backend/admin/access <--- replace wording 'ticket' to 'report'
+http://tab.tingog.ph/backend/admin/accounts <--- when the access level is concerned office make concerned office required

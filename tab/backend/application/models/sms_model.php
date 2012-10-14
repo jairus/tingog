@@ -4,20 +4,48 @@ class SMS_Model extends CI_Model{
 		parent::__construct();
 		$this->load->database();
 	}
-	function sendSMS($number, $sms, $tariff=""){
+	function sendSMS($number, $sms, $tariff="", $telco=""){
 		//$sms = substr($sms, 0, 160);
 		$sms = str_replace("\t", "", $sms);
 		$sms = urlencode($sms);
 		
+		if(!trim($telco)){
+			$telco = $_GET['telco'];
+		}
+		
+		//if number starts with 0
+		if($number[0]=='0'){
+			$number = str_replace_first("0", "63", $number);
+		}
+		$sql = "select * from `sms_replies` where (`url`<>'' or `telco`<>'') and `number`='".$number."' limit 1";
+		$query = $this->db->query($sql);
+		$result = std2arr($query->result_array());
+		
+		print_r($result);
+		
+		
+		if(!$telco){
+			if($result[0]['telco']){
+				$telco = $result[0]['telco'];
+			}
+			else if($result[0]['url']){
+				$matches = array();
+				preg_match_all("/telco=(.*)&/iUs", $result[0]['url'], $matches);
+				$telco = trim($matches[1][0]);
+			}
+		}
+		
+		
 		if($tariff!=""){
-			$url = "http://74.86.63.102/~txtcircu/sms_out.php?telco=".$_GET['telco']."&tariff=".$tariff."&SUB_Mobtel=".$number."&SMS_Message_String=".$sms."&CSP_Txid=1";
+			$url = "http://74.86.63.102/~txtcircu/sms_out.php?telco=".$telco."&tariff=".$tariff."&SUB_Mobtel=".$number."&SMS_Message_String=".$sms."&CSP_Txid=1";
 		}
 		else{
-			$url = "http://74.86.63.102/~txtcircu/sms_out.php?telco=".$_GET['telco']."&tariff=1&SUB_Mobtel=".$number."&SMS_Message_String=".$sms."&CSP_Txid=1";
+			$url = "http://74.86.63.102/~txtcircu/sms_out.php?telco=".$telco."&tariff=1&SUB_Mobtel=".$number."&SMS_Message_String=".$sms."&CSP_Txid=1";
 		}
 		$sql = "insert into `sms_replies` set
 			`url` = '".mysql_escape_string($url)."',
 			`number` = '".mysql_escape_string($number)."',
+			`telco` = '".mysql_escape_string($telco)."',
 			`message` = '".mysql_escape_string(urldecode($sms))."',
 			`dateadded` = NOW()
 		";

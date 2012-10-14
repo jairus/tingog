@@ -153,7 +153,7 @@ function showDropdown(flag){
 	jQuery(".parkonly *").attr("disabled", true);
 	jQuery(".smsonly").show();
 	jQuery(".smsonly *").attr("disabled", false);
-	
+	jQuery("#textarea_message_id").val("");
 	if(flag==1){
 		jQuery(".dispatchonly").show();
 		jQuery(".dispatchonly *").attr("disabled", false);

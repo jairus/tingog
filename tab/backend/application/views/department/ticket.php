@@ -134,6 +134,20 @@ function viewThread(id){
 	});
 }
 
+function countChars(){
+	str = jQuery("#textarea_message_id").val();
+	count = str.length;
+	jQuery("#counter").val(count);
+}
+jQuery(function(){
+	jQuery("#textarea_message_id").keydown(function(){
+		countChars();
+	});
+	jQuery("#textarea_message_id").keyup(function(){
+		countChars();
+	});
+});
+
 function showDropdown(flag){
 	jQuery(".parkonly").hide();
 	jQuery(".parkonly *").attr("disabled", true);
@@ -151,6 +165,15 @@ function showDropdown(flag){
 		jQuery("#textarea_message_id").val("<?php
 		echo "Para mag-reply sa Tingog, i-text ang TINGOG REP ".$_SESSION['municipality'].$ticket['id']."/<message>";
 		?>");
+	}
+	//internal with sms
+	else if(flag==4){
+		jQuery(".dispatchonly").show();
+		jQuery(".dispatchonly *").attr("disabled", false);
+		jQuery("#textarea_message_id").val("<?php
+		echo "Na-aksyunan na ang inyong TINGOG report ".$_SESSION['municipality'].$ticket['id']." <action taken>";
+		?>");
+		countChars();
 	}
 	else if(flag==0){
 		jQuery(".dispatchonly").hide();
@@ -465,7 +488,7 @@ Assign &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			
 			if($ticket['status']!='resolved'){
 	  ?>
-	  <input name="option" type="radio" value="resolve" onclick="showDropdown(1);" />
+	  <input name="option" type="radio" value="resolve" onclick="showDropdown(4);" />
 Resolve &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <?php
 			}
@@ -483,10 +506,27 @@ Reply to Sender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Others &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 </div>
     <div>&nbsp;</div>
-    <div id="message_input" class="text_1"></div>
-    <div id="message_input"><textarea id="textarea_message_id" name="message" rows="5" cols="100" class="input_1"></textarea>
+    <div class="text_1"></div>
+    <div id="message_input" class="text_1">
+		<table>
+			<tr>
+				<td align="right">
+					<div class='text_1'>Character Count: <input class='text_1' type='text' id='counter' style='width:50px' /></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea id="textarea_message_id" name="message" rows="5" cols="100" class="input_1"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div><center><br><input type="button" id="btn_message_submit_id" name="btn_message_submit" class="btn_3" value="Submit" style="width:130px;" onclick='submitMessage("<?php echo $ticket['id']; ?>");' /></center></div>
+				</td>
+			</tr>
+		</table>
     </div>
-		<div id="message_input"><center><br><input type="button" id="btn_message_submit_id" name="btn_message_submit" class="btn_3" value="Submit" style="width:130px;" onclick='submitMessage("<?php echo $ticket['id']; ?>");' /></center></div>
+		<div><center><br><input type="button" id="btn_message_submit_id" name="btn_message_submit" class="btn_3" value="Submit" style="width:130px;" onclick='submitMessage("<?php echo $ticket['id']; ?>");' /></center></div>
   </form>
 </td></tr>
 </table>

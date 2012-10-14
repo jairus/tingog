@@ -1,8 +1,11 @@
 <?php
+	@session_start();
+	$mun = $_SESSION['municipality'];
 	$ticket = $ticket[0];
 	$data = array();
 	$data['ticket'] = $ticket;
 	$data['messages'] = $messages;
+	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -109,12 +112,26 @@ function viewThread(id){
 	});
 }
 
+function countChars(){
+	str = jQuery("#textarea_message_id").val();
+	count = str.length;
+	jQuery("#counter").val(count);
+}
+jQuery(function(){
+	jQuery("#textarea_message_id").keydown(function(){
+		countChars();
+	});
+	jQuery("#textarea_message_id").keyup(function(){
+		countChars();
+	});
+});
 function showDropdown(flag){
 	jQuery(".parkonly").hide();
 	jQuery(".parkonly *").attr("disabled", true);
 	jQuery(".smsonly").show();
 	jQuery(".smsonly *").attr("disabled", false);
 	
+	jQuery("#textarea_message_id").val("");
 	if(flag==1){
 		jQuery(".dispatchonly").show();
 		jQuery(".dispatchonly *").attr("disabled", false);
@@ -122,6 +139,12 @@ function showDropdown(flag){
 	else if(flag==0){
 		jQuery(".dispatchonly").hide();
 		jQuery(".dispatchonly *").attr("disabled", true);
+	}
+	else if(flag==3){
+		jQuery(".dispatchonly").hide();
+		jQuery(".dispatchonly *").attr("disabled", true);
+		jQuery("#textarea_message_id").val("<question>? Reply TINGOG REP <?php echo $mun.$ticket['id']; ?>/<message>. Ex. TINGOG REP <?php echo $mun.$ticket['id']; ?> Baranggay health station");
+		countChars();
 	}
 	else if(flag==2){
 		
@@ -132,6 +155,11 @@ function showDropdown(flag){
 		
 		jQuery(".parkonly").show();
 		jQuery(".parkonly *").attr("disabled", false);
+	}
+	else if(flag==3){
+		
+		jQuery(".dispatchonly").show();
+		jQuery(".dispatchonly *").attr("disabled", false);reply
 	}
 }
 
@@ -313,12 +341,8 @@ function check_barangay(v){
                         <td width="100"><b>Others:</b></td>
                         <td align="center"><b>:</b></td>
                         <td>&nbsp;<select name="park_tag" id="park_tag" class="input_1" style="width:150px;">
-                          <?
-						  	echo "<option value=\"\">-</option>";
-							foreach($array_parked as $k=>$v){
-								echo '<option value="'.$k.'">'.$v.'</option>';
-							}
-						  ?>
+                          <option value='DUP'>Duplicate</option>
+						  <option value='SP'>Spam</option>
                         </select></td>
                       </tr>
                     </table>
@@ -399,13 +423,14 @@ function check_barangay(v){
 			?>
 			<input id="option" name="option" type="radio" value="dispatch" checked="checked" onclick="showDropdown(1);" /> 
 			Dispatch &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			<?
+			<?php
 		}
-		?><input id="option" name="option" type="radio" value="internal" onclick="showDropdown(0);" />
-		 Internal Note &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-		 <input id="option" name="option" type="radio" value="reply" onclick="showDropdown(0);" /> 
+		?>
+		<input id="option" name="option" type="radio" value="internal" onclick="showDropdown(0);" />
+		Internal Note &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<input id="option" name="option" type="radio" value="reply" onclick="showDropdown(3);" /> 
 		Reply to Sender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-		<?
+		<?php
 		if($ticket['status']!='dispatched'){
 			if($ticket['status']!='parked'){
 				?>
@@ -418,17 +443,35 @@ function check_barangay(v){
 	?>
     </div>
     <div>&nbsp;</div>
-    <div id="message_input" class="text_1"></div>
+    <div class="text_1"></div>
 	<?
 		if($ticket['status']!='closed'){
-	?>
-	<div id="message_input"><textarea id="textarea_message_id" name="message" rows="5" cols="100" class="input_1"></textarea></div>
-	<div id="message_input"><center><br><input type="button" id="btn_message_submit_id" name="btn_message_submit" class="btn_3" value="Submit" style="width:130px;" onclick='submitMessage("<?php echo $ticket['id']; ?>");' /></center></div>
-	<?
+			?>
+			<div id="message_input" class="text_1">
+				<table>
+					<tr>
+						<td align="right">
+							<div class='text_1'>Character Count: <input class='text_1' type='text' id='counter' style='width:50px' /></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<textarea id="textarea_message_id" name="message" rows="5" cols="100" class="input_1"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div><center><br><input type="button" id="btn_message_submit_id" name="btn_message_submit" class="btn_3" value="Submit" style="width:130px;" onclick='submitMessage("<?php echo $ticket['id']; ?>");' /></center></div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<?
 		}else{
-	?>
-	<div id="message_input"><center><br><input type="button" id="btn_message_submit_id" name="btn_message_submit" class="btn_3" value="OK" style="width:130px;" onclick='submitTag("<?php echo $ticket['id']; ?>");' /></center></div>
-	<?
+			?>
+			<div><center><br><input type="button" id="btn_message_submit_id" name="btn_message_submit" class="btn_3" value="OK" style="width:130px;" onclick='submitTag("<?php echo $ticket['id']; ?>");' /></center></div>
+			<?php
 		}
 	?>
   </form>

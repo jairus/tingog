@@ -1133,6 +1133,7 @@ Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
 		$str = trim($str);
 		return $str;
 	}
+	
 
 	function createTicket($type='email'){
 			if(isset($_GET['SUB_Mobtel']) && isset($_GET['SMS_Message_String']) && isset($_GET['CSP_Txid'])){
@@ -1177,7 +1178,6 @@ Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
 					//exit();
 					//if syntax: tingog tab basud/message
 					$desc = $strtemp[1];
-
 					$ting = $firstpo[0];
 					$muni = $firstpo[1];
 					$bara = $firstpo[2];
@@ -1188,11 +1188,20 @@ Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
 						$bara = $smsarr[1];
 						$desc = $smsarr[2];
 					}
+					
 					else if(!trim($desc)){
-						$desc = $bara;
+						$desc = str_replace_first_i("tingog tab", "", $sms);
+						$bara = "-";
+					}
+					//if syntax: tingog tab basud message
+					else{
+						$desc = str_replace_first_i("tingog tab", "", $sms);
 						$bara = "-";
 					}
 					
+					// just always use this
+					$desc = str_replace_first_i("tingog tab", "", $sms);
+					$bara = "-";
 
 					
 					if(!trim($bara)||!trim($desc)){
@@ -1259,7 +1268,7 @@ Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
 	
 Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
 								}
-								$this->sms->sendSMS($number, $rep);
+								$this->sms->sendSMS($number, $rep, 2);
 							}else{
 								$this->sms->createUser($number, $smsarr[1],$smsarr[2],$smsarr[3],$smsarr[4]);
 								if(1 || trim($_GET['telco'])=='smart'||trim($_GET['telco'])=='globe'){
@@ -1558,8 +1567,13 @@ I-text ang keyword sa 2015. P1/txt";
 			}
 			
 			if($_GET['tester']){
-				?><form action='http://<?php echo $municipality; ?>.tingog.ph/backend/admin/createticket/sms/'>
-					<input type='hidden' name='tester' value=1 />
+				if(strpos($_SERVER['HTTP_HOST'], "tingoglocal")!==false){
+					?><form action='http://<?php echo $municipality; ?>.tingoglocal.ph/backend/admin/createticket/sms/'><?php
+				}
+				else{
+					?><form action='http://<?php echo $municipality; ?>.tingog.ph/backend/admin/createticket/sms/'><?php
+				}
+					?><input type='hidden' name='tester' value=1 />
 
 					<center>
 					Mobile Number<br>e.g. (639228772727)<br><input type='text' name='SUB_Mobtel' value="<?php echo htmlentities($_GET['SUB_Mobtel'])?>" /> <br>
@@ -1581,6 +1595,35 @@ I-text ang keyword sa 2015. P1/txt";
 		#}else{
 		#	$content['content'] = returnNoAccessRight();
 		#}
+	}
+	
+	function test(){
+		$municipality = explode(".", $_SERVER['HTTP_HOST']); //lower case
+		$municipality  = trim($municipality[0]);
+		$municipality = strtolower($municipality);
+		if(strpos($_SERVER['HTTP_HOST'], "tingoglocal")!==false){
+			?><form action='http://<?php echo $municipality; ?>.tingoglocal.ph/backend/admin/createticket/sms/'><?php
+		}
+		else{
+			?><form action='http://<?php echo $municipality; ?>.tingog.ph/backend/admin/createticket/sms/'><?php
+		}
+			?><input type='hidden' name='tester' value=1 />
+
+			<center>
+			Mobile Number<br>e.g. (639228772727)<br><input type='text' name='SUB_Mobtel' value="<?php echo htmlentities($_GET['SUB_Mobtel'])?>" /> <br>
+			Telco<br><select name='telco' id='telco'>
+				<option value='sun'>Sun</option>
+				<option value='smart'>Smart</option>
+				<option value='globe'>Globe</option>
+			</select><br>
+			<script>
+				document.getElementById("telco").value = "<?php echo htmlentities($_GET['telco']); ?>";
+			</script>
+			Message <br> <textarea name='smstest' style='width:400px; height:300px'><?php echo htmlentities($_GET['smstest'])?></textarea><br>
+			No SMS? <input type='checkbox' name='nosms' value=1 checked="checked" /><br>
+			<input type='submit' value='Send'>
+		  </form>
+		<?php
 	}
 	
 	

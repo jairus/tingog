@@ -73,11 +73,32 @@ class Cityaccess_Model extends CI_Model{
 			}
 			#else if($row['type']=='Park Message'){
 			else if(strstr($row['type'], 'Parked - ')){	
-				array_push($array,array('user_login'=>$row['user_login'], 'user'=>$row['user'],'date'=>$row['date'],'msg'=>$row['msg'],'label'=>'Park Message','div_class'=>'park_message','read'=>$row['read'],'type'=>$row['type']));
+				array_push($array,
+					array(
+					'user_login'=>$row['user_login'],
+					'user'=>$row['user'],
+					'date'=>$row['date'],
+					'msg'=>$row['msg'],
+					'label'=>'Park Message',
+					'div_class'=>'park_message',
+					'read'=>$row['read'],
+					'type'=>$row['type']
+					)
+				);
 			}
 			#else if($row['type']=='Dispatch Message'){
 			else if(strstr($row['type'], 'Dispatch to ')){
-				array_push($array,array('user_login'=>$row['user_login'], 'user'=>$row['user'],'date'=>$row['date'],'msg'=>$row['msg'],'label'=>'Dispatch to ','div_class'=>'dispatch_message','read'=>$row['read'],'type'=>$row['type']));
+				array_push($array,
+					array(
+					'user_login'=>$row['user_login'], 
+					'user'=>$row['user'],
+					'date'=>$row['date'],
+					'msg'=>$row['msg'],
+					'label'=>'Dispatch to ',
+					'div_class'=>'dispatch_message',
+					'read'=>$row['read'],
+					'type'=>$row['type'])
+				);
 			}
 			else if($row['type']=='Reply Message'){
 				array_push($array,array('user_login'=>$row['user_login'], 'user'=>$row['user'],'date'=>$row['date'],'msg'=>$row['msg'],'label'=>'Reply Message','div_class'=>'reply_message','read'=>$row['read'],'type'=>$row['type']));
@@ -123,10 +144,13 @@ class Cityaccess_Model extends CI_Model{
 			return false;
 		}
 		$array_parked = array_parked();
+		if($array_parked[$tag]){
+			$tag = $array_parked[$tag];
+		}
 		$id = mysql_escape_string($id);
 		$message = mysql_escape_string($message);
 		$sql = "insert into `tickets_msg` set 
-			`type`='Parked - ".$array_parked[$tag]."',
+			`type`='Parked - ".$tag."',
 			`msg` = '".$message."',
 			`tid` = '".$id."',
 			`user` = '".$_SESSION['user_id']."',

@@ -1,4 +1,22 @@
 <?php
+	function str_replace_first($search_for, $replace_with, $str) {
+		$find = $search_for;
+		$find = preg_quote($find);
+		$find = str_replace('/',"\/",$find);
+		$pattern = "/".$find."/";
+		
+		$str = preg_replace($pattern, $replace_with, $str, 1);
+		return $str;
+	}
+	
+	function str_replace_first_i($search_for, $replace_with, $str) {
+		$find = $search_for;
+		$find = preg_quote($find);
+		$find = str_replace('/',"\/",$find);
+		$pattern = "/".$find."/i";
+		$str = preg_replace($pattern, $replace_with, $str, 1);
+		return $str;
+	}
 	function pre($arr){
 		echo "<pre>";
 		if(is_array($arr)) print_r($arr);
@@ -213,7 +231,8 @@
 			'PF'=>'Positive Feedback',
 			'NFA'=>'Not for Action',
 			'OI'=>'Other Issues',
-			'SP'=>'Spam'
+			'SP'=>'Spam',
+			'DUP'=>'Duplicate'
 		);
 		
 		if($key){

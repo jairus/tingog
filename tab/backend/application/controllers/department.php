@@ -251,13 +251,15 @@ class Department extends CI_Controller {
 		if(isset($_POST['message'])) $msg = $_POST['message'];
 		else $msg = "";
 		
-		$ticket_id = substr('00000'.$id,-6);
+		$ticket_id = $id;
 		$ticket = std2arr($this->departmentmodel->getTicketDetails($id));
 		if(trim($ticket[0]['number'])){
-			$sms = "Magandang araw! May kaukulang aksyon na ang iyong report ".$ticket_id.". ".$msg.". 
+			/*$sms = "Magandang araw! May kaukulang aksyon na ang iyong report ".$ticket_id.". ".$msg.". 
 
 Anong masasabi mo sa aming serbisyo? Para sumagot, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/salamat! P1/txt";
-			$this->sms->sendSMS($ticket[0]['number'],$sms);
+			*/
+			$sms = $_POST['message'];
+			$this->sms->sendSMS($ticket[0]['number'],$sms, 2);
 		}
 		
 		$this->departmentmodel->resolveTicket($id, $msg);
@@ -277,7 +279,8 @@ Anong masasabi mo sa aming serbisyo? Para sumagot, i-text ang TINGOG REP<report#
 		}	
 		$message = $_POST['message'];
 		$sms = $_POST['sms'];
-		$ticket_id = $_POST['ticket_id'];
+		$ticket_id = $id;
+		$ticket = std2arr($this->departmentmodel->getTicketDetails($id));
 		$message_head = "";
 		if(is_array($sms)){
 			$numbers = array();
@@ -289,6 +292,9 @@ Anong masasabi mo sa aming serbisyo? Para sumagot, i-text ang TINGOG REP<report#
 			}
 			if(count($numbers)){
 				$message_head = "Sent SMS to ".implode(", ", $numbers)."\n\n";
+				foreach($numbers as $number){
+					$this->sms->sendSMS($number,$sms, 2);
+				}
 			}
 		}
 		$message_foot = "";

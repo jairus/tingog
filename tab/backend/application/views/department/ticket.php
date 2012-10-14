@@ -553,8 +553,6 @@ Others &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				</td>
 			</tr>
 		</table>
-    </div>
-		<div><center><br><input type="button" id="btn_message_submit_id" name="btn_message_submit" class="btn_3" value="Submit" style="width:130px;" onclick='submitMessage("<?php echo $ticket['id']; ?>");' /></center></div>
   </form>
 </td></tr>
 </table>

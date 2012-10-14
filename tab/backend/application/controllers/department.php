@@ -161,13 +161,17 @@ class Department extends CI_Controller {
 		$this->load->view('department/ticketlist.php', $data);
 	}
 	
-	function depviewticket($id){
+	function depviewticket($id=""){
 		#pre(get_class($this).'->'.__FUNCTION__);
 		if(!checkPermission(get_class($this), __FUNCTION__)){
 			$content['content'] = returnNoAccessRight();
 			$this->load->view('layout/main', $content);
 			exit();
 		}	
+		
+		if(!trim($id)){
+			return false;
+		}
 		
 		$data = array();
 		$data['ticket'] = $this->departmentmodel->getTicketDetails($id);
@@ -330,7 +334,22 @@ Anong masasabi mo sa aming serbisyo? Para sumagot, i-text ang TINGOG REP<report#
 			$this->load->view('layout/main', $content);
 			exit();
 		}	
+		$sms = $_POST['message'];
+		
+		
+		$ticket = std2arr($this->departmentmodel->getTicketDetails($id));
+		if(trim($ticket[0]['number'])){
+			//$sms = "Kailangan namin ng karagdagang impormasyon para matugunan ang iyong report. ".$_POST['message']."? Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ Barangay health station P1/txt";
+			$sms = $_POST['message'];
+			$this->sms->sendSMS($ticket[0]['number'],$sms, 2);
+		}
+		if(trim($ticket[0]['email'])){
+			$msg = "Kailangan namin ng karagdagang impormasyon para matugunan ang iyong report. ".$_POST['message']."?";
+			$this->sms->sendEmail($ticket[0]['email'],$msg);
+		}
+		
 		$this->departmentmodel->sendReply($id, $_POST['message']);
+		
 		//refresh thread
 		?>
 		<script>
@@ -340,13 +359,17 @@ Anong masasabi mo sa aming serbisyo? Para sumagot, i-text ang TINGOG REP<report#
 		<?php
 	}
 	
-	function viewThread($id){ //for ajax use
+	function viewThread($id=""){ //for ajax use
 		if(!checkPermission(get_class($this), __FUNCTION__)){
 			pre('Not allowed');
 			$content['content'] = returnNoAccessRight();
 			$this->load->view('layout/main', $content);
 			exit();
 		}	
+		
+		if(!trim($id)){
+			return false;
+		}
 		$ticket = $this->departmentmodel->getTicketDetails($id);
 		$data['ticket'] = $ticket[0];
 		$data['messages'] = $this->departmentmodel->ticketMessages($id);

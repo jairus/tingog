@@ -172,12 +172,15 @@ class Cityaccess extends CI_Controller {
 		$this->load->view('cityaccess/ticketlist.php', $data);
 	}
 	
-	function viewTicket($id){
+	function viewTicket($id=""){
 		if(!checkPermission(get_class($this), __FUNCTION__)){
 			$content['content'] = returnNoAccessRight();
 			$this->load->view('layout/main', $content);
 			exit();
-		}	
+		}
+		if(!trim($id)){
+			return false;
+		}
 		$data = array();
 		$result = $this->citymodel->getTicketList('new');
 		$data['new_tickets'] = $result;
@@ -307,12 +310,15 @@ class Cityaccess extends CI_Controller {
 		}
 	}
 	
-	function viewThread($id){ //for ajax use
+	function viewThread($id=""){ //for ajax use
 		if(!checkPermission(get_class($this), __FUNCTION__)){
 			$content['content'] = returnNoAccessRight();
 			$this->load->view('layout/main', $content);
 			exit();
 		}	
+		if(!trim($id)){
+			return false;
+		}
 		$ticket = $this->citymodel->getTicketDetails($id);
 		$data['ticket'] = $ticket[0];
 		$data['messages'] = $this->citymodel->ticketMessages($id);

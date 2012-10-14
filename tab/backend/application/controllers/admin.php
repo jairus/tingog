@@ -721,7 +721,7 @@ class Admin extends CI_Controller {
 				#$r[$i]['id'] = $v['id'];
 				#$r[$i]['name'] = $v['department'];
 				$v['name'] = $v['issue'];
-				$v['edit_link'] = "/admin/issueEdit/".$v['id'];
+				$v['edit_link'] = "/backend/admin/issueEdit/".$v['id'];
 				
 				$check = $this->admin->checkIssueTicketNo($v['id']);
 				if(count($check)){
@@ -876,7 +876,7 @@ class Admin extends CI_Controller {
 				else $v['department'] = "";
 				#$v['department'] = $dep[''];
 				#pre($dep);
-				$v['edit_link'] = "/admin/personnelEdit/".$v['id'];
+				$v['edit_link'] = "/backend/admin/personnelEdit/".$v['id'];
 				array_push($r,$v);
 				$i++;
 			}

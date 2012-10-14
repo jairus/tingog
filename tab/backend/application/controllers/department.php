@@ -213,8 +213,20 @@ class Department extends CI_Controller {
 			$this->load->view('layout/main', $content);
 			exit();
 		}
-		if(isset($_POST['park_tag'])) $tag = $_POST['park_tag'];
-		else $tag = "";
+		if(isset($_POST['park_tag'])){
+			$tag = $_POST['park_tag'];
+			if($tag=="PF"){
+				$sms = $_POST['message'];
+				$this->sms->sendSMS($ticket[0]['number'],$sms, 2);
+			}
+			else if($tag=="NFA"){
+				$sms = $_POST['message'];
+				$this->sms->sendSMS($ticket[0]['number'],$sms, 2);
+			}
+		}
+		else{
+			$tag = "";
+		}
 		$this->departmentmodel->parkTicket($id, $_POST['message'], $tag);
 		//refresh thread
 		?>

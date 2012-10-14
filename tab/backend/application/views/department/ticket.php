@@ -1,6 +1,7 @@
 <?php
 @session_start();
 	$ticket = $ticket[0];
+	$mun = $_SESSION['municipality'];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -148,6 +149,24 @@ jQuery(function(){
 	});
 });
 
+function changeMessage(){
+	tag = jQuery("#park_tag").val();
+	jQuery("#textarea_message_id").val("");
+	if(tag=='PF'){
+		jQuery("#textarea_message_id").val("<?php
+		$date = date("M d, Y", strtotime($ticket['date']));
+		echo "Salamat sa inyong magandang feedback na itinext sa TINGOG noong $date. Asahan ninyo ang aming patuloy na serbisyo.";
+		?>");
+	}
+	else if(tag=='NFA'){
+		jQuery("#textarea_message_id").val("<?php
+		$date = date("M d, Y", strtotime($ticket['date']));
+		echo "Salamat sa inyong report na itinext noong $date. Sa ngayon, hinde pa ito sakop sa TINGOG ngunit asahan ninyong bibigyan ito ng pansin ng kinauukulan.";
+		?>");
+	}
+	countChars();
+}
+
 function showDropdown(flag){
 	jQuery(".parkonly").hide();
 	jQuery(".parkonly *").attr("disabled", true);
@@ -173,6 +192,12 @@ function showDropdown(flag){
 		jQuery("#textarea_message_id").val("<?php
 		echo "Na-aksyunan na ang inyong TINGOG report ".$_SESSION['municipality'].$ticket['id']." <action taken>";
 		?>");
+		countChars();
+	}
+	else if(flag==5){
+		jQuery(".dispatchonly").hide();
+		jQuery(".dispatchonly *").attr("disabled", true);
+		jQuery("#textarea_message_id").val("<question>? Reply TINGOG REP <?php echo $mun.$ticket['id']; ?>/<message>. Ex. TINGOG REP <?php echo $mun.$ticket['id']; ?> Baranggay health station");
 		countChars();
 	}
 	else if(flag==0){
@@ -220,7 +245,7 @@ function showDropdown(flag){
                       <tr>
                         <td width="100"><b>Report #</b></td>
                         <td width="10" align="center"><b>:</b></td>
-                        <td><?php echo zeroes($ticket['id'], 6); ?></td>
+                        <td><?php echo $mun.$ticket['id']; ?></td>
                       </tr>
                       <tr>
                         <td colspan="3">&nbsp;</td>
@@ -391,14 +416,17 @@ function showDropdown(flag){
 					  <tr class='parkonly' style="display:none;">
                         <td width="100"><b>Others:</b></td>
                         <td align="center"><b>:</b></td>
-                        <td>&nbsp;<select name="park_tag" id="park_tag" class="input_1" style="width:150px;">
-                          <?
-						  	$array_parked = array_parked();
-							echo "<option value=\"\">-</option>";
-							foreach($array_parked as $k=>$v){
-								echo '<option value="'.$k.'">'.$v.'</option>';
-							}
+                        <td>&nbsp;<select name="park_tag" id="park_tag" class="input_1" style="width:150px;" onchange='changeMessage()'>
+                          <?php
+						  	/*
+							'PF'=>'Positive Feedback',
+							'NFA'=>'Not for Immediate Action',
+							'SP'=>'Spam',
+							*/
 						  ?>
+						  <option value='PF'>Positive Feedback</option>
+						  <option value='NFA'>Not for Immediate Action</option>
+						  <option value='SP'>Spam</option>
                         </select></td>
                       </tr>
                     </table>
@@ -500,9 +528,9 @@ Return to dispatcher &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Internal Note &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input name="option" type="radio" value="internalwsms" onclick="showDropdown(3);" />
 Internal Note (SMS to assignee) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input name="option" type="radio" value="reply" onclick="showDropdown(0);" /> 
+<input name="option" type="radio" value="reply" onclick="showDropdown(5);" /> 
 Reply to Sender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-<input name="option" type="radio" value="park" onclick="showDropdown(2);" />
+<input name="option" type="radio" value="park" onclick="showDropdown(2); changeMessage();" />
 Others &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 </div>
     <div>&nbsp;</div>
@@ -530,5 +558,8 @@ Others &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </form>
 </td></tr>
 </table>
+<?php
+
+?>
 </body>
 </html>

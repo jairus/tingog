@@ -195,7 +195,7 @@ function check_barangay(v){
                       <tr>
                         <td width="100"><b>Report #</b></td>
                         <td width="10" align="center"><b>:</b></td>
-                        <td><?php echo zeroes($ticket['id'], 6); ?></td>
+                        <td><?php echo $mun.$ticket['id']; ?></td>
                       </tr>
                       <tr>
                         <td colspan="3">&nbsp;</td>

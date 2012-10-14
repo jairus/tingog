@@ -229,7 +229,7 @@
 	function array_parked($key=NULL){
 		$array = array(
 			'PF'=>'Positive Feedback',
-			'NFA'=>'Not for Action',
+			'NFA'=>'Not for Immediate Action',
 			'OI'=>'Other Issues',
 			'SP'=>'Spam',
 			'DUP'=>'Duplicate'

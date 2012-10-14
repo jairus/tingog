@@ -14,7 +14,7 @@ dispatcher on "Others"
 concerned office 
 Others
  - Positive feedback (send sms)
- - Not for action -> Note for immediate Action (send sms)
+ - Not for action -> Not for immediate Action (send sms)
  - Spam
 
 Resolve

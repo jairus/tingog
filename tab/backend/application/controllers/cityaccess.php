@@ -207,7 +207,7 @@ class Cityaccess extends CI_Controller {
 		if(isset($_POST['park_tag'])) $tag = $_POST['park_tag'];
 		else $tag = "";
 		$this->citymodel->parkTicket($id, $_POST['message'], $tag);
-		$this->sendSMS($_POST['action'],false);
+		//$this->sendSMS($_POST['action'],false);
 		//refresh thread
 		?>
 		<script>
@@ -230,7 +230,7 @@ class Cityaccess extends CI_Controller {
 			$brgy = $_POST['brgy'];
 		}
 		$this->citymodel->dispatchTicket($id, $_POST['message'],$_POST['category_id'],$_POST['department_id'],$brgy);
-		$this->sendSMS($_POST['action'],false);
+		//$this->sendSMS($_POST['action'],false);
 		//refresh thread
 		?>
 		<script>
@@ -247,7 +247,7 @@ class Cityaccess extends CI_Controller {
 			exit();
 		}	
 		$this->citymodel->internalMessage($id, $_POST['message']);
-		$this->sendSMS($_POST['action'],false);
+		//$this->sendSMS($_POST['action'],false);
 		//refresh thread
 		?>
 		<script>
@@ -271,7 +271,7 @@ class Cityaccess extends CI_Controller {
 		if(trim($ticket[0]['number'])){
 			//$sms = "Kailangan namin ng karagdagang impormasyon para matugunan ang iyong report. ".$_POST['message']."? Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ Barangay health station P1/txt";
 			$sms = $_POST['message'];
-			$this->sms->sendSMS($ticket[0]['number'],$sms, 2);
+			$this->sms->sendSMS($ticket[0]['number'],$sms, 1);
 		}
 		if(trim($ticket[0]['email'])){
 			$msg = "Kailangan namin ng karagdagang impormasyon para matugunan ang iyong report. ".$_POST['message']."?";
@@ -281,7 +281,6 @@ class Cityaccess extends CI_Controller {
 		#exit();
 		
 		$this->citymodel->sendReply($id, $_POST['message']);
-		$this->sendSMS($_POST['action'],false);
 		//refresh thread
 		?>
 		<script>

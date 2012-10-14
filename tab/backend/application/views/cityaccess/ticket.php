@@ -20,6 +20,10 @@
 function submitMessage(id){
 	jQuery("#btn_message_submit_id").hide();
 	mtype = jQuery('input:radio[name=option]:checked').val();
+	if(!mtype){
+		jQuery("#btn_message_submit_id").show();
+		return false;
+	}
 	if(mtype=='internal'){
 		jQuery.ajax({
 			type: 'POST',
@@ -143,7 +147,7 @@ function showDropdown(flag){
 	else if(flag==3){
 		jQuery(".dispatchonly").hide();
 		jQuery(".dispatchonly *").attr("disabled", true);
-		jQuery("#textarea_message_id").val("<question>? Reply TINGOG REP <?php echo $mun.$ticket['id']; ?>/<message>. Ex. TINGOG REP <?php echo $mun.$ticket['id']; ?> Baranggay health station");
+		jQuery("#textarea_message_id").val("<question>? Reply TINGOG REP <?php echo $mun.$ticket['id']; ?>/<message>. Ex. TINGOG REP <?php echo $mun.$ticket['id']; ?>/Baranggay health station");
 		countChars();
 	}
 	else if(flag==2){
@@ -161,6 +165,7 @@ function showDropdown(flag){
 		jQuery(".dispatchonly").show();
 		jQuery(".dispatchonly *").attr("disabled", false);reply
 	}
+	countChars();
 }
 
 function check_barangay(v){
@@ -444,7 +449,7 @@ function check_barangay(v){
     </div>
     <div>&nbsp;</div>
     <div class="text_1"></div>
-	<?
+	<?php
 		if($ticket['status']!='closed'){
 			?>
 			<div id="message_input" class="text_1">
@@ -477,5 +482,14 @@ function check_barangay(v){
   </form>
 </td></tr>
 </table>
+<?php
+if(strtolower(trim($ticket['status']))=='dispatched'){
+	?>
+	<script>
+		jQuery(".dispatchonly").hide();
+	</script>
+	<?php
+}
+?>
 </body>
 </html>

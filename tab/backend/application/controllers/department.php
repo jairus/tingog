@@ -202,6 +202,29 @@ class Department extends CI_Controller {
 		}
 		#pre("hello");
 		#exit();
+		$message = $_POST['message'];
+		
+		/*
+		$sms = $_POST['sms'];
+		$ticket_id = $id;
+		$ticket = std2arr($this->departmentmodel->getTicketDetails($id));
+		$message_head = "";
+		if(is_array($sms)){
+			$numbers = array();
+			foreach($sms as $number){
+				//send sms
+				if(trim($number)&&!in_array($number, $numbers)){
+					$numbers[] = $number;
+				}
+			}
+			if(count($numbers)){
+				$message_head = "Sent SMS to ".implode(", ", $numbers)."\n\n";
+				foreach($numbers as $number){
+					$this->sms->sendSMS($number,$message, 3);
+				}
+			}
+		}
+		*/
 		$this->departmentmodel->assignTicket($id, $_POST['message'],$_POST['issue_id'],$_POST['personnel_id'],$_POST['personnel_id2'],$_POST['datepicker']);
 		?>
 		<script>
@@ -217,15 +240,19 @@ class Department extends CI_Controller {
 			$this->load->view('layout/main', $content);
 			exit();
 		}
+		$ticket = std2arr($this->departmentmodel->getTicketDetails($id));
+		
 		if(isset($_POST['park_tag'])){
 			$tag = $_POST['park_tag'];
-			if($tag=="PF"){
-				$sms = $_POST['message'];
-				$this->sms->sendSMS($ticket[0]['number'],$sms, 2);
-			}
-			else if($tag=="NFA"){
-				$sms = $_POST['message'];
-				$this->sms->sendSMS($ticket[0]['number'],$sms, 2);
+			if(trim($ticket[0]['number'])){
+				if($tag=="PF"){
+					$sms = $_POST['message'];
+					$this->sms->sendSMS($ticket[0]['number'],$sms, "0");
+				}
+				else if($tag=="NFA"){
+					$sms = $_POST['message'];
+					$this->sms->sendSMS($ticket[0]['number'],$sms, "0");
+				}
 			}
 		}
 		else{
@@ -275,7 +302,7 @@ class Department extends CI_Controller {
 Anong masasabi mo sa aming serbisyo? Para sumagot, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/salamat! P1/txt";
 			*/
 			$sms = $_POST['message'];
-			$this->sms->sendSMS($ticket[0]['number'],$sms, 2);
+			$this->sms->sendSMS($ticket[0]['number'],$sms, "0");
 		}
 		
 		$this->departmentmodel->resolveTicket($id, $msg);
@@ -309,7 +336,7 @@ Anong masasabi mo sa aming serbisyo? Para sumagot, i-text ang TINGOG REP<report#
 			if(count($numbers)){
 				$message_head = "Sent SMS to ".implode(", ", $numbers)."\n\n";
 				foreach($numbers as $number){
-					$this->sms->sendSMS($number,$sms, 2);
+					$this->sms->sendSMS($number,$message, 1);
 				}
 			}
 		}
@@ -341,7 +368,7 @@ Anong masasabi mo sa aming serbisyo? Para sumagot, i-text ang TINGOG REP<report#
 		if(trim($ticket[0]['number'])){
 			//$sms = "Kailangan namin ng karagdagang impormasyon para matugunan ang iyong report. ".$_POST['message']."? Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ Barangay health station P1/txt";
 			$sms = $_POST['message'];
-			$this->sms->sendSMS($ticket[0]['number'],$sms, 2);
+			$this->sms->sendSMS($ticket[0]['number'],$sms, "1");
 		}
 		if(trim($ticket[0]['email'])){
 			$msg = "Kailangan namin ng karagdagang impormasyon para matugunan ang iyong report. ".$_POST['message']."?";

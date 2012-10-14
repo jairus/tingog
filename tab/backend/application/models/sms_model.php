@@ -17,7 +17,7 @@ class SMS_Model extends CI_Model{
 		if($number[0]=='0'){
 			$number = str_replace_first("0", "63", $number);
 		}
-		$sql = "select * from `sms_replies` where (`url`<>'' or `telco`<>'') and `number`='".$number."' limit 1";
+		$sql = "select * from `sms_replies` where (`url`<>'' or `telco`<>'') and `number`='".$number."' order by `id` desc limit 1";
 		$query = $this->db->query($sql);
 		$result = std2arr($query->result_array());
 		
@@ -42,14 +42,25 @@ class SMS_Model extends CI_Model{
 		else{
 			$url = "http://74.86.63.102/~txtcircu/sms_out.php?telco=".$telco."&tariff=1&SUB_Mobtel=".$number."&SMS_Message_String=".$sms."&CSP_Txid=1";
 		}
+		
+		
+		
+		
+		if(!$_GET['nosms']){
+			$sending_status = file_get_contents($url);
+			echo "SMS Sending Status: ".$sending_status;
+		}
+		else{
+			echo "SMS Not Sent!";
+		}
 		$sql = "insert into `sms_replies` set
 			`url` = '".mysql_escape_string($url)."',
 			`number` = '".mysql_escape_string($number)."',
 			`telco` = '".mysql_escape_string($telco)."',
+			`sending_status` = '".mysql_escape_string($sending_status)."',
 			`message` = '".mysql_escape_string(urldecode($sms))."',
 			`dateadded` = NOW()
 		";
-		
 		echo "<pre>";
 		echo "<b>Number: </b>".$number."<hr>";
 		echo "<b>SMS Reply:</b>\n".htmlentities(urldecode($sms))."<hr>";
@@ -58,12 +69,6 @@ class SMS_Model extends CI_Model{
 		//echo $sql;
 		$this->db->query($sql);
 		
-		if(!$_GET['nosms']){
-			echo "SMS Sending Status: ".file_get_contents($url);
-		}
-		else{
-			echo "SMS Not Sent!";
-		}
 		echo "</pre>";
 		#$url = "";
 		#$url = "http://api.clickatell.com/http/sendmsg?user=DirectOpen&password=D0SMS911&api_id=3269103&to=$number$&text=$sms";

@@ -182,10 +182,10 @@ function showDropdown(flag){
 		jQuery(".dispatchonly").show();
 		jQuery(".dispatchonly *").attr("disabled", false);
 		jQuery("#textarea_message_id").val("<?php
-		echo "Para mag-reply sa Tingog, i-text ang TINGOG REP ".$_SESSION['municipality'].$ticket['id']."/<message>";
+		echo "<message to staff>. Para rumesponde sa ulat na natanggap, reply TINGOG ACTION ".$_SESSION['municipality'].$ticket['id']."/<message>. Ex. TINGOG ACTION ".$_SESSION['municipality'].$ticket['id']."/ito po ay natugunan na.";
 		?>");
 	}
-	//internal with sms
+	//resolved
 	else if(flag==4){
 		jQuery(".dispatchonly").show();
 		jQuery(".dispatchonly *").attr("disabled", false);
@@ -197,7 +197,7 @@ function showDropdown(flag){
 	else if(flag==5){
 		jQuery(".dispatchonly").hide();
 		jQuery(".dispatchonly *").attr("disabled", true);
-		jQuery("#textarea_message_id").val("<question>? Reply TINGOG REP <?php echo $mun.$ticket['id']; ?>/<message>. Ex. TINGOG REP <?php echo $mun.$ticket['id']; ?> Baranggay health station");
+		jQuery("#textarea_message_id").val("<question>? Reply TINGOG REP <?php echo $mun.$ticket['id']; ?>/<message>. Ex. TINGOG REP <?php echo $mun.$ticket['id']; ?>/Baranggay health station");
 		countChars();
 	}
 	else if(flag==0){
@@ -214,6 +214,7 @@ function showDropdown(flag){
 		jQuery(".parkonly").show();
 		jQuery(".parkonly *").attr("disabled", false);
 	}
+	countChars();
 }
 </script>
 
@@ -526,8 +527,14 @@ Resolve &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Return to dispatcher &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input name="option" type="radio" value="internal" onclick="showDropdown(1);" />
 Internal Note &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input name="option" type="radio" value="internalwsms" onclick="showDropdown(3);" />
-Internal Note (SMS to assignee) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<?php
+if(trim(strtolower($ticket['status']))=='assigned'){
+	?>
+	<input name="option" type="radio" value="internalwsms" onclick="showDropdown(3);" />
+	Internal Note (SMS to assignee) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<?php
+}
+?>
 <input name="option" type="radio" value="reply" onclick="showDropdown(5);" /> 
 Reply to Sender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 <input name="option" type="radio" value="park" onclick="showDropdown(2); changeMessage();" />

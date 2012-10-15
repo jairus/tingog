@@ -1268,7 +1268,7 @@ Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
 	
 Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
 								}
-								$this->sms->sendSMS($number, $rep, 2);
+								$this->sms->sendSMS($number, $rep, "2");
 							}else{
 								$this->sms->createUser($number, $smsarr[1],$smsarr[2],$smsarr[3],$smsarr[4]);
 								if(1 || trim($_GET['telco'])=='smart'||trim($_GET['telco'])=='globe'){
@@ -1279,7 +1279,7 @@ Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
 	
 Para sa listahan ng keywords, i-text ang TINGOG sa 2015 for free.";
 								}
-								$this->sms->sendSMS($number, $rep);
+								$this->sms->sendSMS($number, $rep, "1");
 							}
 						}
 					}

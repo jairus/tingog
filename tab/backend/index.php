@@ -2,6 +2,7 @@
 session_start();
 $exclude = array(
 	'/backend/admin/createticket',
+	'/backend/admin/test',
 	'/backend/ticket/barangay',
 	'/backend/ticket/getreport',
 	'/backend/report/ticketws',

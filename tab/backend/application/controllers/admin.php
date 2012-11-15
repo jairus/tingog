@@ -1016,8 +1016,24 @@ class Admin extends CI_Controller {
 		$name = $this->sms->getNameFromNumber($number);
 		
 		if(!$ticket_id && !$msg){
-			$text = "Para mag-reply sa Tingog, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP ".$mun."12345/ salamat! 1P/txt Maaari ding alamin ang updates sa iyong report sa website ng TINGOG 2015 http://www.tingog.ph/tab/.";
-			$this->sms->sendSMS($number,$text);
+			if(trim($_GET['telco'])=='smart'){
+				$text = "Para mag-reply sa Tingog, reply TINGOG REP <report#>/<message>.Ex. TINGOG REP 12345/salamat! P1/txt
+	
+	Para sa updates ng iyong report i-check sa www.tingog.ph";
+				$this->sms->sendSMS($number,$text, 1);
+			}
+			else if(trim($_GET['telco'])=='globe'){
+				$text = "Para mag-reply sa Tingog, reply TINGOG REP <report#>/<message>.Ex. TINGOG REP 12345/salamat! P1/txt
+	
+	Para sa updates ng iyong report i-check sa www.tingog.ph";
+				$this->sms->sendSMS($number,$text, 1, "TINGOG REP");
+			}
+			else if(trim($_GET['telco'])=='sun'){
+				$text = "Para mag-reply sa Tingog, reply TINGOG REP <report#>/<message>.Ex. TINGOG REP 12345/salamat! P1/txt
+	
+	Para sa updates ng iyong report i-check sa www.tingog.ph";
+				$this->sms->sendSMS($number,$text, 1);
+			}
 			return false;
 		}
 		else if(!$ticket_id || !$msg){
@@ -1029,7 +1045,7 @@ Para sa listahan ng keywords,reply TINGOG HELP.P1/txt.";
 			else if(trim($_GET['telco'])=='globe'){
 				$text = "Mali ang format na iyong ginamit.I-text ang TINGOG REP<report#>/<message>.Ex. TINGOG REP 12345/ salamat!
 Para sa listahan ng keywords,reply TINGOG HELP.P1/txt.";
-				$this->sms->sendSMS($number,$text, 2);
+				$this->sms->sendSMS($number,$text, 2, 'globe', "TINGOG REPERROR");
 			}
 			if(trim($_GET['telco'])=='sun'){
 				$text = "Mali ang format na iyong ginamit.I-text ang TINGOG REP <report#>/<message>.Ex. TINGOG REP 12345/ salamat!P1/txt.
@@ -1048,7 +1064,7 @@ Para sa listahan ng keywords,reply TINGOG HELP for free.";
 				}
 				else if(trim($_GET['telco'])=='globe'){
 					$text = "Sorry, mali ang report number. I-check ang report number. Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ salamat! P1/txt";
-					$this->sms->sendSMS($number,$text, 2);
+					$this->sms->sendSMS($number,$text, 2, 'globe', "TINGOG REPERROR");
 				}
 				if(trim($_GET['telco'])=='sun'){
 					$text = "Sorry, mali ang report number. I-check ang report number. Para mag-reply, i-text ang TINGOG REP <report#>/<message>.Ex. TINGOG REP 12345/ salamat!P1/txt";
@@ -1066,7 +1082,7 @@ Para sa listahan ng keywords, reply TINGOG HELP.P1/txt";
 					$text = "Salamat sa iyong mensahe. Ikaw ay makatatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang.
 
 Para sa listahan ng keywords, reply TINGOG HELP.P1/txt";
-					$this->sms->sendSMS($number,$text, 1);
+					$this->sms->sendSMS($number,$text, 1, 'globe', "TINGOG REP");
 				}
 				else if(trim($_GET['telco'])=='sun'){
 					$text = "Salamat sa iyong mensahe. Ikaw ay makatatanggap ng sagot mula sa TINGOG 2015 maya-maya lamang. P1/txt
@@ -1091,7 +1107,7 @@ Para sa listahan ng keywords, reply TINGOG HELP for free.";
 			}
 			else if(trim($_GET['telco'])=='globe'){
 				$text = "Mali ang format na iyong ginamit.I-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 12345/salamat! P1/txt.";
-				$this->sms->sendSMS($number,$text, 2);
+				$this->sms->sendSMS($number,$text, 2, 'globe', "TINGOG ACTERROR");
 			}
 			else if(trim($_GET['telco'])=='sun'){
 				$text = "Mali ang format na iyong ginamit.I-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 12345/salamat! P1/txt.";
@@ -1109,7 +1125,7 @@ Para sa listahan ng keywords, reply TINGOG HELP for free.";
 				}
 				else if(trim($_GET['telco'])=='globe'){
 					$text = "Sorry, mali ang report number. Para magbigay ulat tungkol sa isang report, i-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 12345/ salamat! P1/txt.";
-					$this->sms->sendSMS($number,$text, 2);
+					$this->sms->sendSMS($number,$text, 2, 'globe', "TINGOG ACTERROR");
 				}
 				else if(trim($_GET['telco'])=='sun'){
 					$text = "Sorry, mali ang report number. Para magbigay ulat tungkol sa isang report, i-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 12345/ salamat! P1/txt.";
@@ -1124,7 +1140,7 @@ Para sa listahan ng keywords, reply TINGOG HELP for free.";
 				}
 				else if(trim($_GET['telco'])=='globe'){
 					$text = "Salamat sa iyong pagresponde. Ipaaalam namin agad ang resulta ng estado ng report na naiulat.Para sa listahan ng keywords,i-text ang TINGOG HELP sa 2015. P1/txt";
-					$this->sms->sendSMS($number,$text, 1);
+					$this->sms->sendSMS($number,$text, 1, 'globe', "TINGOG ACTION2");
 				}
 				else if(trim($_GET['telco'])=='sun'){
 					$text = "Salamat sa iyong pagresponde. Ipaaalam namin agad ang resulta ng estado ng report na naiulat. Para sa listahan ng keywords, i-text ang TINGOG sa 2015. P1/txt";
@@ -1219,7 +1235,7 @@ Para sa listahan ng keywords, reply TINGOG HELP for free.";
 						}
 						else if(trim($_GET['telco'])=='globe'){
 							$rep = "Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015";
-							$this->sms->sendSMS($number, $rep, 2);
+							$this->sms->sendSMS($number, $rep, 2, 'globe', "TINGOG REPERROR");
 						}
 						else if(trim($_GET['telco'])=='sun'){
 							$rep = "Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud maganda ang inyong serbisyo. I-send sa 2015.P1/txt";
@@ -1241,13 +1257,19 @@ Para sa listahan ng keywords, reply TINGOG HELP for free.";
 						$ticketno = $municipality.$ticketno;
 						//$rep = "Salamat sa iyong report. Ito ay ipaparating sa kinauukulan para sa kanilang aksyon. Tandaan ang iyong report number ".$ticketno.". Makakatanggap ka pa ng mga mensahe tungkol sa iyong report. Maaari ding alamin ang updates sa iyong report sa website ng TINGOG 2015 ".$tingog_url;
 						
-						if( trim($_GET['telco'])=='smart'||trim($_GET['telco'])=='globe'){
-							$rep = "Salamat sa pag-report sa TINGOG 2015. Ito'y bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ".$ticketno.".";
+						if( trim($_GET['telco'])=='smart'){
+							$rep = "Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ".$ticketno.".";
+							$this->sms->sendSMS($number, $rep, 1);
+						}
+						else if( trim($_GET['telco'])=='globe'){
+							$rep = "Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ".$ticketno.".";
+							$this->sms->sendSMS($number, $rep, 1, 'globe', "TINGOG REPORT2");
 						}
 						else if(trim($_GET['telco'])=='sun'){
-							$rep = "Salamat sa pag-report sa TINGOG 2015. Ito'y bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ".$ticketno.".P1/txt";
+							$rep = "Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ".$ticketno.".P1/txt";
+							$this->sms->sendSMS($number, $rep, 1);
 						}
-						$this->sms->sendSMS($number, $rep, 1);
+						
 					}
 				}
 
@@ -1266,7 +1288,7 @@ Para sa listahan ng keywords, reply TINGOG HELP for free.";
 						}
 						else if(trim($_GET['telco'])=='globe'){
 							$rep = "Para mag-register sa Tingog 2015, i-text ang TINGOG REG <LOCATION>/<barangay>/<name>/<age>/<gender>. Ex. TINGOG REG ADS/mapaga/mscruz/30/F sa 2015. P1/txt";
-							$this->sms->sendSMS($number, $rep, 1);
+							$this->sms->sendSMS($number, $rep, 1, 'globe', "TINGOG REG");
 						}
 						else if(trim($_GET['telco'])=='sun'){
 							$rep = "Para mag-register sa Tingog 2015, i-text ang TINGOG REG <LOCATION>/<barangay>/<name>/<age>/<gender> sa 2015.Ex. TINGOG REG ADS/mapaga/mscruz/30/F sa 2015.P1/txt";
@@ -1283,7 +1305,7 @@ Para sa listahan ng keywords, reply TINGOG HELP for free.";
 							}
 							else if(trim($_GET['telco'])=='globe'){
 								$rep = "Ikaw ay naka-register na. Para magpadala ng report, reply TINGOG <LOCATION> <barangay> <report> Ex. TINGOG TAB Cormidal Walang tao sa health center.";
-								$this->sms->sendSMS($number, $rep, 2);
+								$this->sms->sendSMS($number, $rep, 2, 'globe', "TINGOG REGERROR");
 							}
 							else if(trim($_GET['telco'])=='sun'){
 								$rep = "Ikaw ay naka-register na. Para magpadala ng report, reply TINGOG <LOCATION> <barangay> <report> Ex. TINGOG TAB Cormidal Walang tao sa health center.P1/txt";
@@ -1297,7 +1319,7 @@ Para sa listahan ng keywords, reply TINGOG HELP for free.";
 							}
 							else if(trim($_GET['telco'])=='globe'){
 								$rep = "Maling format. Para mag-register, i-text ang TINGOG REG <LOCATION>/<barangay>/<name>/<age>/<gender>. Ex. TINGOG REG ADS/mapaga/jennycruz/30/F sa 2015. P1/txt";
-								$this->sms->sendSMS($number, $rep, 2);
+								$this->sms->sendSMS($number, $rep, 2, 'globe', "TINGOG REGERROR");
 							}
 							else if(trim($_GET['telco'])=='sun'){
 								$rep = "Maling format. Para mag-register, i-text ang TINGOG REG <LOCATION>/<barangay>/<name>/<age>/<gender> sa 2015.Ex. TINGOG REG ADS/mapaga/mscruz/30/F sa 2015.P1/txt";
@@ -1313,7 +1335,7 @@ Para sa listahan ng keywords, reply TINGOG HELP for free.";
 							}
 							else if(trim($_GET['telco'])=='globe'){
 								$rep = "Salamat sa pag-register sa Tingog. Ang pagbibigay mo ng iyong impormasyon ay makatutulong upang mas mapabuti ang aming serbisyo.";
-								$this->sms->sendSMS($number, $rep, 1);
+								$this->sms->sendSMS($number, $rep, 1, 'globe', "TINGOG REG2");
 							}
 							if(trim($_GET['telco'])=='sun'){
 								$rep = "Salamat sa pag-register sa Tingog. Ang pagbibigay mo ng iyong impormasyon ay makatutulong upang mas mapabuti ang aming serbisyo . P1/registration";
@@ -1333,7 +1355,7 @@ ADS-Agusan del Sur.Reply TINGOG REG <LOCATION>/<name>/<barangay>/<age>/<gender> 
 							$rep = "Invalid location.Locations:
 TAB-Tabaco,
 ADS-Agusan del Sur.Reply TINGOG REG <LOCATION>/<name>/<barangay>/<age>/<gender> Ex.TINGOG REG ADS/mscruz/mapaga/30/F";
-							$this->sms->sendSMS($number, $rep, 2);
+							$this->sms->sendSMS($number, $rep, 2, "TINGOG REGERROR");
 						}
 						if(trim($_GET['telco'])=='sun'){
 							$rep = "Invalid location.Locations:
@@ -1370,7 +1392,7 @@ Para sa updates ng iyong report i-check sa www.tingog.ph";
 							$text = "Para mag-reply sa Tingog, reply TINGOG REP <report#>/<message>.Ex. TINGOG REP 12345/salamat! P1/txt
 
 Para sa updates ng iyong report i-check sa www.tingog.ph";
-							$this->sms->sendSMS($number,$text, 1);
+							$this->sms->sendSMS($number,$text, 1, "TINGOG REP");
 						}
 						else if(trim($_GET['telco'])=='sun'){
 							$text = "Para mag-reply sa Tingog, reply TINGOG REP <report#>/<message>.Ex. TINGOG REP 12345/salamat! P1/txt
@@ -1390,7 +1412,7 @@ Para sa updates ng iyong report i-check sa www.tingog.ph";
 						}
 						else if(trim($_GET['telco'])=='globe'){
 							$text = "Sorry, mali ang report number. I-check ang report number. Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ salamat! P1/txt";
-							$this->sms->sendSMS($number,$text, 2);
+							$this->sms->sendSMS($number,$text, 2, "TINGOG REPERROR");
 						}
 						if(trim($_GET['telco'])=='sun'){
 							$text = "Sorry, mali ang report number. I-check ang report number. Para mag-reply, i-text ang TINGOG REP <report#>/<message>.Ex. TINGOG REP 12345/ salamat!P1/txt";
@@ -1423,7 +1445,7 @@ Para sa updates ng iyong report i-check sa www.tingog.ph";
 						}
 						else if(trim($_GET['telco'])=='globe'){
 							$text = "Para rumesponde sa ulat na natanggap, reply TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 1234/ito po ay natugunan na.";
-							$this->sms->sendSMS($number,$text, 1);
+							$this->sms->sendSMS($number,$text, 1, "TINGOG ACTION");
 						}
 						else if(trim($_GET['telco'])=='sun'){
 							$text = "Para rumesponde sa ulat na natanggap, reply TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 1234/ito po ay natugunan na. P1/txt";
@@ -1440,7 +1462,7 @@ Para sa updates ng iyong report i-check sa www.tingog.ph";
 						}
 						else if(trim($_GET['telco'])=='globe'){
 							$text = "Mali ang format na iyong ginamit.I-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 12345/salamat! P1/txt.";
-							$this->sms->sendSMS($number,$text, 2);
+							$this->sms->sendSMS($number,$text, 2, "TINGOG ACTERROR");
 						}
 						else if(trim($_GET['telco'])=='sun'){
 							$text = "Mali ang format na iyong ginamit.I-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 12345/salamat! P1/txt.";
@@ -1469,35 +1491,57 @@ Para sa updates ng iyong report i-check sa www.tingog.ph";
 				TINGOG INFO
 				*/
 				else if(strpos($smstemp, "tingog info")!==false){
-					if(trim($_GET['telco'])=='smart'||trim($_GET['telco'])=='globe'){
-						$rep = "Keywords:
-TINGOG REG-paano mag register
-TINGOG <LOCATION> <barangay> <report>-para mag report 
-TINGOG REP-paano mag-reply
-I-text ang keyword sa 2015. P1/txt";
-					}
-					else{
+					if(trim($_GET['telco'])=='smart'){
 						$rep = "Keywords:
 TINGOG REG-paano mag register
 TINGOG <LOCATION> <barangay> <report>-para mag report 
 TINGOG REP-paano mag-reply
 I-text ang keyword sa 2015. P1/txt";
 						$tariff = 0;
+						$this->sms->sendSMS($number, $rep, $tariff);
 					}
-					$this->sms->sendSMS($number, $rep, $tariff);
+					else if(trim($_GET['telco'])=='globe'){
+						$rep = "Keywords:
+TINGOG REG-paano mag register
+TINGOG <LOCATION> <barangay> <report>-para mag report 
+TINGOG REP-paano mag-reply
+I-text ang keyword sa 2015. P1/txt";
+						$tariff = 0;
+						$this->sms->sendSMS($number, $rep, $tariff, "TINGOG INFO");
+					}
+					else if(trim($_GET['telco'])=='sun'){
+						$rep = "Keywords:
+TINGOG REG-paano mag register
+TINGOG <LOCATION> <barangay> <report>-para mag report 
+TINGOG REP-paano mag-reply
+I-text ang keyword sa 2015. P1/txt";
+						$tariff = 0;
+						$this->sms->sendSMS($number, $rep, $tariff);
+					}
+					
 				}
 				//tingog help
 				/*
 				TINGOG HELP
 				*/
 				else if(strpos($smstemp, "tingog help")!==false){
-					if(trim($_GET['telco'])=='smart'||trim($_GET['telco'])=='globe'){
+					if(trim($_GET['telco'])=='smart'){
 						$rep = "Keywords:
 TINGOG REG-paano mag register
 TINGOG <LOCATION> <barangay> <report>-para mag report
 TINGOG REP-paano mag-reply
 I-text ang keyword sa 2015. P1/txt";
 						$tariff = 1;
+						$this->sms->sendSMS($number, $rep, $tariff);
+					}
+					else if(trim($_GET['telco'])=='globe'){
+						$rep = "Keywords:
+TINGOG REG-paano mag register
+TINGOG <LOCATION> <barangay> <report>-para mag report
+TINGOG REP-paano mag-reply
+I-text ang keyword sa 2015. P1/txt";
+						$tariff = 1;
+						$this->sms->sendSMS($number, $rep, $tariff, "TINGOG HELP");
 					}
 					else{
 						$rep = "Tingog keywords:
@@ -1505,9 +1549,10 @@ TINGOG <LOCATION> <barangay> <report> -para mag report
 TINGOG REP <report#>/<message>- para mag reply.I-text ang keyword sa 2015.
 P1/txt";	
 						$tariff = 0;
+						$this->sms->sendSMS($number, $rep, $tariff);
 					}
 					
-					$this->sms->sendSMS($number, $rep, $tariff);
+					
 				}
 				//tingog location
 				/*
@@ -1520,7 +1565,7 @@ P1/txt";
 					}
 					else if(trim($_GET['telco'])=='globe'){
 						$rep = "Tingog Locations:TAB-Tabaco, ADS-Agusan del Sur.Para magpadala ng report, reply TINGOG <LOCATION> <barangay> <report> Ex.TINGOG TAB basud galing niyo!";
-						$this->sms->sendSMS($number, $rep, 1);
+						$this->sms->sendSMS($number, $rep, 1, "TINGOG LOCATION");
 					}
 					else if(trim($_GET['telco'])=='sun'){
 						$rep = "Tingog Locations: TAB-Tabaco, ADS-Agusan del Sur. Para magreport, reply TINGOG <LOCATION> <barangay> <report> Ex.TINGOG TAB basud galing!P1/txt";
@@ -1592,7 +1637,7 @@ ADS-Agusan del Sur.Reply TINGOG REG <LOCATION>/<name>/<barangay>/<age>/<gender> 
 TAB-Tabaco,
 ADS-Agusan del Sur
 Reply TINGOG <LOCATION> <barangay> <report> Ex.TINGOG ADS Basud walang tubig.P1/txt";
-						$this->sms->sendSMS($number, $rep, 2);
+						$this->sms->sendSMS($number, $rep, 2, "TINGOG REPERROR");
 					}
 					else if(trim($_GET['telco'])=='sun'){
 						$rep = "Invalid location. Valid Locations :

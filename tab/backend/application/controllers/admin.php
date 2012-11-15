@@ -1476,7 +1476,7 @@ Para sa updates ng iyong report i-check sa www.tingog.ph";
 						}
 						else if(trim($_GET['telco'])=='globe'){
 							$text = "Sorry, mali ang report number. Para magbigay ulat tungkol sa isang report, i-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 12345/ salamat! P1/txt.";
-							$this->sms->sendSMS($number,$text, 2);
+							$this->sms->sendSMS($number,$text, 2, "TINGOG ACTERROR");
 						}
 						else if(trim($_GET['telco'])=='sun'){
 							$text = "Sorry, mali ang report number. Para magbigay ulat tungkol sa isang report, i-text ang TINGOG ACTION <report#>/<message>. Ex. TINGOG ACTION 12345/ salamat! P1/txt.";

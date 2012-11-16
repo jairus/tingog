@@ -368,7 +368,7 @@ Anong masasabi mo sa aming serbisyo? Para sumagot, i-text ang TINGOG REP<report#
 		if(trim($ticket[0]['number'])){
 			//$sms = "Kailangan namin ng karagdagang impormasyon para matugunan ang iyong report. ".$_POST['message']."? Para mag-reply, i-text ang TINGOG REP<report#>/<message>. Ex. TINGOG REP 12345/ Barangay health station P1/txt";
 			$sms = $_POST['message'];
-			$this->sms->sendSMS($ticket[0]['number'],$sms, "1");
+			$this->sms->sendSMS($ticket[0]['number'],$sms, "0");
 		}
 		if(trim($ticket[0]['email'])){
 			$msg = "Kailangan namin ng karagdagang impormasyon para matugunan ang iyong report. ".$_POST['message']."?";

@@ -1191,7 +1191,21 @@ Para sa listahan ng keywords, reply TINGOG HELP for free.";
 				$municipality = explode(".", $_SERVER['HTTP_HOST']); //lower case
 				$municipality  = trim($municipality[0]);
 				$municipality = strtolower($municipality);
-				if(strpos($smstemp, "tingog ".$municipality." ")!==false){
+				if(trim($smstemp)=="tingog ".$municipality){
+					if(trim($_GET['telco'])=='smart'){
+						$rep = "Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015";
+						$this->sms->sendSMS($number, $rep, 2);
+					}
+					else if(trim($_GET['telco'])=='globe'){
+						$rep = "Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud/ maganda ang inyong serbisyo. Ipadala sa 2015";
+						$this->sms->sendSMS($number, $rep, 2, 'globe', "TINGOG REPERROR");
+					}
+					else if(trim($_GET['telco'])=='sun'){
+						$rep = "Mali ang format na iyong ginamit.I-text ang TINGOG <LOCATION> <barangay> <report >. Ex. TINGOG TAB basud maganda ang inyong serbisyo. I-send sa 2015.P1/txt";
+						$this->sms->sendSMS($number, $rep, 2);
+					}
+				}
+				else if(strpos($smstemp, "tingog ".$municipality." ")!==false){
 					
 					$strtemp = $this->simplifyText($sms);
 					$strtemp = explode("/", $strtemp);
@@ -1263,7 +1277,7 @@ Para sa listahan ng keywords, reply TINGOG HELP for free.";
 						}
 						else if( trim($_GET['telco'])=='globe'){
 							$rep = "Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ".$ticketno.".";
-							$this->sms->sendSMS($number, $rep, 1, 'globe', "TINGOG REPORT2");
+							$this->sms->sendSMS($number, $rep, 1, 'globe', "TINGOG REPORT");
 						}
 						else if(trim($_GET['telco'])=='sun'){
 							$rep = "Salamat sa pag-report sa TINGOG 2015. Ito ay bibigyan pansin ng kinauukulan para sa tamang aksyon. Tandaan ang iyong report number ".$ticketno.".P1/txt";

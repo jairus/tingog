@@ -46,14 +46,20 @@ function showDropdown(x){
 	}
 }
 
-function cityaccess_tickets(){
-	jQuery("#cityaccess_tickets").html('<img src="/backend/images/loading.gif">');
+function cityaccess_tickets(auto){
+	if(!auto){
+		jQuery("#cityaccess_tickets").html('<img src="/backend/images/loading.gif">');
+	}
+	
 	jQuery.ajax({
 		type: 'POST',
 		url: "/backend/cityaccess/viewTicketList",
 		data: "",
 		success: function(message){
-			jQuery("#cityaccess_tickets").html(message);
+			if(message!=jQuery("#cityaccess_tickets").html()){
+				jQuery("#cityaccess_tickets").html(message);
+				tabToggle(tabtoggle);
+			}
 		},
 	});	
 }
@@ -126,7 +132,12 @@ $this->load->view('cityaccess/dialog.php');
 	<div id="cityaccess_myaccount"></div>
 </div>
 <script>
-cityaccess_tickets();
+var tabtoggle = 1;
+function loop(auto){
+	cityaccess_tickets(auto);
+	setTimeout(function(){ loop(true); }, 30*1000);
+}
+loop();
 jQuery('#tabs').tabs({
 	 select: function(event, ui) {
 		if(ui.index==0){
@@ -147,4 +158,6 @@ jQuery('#tabs').tabs({
 	
 	}
 });
+
+
 </script>

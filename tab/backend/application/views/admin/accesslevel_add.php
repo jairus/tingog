@@ -15,7 +15,7 @@ li{
 	list-style:none;
 }
 </style>
-<table width="949" border="0" cellspacing="0" cellpadding="0">
+<table width="100%"" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td class="text_1"></td>
     </tr>

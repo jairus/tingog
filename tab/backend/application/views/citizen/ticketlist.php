@@ -57,7 +57,7 @@ function tabToggle(n){
 
 
 <div class="ticket_list">
-<table width="949" border="0" cellspacing="0" cellpadding="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td colspan="7"><div style="padding:10px 0px;">
         <input type="button" id="btn_new_id" name="btn_new" class="btn_1_active" value="New" style="width:100px;" onclick="tabToggle(1);" />
@@ -75,7 +75,7 @@ function tabToggle(n){
       </div></td>
   </tr>
 </table>
-<table width="949" border="0" cellspacing="0" cellpadding="0" id="parameter_1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="parameter_1">
   <tr>
     <td class="text_1" colspan="7"><div style="padding:5px;">
         <hr />
@@ -83,7 +83,7 @@ function tabToggle(n){
   </tr>
   <tr class="pagination">
     <td class="text_1" colspan="7"><div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -118,7 +118,7 @@ function tabToggle(n){
   <tr bgcolor="<?php echo $row_color; ?>">
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><?php echo zeroes($r['id'], 6); ?></div></td>
     <td class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><?php echo date("M d, Y H:i",strtotime($r['date'])); ?> </div></td>
-    <td bgcolor="<?php echo $row_color; ?>" class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode($r['description'])), 20); ?><br>
+    <td bgcolor="<?php echo $row_color; ?>" class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode(stripslashesx($r['description']))), 20); ?><br>
     <a href="#" onclick="openThreadDialog('<?php echo $r['id']; ?>');">Open Report</a> </div></td>
     <td class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><!--<?php echo $r['name']; ?>-->&nbsp;</div></td>
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><!--<?php if($r['number']) echo $r['number']; else echo $r['email']; ?>--></div></td>
@@ -133,7 +133,7 @@ function tabToggle(n){
   </tr>
   <tr class="pagination">
     <td class="text_1" colspan="7"><div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -149,7 +149,7 @@ function tabToggle(n){
       </div></td>
   </tr>
 </table>
-<table width="949" border="0" cellspacing="0" cellpadding="0" id="parameter_2" style="display:none;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="parameter_2" style="display:none;">
   <tr>
     <td class="text_1" colspan="7"><div style="padding:5px;">
         <hr />
@@ -157,7 +157,7 @@ function tabToggle(n){
   </tr>
   <tr  class="pagination">
     <td class="text_1" colspan="7"><div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -194,7 +194,7 @@ function tabToggle(n){
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><?php echo zeroes($r['id'], 6); ?></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo date("M d, Y H:i",strtotime($r['date'])); ?></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo $r['department']; ?></div></td>
-    <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode($r['description'])), 20); ?><br>
+    <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode(stripslashesx($r['description']))), 20); ?><br>
         <a href="#" onclick="openThreadDialog('<?php echo $r['id']; ?>');">Open Report</a> <?
 			if($r['read']){
 				echo '<img src="/images/new_msg.gif" width="26" height="22" align="absmiddle" />';
@@ -213,7 +213,7 @@ function tabToggle(n){
   </tr>
   <tr class="pagination">
     <td class="text_1" colspan="7"><div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -229,7 +229,7 @@ function tabToggle(n){
       </div></td>
   </tr>
 </table>
-<table width="949" border="0" cellspacing="0" cellpadding="0" id="parameter_3" style="display:none;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="parameter_3" style="display:none;">
   <tr>
     <td class="text_1" colspan="7"><div style="padding:5px;">
         <hr />
@@ -237,7 +237,7 @@ function tabToggle(n){
   </tr>
   <tr class="pagination">
     <td class="text_1" colspan="7"><div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -274,7 +274,7 @@ function tabToggle(n){
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><?php echo zeroes($r['id'], 6); ?></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo date("M d, Y H:i",strtotime($r['date'])); ?></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo $r['department']; ?></div></td>
-    <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode($r['description'])), 20); ?><br>
+    <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode(stripslashesx($r['description']))), 20); ?><br>
         <a href="#" onclick="openThreadDialog('<?php echo $r['id']; ?>');">Open Report</a></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><!--<?php echo $r['name']; ?>-->&nbsp;</div></td>
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><!--<?php if($r['number']) echo $r['number']; else echo $r['email']; ?>-->&nbsp;</div></td>
@@ -289,7 +289,7 @@ function tabToggle(n){
   </tr>
   <tr class="pagination">
     <td class="text_1" colspan="7"><div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -305,7 +305,7 @@ function tabToggle(n){
       </div></td>
   </tr>
 </table>
-<table width="949" border="0" cellspacing="0" cellpadding="0" id="parameter_4" style="display:none;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="parameter_4" style="display:none;">
   <tr>
     <td class="text_1" colspan="7"><div style="padding:5px;">
         <hr />
@@ -313,7 +313,7 @@ function tabToggle(n){
   </tr>
   <tr class="pagination">
     <td class="text_1" colspan="7"><div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -350,7 +350,7 @@ function tabToggle(n){
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><?php echo zeroes($r['id'], 6); ?></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo date("M d, Y H:i",strtotime($r['date'])); ?></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo 'Not for Action'; ?></div></td>
-    <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode($r['description'])), 20); ?><br>
+    <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode(stripslashesx($r['description']))), 20); ?><br>
         <a href="#" onclick="openThreadDialog('<?php echo $r['id']; ?>');">Open Report</a></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><!--<?php echo $r['name']; ?>-->&nbsp;</div></td>
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><!--<?php if($r['number']) echo $r['number']; else echo $r['email']; ?>-->&nbsp;</div></td>
@@ -365,7 +365,7 @@ function tabToggle(n){
   </tr>
   <tr class="pagination">
     <td class="text_1" colspan="7"><div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -382,14 +382,14 @@ function tabToggle(n){
   </tr>
 </table>
 
-<table width="949" border="0" cellspacing="0" cellpadding="0" id="parameter_5" style="display:none;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="parameter_5" style="display:none;">
   <tr>
     <td class="text_1" colspan="10"><div style="padding:5px;"><hr /></div></td>
   </tr>
   <tr class="pagination">
     <td class="text_1" colspan="10">
         <div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -423,7 +423,7 @@ function tabToggle(n){
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><?php echo zeroes($r['id'], 6); ?></div></td>
     <td class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><?php echo date("M d, Y H:i",strtotime($r['date'])); ?></div></td>
     <td class="text_1" style="border-bottom:1px solid #CCC;"><? if($r['tag']) echo $r['tag']; ?></td>
-    <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode($r['description'])), 20); ?><br>
+    <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode(stripslashesx($r['description']))), 20); ?><br>
     <a href="#" onclick="openThreadDialog('<?php echo $r['id']; ?>');" class="link_3">Re-open Report</a></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><!--<?php echo $r['name']; ?>-->&nbsp;</div></td>
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><!--<?php if($r['number']) echo $r['number']; else echo $r['email']; ?>-->&nbsp;</div></td>
@@ -439,7 +439,7 @@ function tabToggle(n){
   <tr class="pagination">
     <td class="text_1" colspan="10">
         <div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -452,14 +452,14 @@ function tabToggle(n){
   </tr>
 </table>
 
-<table width="949" border="0" cellspacing="0" cellpadding="0" id="parameter_3" style="display:none;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="parameter_3" style="display:none;">
   <tr class="pagination">
     <td class="text_1" colspan="8"><div style="padding:5px;"><hr /></div></td>
   </tr>
   <tr class="pagination">
     <td class="text_1" colspan="8">
         <div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -495,7 +495,7 @@ function tabToggle(n){
     <td class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><?php echo date("M d, Y H:i",strtotime($r['date'])); ?></div></td>
     <td class="text_1" style="border-bottom:1px solid #CCC;">&nbsp;</td>
     <td class="text_1" style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><? echo $r['department']; ?></div></td>
-    <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode($r['description'])), 20); ?><br>
+    <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><?php echo word_limit(nl2br(urldecode(stripslashesx($r['description']))), 20); ?><br>
     <a href="#" onclick="openThreadDialog('<?php echo $r['id']; ?>');" class="link_3">Open Report</a></div></td>
     <td style="border-bottom:1px solid #CCC;" class="text_1"><div style="padding:10px;"><!--<?php echo $r['name']; ?>-->&nbsp;</div></td>
     <td style="border-bottom:1px solid #CCC;"><div style="padding:10px;"><!--<?php if($r['number']) echo $r['number']; else echo $r['email']; ?>-->&nbsp;</div></td>
@@ -511,7 +511,7 @@ function tabToggle(n){
   <tr class="pagination">
     <td class="text_1" colspan="8">
         <div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>

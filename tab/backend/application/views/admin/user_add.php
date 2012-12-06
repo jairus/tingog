@@ -1,5 +1,13 @@
 <script>
 function addSubmit(){
+	jQuery("#department_id").css({"border":""});
+	if(jQuery("#access_level").val() == 39){
+		if(jQuery("#department_id").val()==""){
+			alert("Please select the Concerned Office.")
+			jQuery("#department_id").css({"border":"2px solid red"});
+			return false;
+		}
+	}
 	jQuery.ajax({
 		type: 'POST',
 		url: "/backend/admin/adminCreateNewAccountSubmit",
@@ -84,7 +92,7 @@ function addSubmit(){
                   <td colspan="2">&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>Concerned Office (optional):</td>
+                  <td>Concerned Office:</td>
                   <td><?php
 							#if($ticket['status']=='dispatched'){
 							#	echo $department;

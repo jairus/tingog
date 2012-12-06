@@ -91,7 +91,7 @@
 		
 	</td>
 	<td class='message'>
-		<?php echo '<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#fff; text-decoration:none;">'.$ticket['description'].'</span>'; ?>
+		<?php echo '<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#fff; text-decoration:none;">'.nl2br(htmlentities(stripslashesx($ticket['description']))).'</span>'; ?>
 	</td>
 </tr>
 <tr>
@@ -133,7 +133,7 @@
 				</td>
 				<td class='message'>
 					<?php
-						echo '<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#fff; text-decoration:none;">'.nl2br(htmlentities($messages[$i]['msg'])).'</span>';
+						echo '<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#fff; text-decoration:none;">'.nl2br(htmlentities(stripslashesx($messages[$i]['msg']))).'</span>';
 					?>
 				</td>
 			</tr>

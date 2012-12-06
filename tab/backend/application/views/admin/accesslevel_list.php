@@ -11,14 +11,14 @@ function addDelete(id){
 	}
 }
 </script>
-<table width="949" border="0" cellspacing="0" cellpadding="0">
+<table width="100%"" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td class="text_1" colspan="8"><div style="padding:5px;"><hr /></div></td>
   </tr>
   <tr class="pagination">
     <td class="text_1" colspan="8">
         <div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%"" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -39,7 +39,7 @@ function addDelete(id){
     <td style="border-bottom:1px solid #e3e2e0;" class="text_2" width="200"><div style="padding:10px; font-weight:bold;">Access Level </div></td>
     <td style="border-bottom:1px solid #e3e2e0;" class="text_2" width="100">&nbsp;</td>
   </tr>
-  <?
+  <?php
 	$x = std2arr($accesslevel);
 	$row_count = 0;
 	foreach($x as $k => $v){
@@ -87,7 +87,7 @@ function addDelete(id){
   <tr class="pagination">
     <td class="text_1" colspan="8">
         <div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%"" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>

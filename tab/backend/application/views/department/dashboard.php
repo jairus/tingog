@@ -45,7 +45,7 @@ function showDropdown(x){
 }
 
 function department_tickets(){
-	jQuery("#cityaccess_tickets").html('<img src="/backend/images/loading.gif">');
+	jQuery("#department_tickets").html('<img src="/backend/images/loading.gif">');
 	jQuery.ajax({
 		type: 'POST',
 		url: "/backend/department/depListTicket",

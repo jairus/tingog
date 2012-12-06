@@ -32,9 +32,9 @@ function submitForm(){
 }
 </script>
 <div>
-  <table width="949" border="0" cellspacing="0" cellpadding="0" id="parameter_1">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="parameter_1">
   <tr>
-    <td width="820" class="text_2"><div style="padding:5px;">
+    <td class="text_2"><div style="padding:5px;">
         <hr />
       </div></td>
   </tr>
@@ -46,7 +46,7 @@ function submitForm(){
     </div></td>
   </tr>
   <tr>
-    <td><iframe align="middle" height="400" width="100%" src="/includes/master.htm"></iframe></td>
+    <td><iframe align="middle" height="600px" width="100%" style='border:1px solid #c0c0c0' src="/includes/master.htm"></iframe></td>
   </tr>
   <tr bgcolor="#f2f1ed">
     <td align="center" bgcolor="#f2f1ed" class="text_1"><div style="padding:10px;"></div></td>

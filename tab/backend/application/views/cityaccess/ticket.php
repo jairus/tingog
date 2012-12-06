@@ -46,6 +46,7 @@ function submitMessage(id){
 			data: jQuery("#ticketform").serialize(),
 			success: function(html){
 				jQuery("#ninjadiv").html(html);
+				window.parent.cityaccess_tickets();
 			},
 		});
 		window.parent.jQuery('#dialog_thread_id').dialog('close');
@@ -70,6 +71,7 @@ function submitMessage(id){
 			data: jQuery("#ticketform").serialize(),
 			success: function(html){
 				jQuery("#ninjadiv").html(html);
+				window.parent.cityaccess_tickets();
 			},
 		});
 		window.parent.jQuery('#dialog_thread_id').dialog('close');
@@ -82,12 +84,12 @@ function submitMessage(id){
 			data: jQuery("#ticketform").serialize(),
 			success: function(html){
 				jQuery("#ninjadiv").html(html);
-				
+				window.parent.cityaccess_tickets();
 			},
 		});
 		window.parent.jQuery('#dialog_thread_id').dialog('close');
 	}
-	window.parent.cityaccess_tickets();
+	
 	//window.parent.jQuery('#dialog_thread_id').dialog('close');
 }
 
@@ -261,7 +263,7 @@ function check_barangay(v){
                         <td><b>Barangay</b></td>
                         <td align="center"><b>:</b></td>
                         <td>&nbsp;<select name="brgy" class="input_1" id="brgy" onchange="check_barangay(this.value);">
-						  <option value="0">-</option>
+						  <!--<option value="0">-</option>-->
 						  <?
 						  	foreach($barangay as $k=>$v){
 								echo "<option value=\"".$v['id']."\">".$v['name']."</option>";
@@ -287,7 +289,7 @@ function check_barangay(v){
 								$t = count($categories);
 								if($t){
 									echo '&nbsp;<select id="category_id" name="category_id" class="input_1" style="width:150px;">';
-									echo "<option value=\"\">-</option>";
+									//echo "<option value=\"\">-</option>";
 									for($i=0; $i<$t; $i++){
 										echo "<option value=\"".$categories[$i]->id."\">".$categories[$i]->category."</option>";
 									}
@@ -309,7 +311,7 @@ function check_barangay(v){
 								$t = count($departments);
 								if($t){
 									echo '&nbsp;<select id="department_id" name="department_id" class="input_1" style="width:150px;">';
-									echo "<option value=\"\">-</option>";
+									//echo "<option value=\"\">-</option>";
 									for($i=0; $i<$t; $i++){
 										echo "<option value=\"".$departments[$i]->id."\">".$departments[$i]->department."</option>";
 									}
@@ -329,7 +331,7 @@ function check_barangay(v){
                         <td align="center"><b>:</b></td>
                         <td>&nbsp;<select name="tag" id="tag" class="input_1" style="width:150px;">
                           <?
-						  	echo "<option value=\"\">-</option>";
+						  	//echo "<option value=\"\">-</option>";
 						  	foreach(array_tag(false) as $k=>$v){
 								echo "<option value=\"".$k."\">".$v."</option>";
 							}

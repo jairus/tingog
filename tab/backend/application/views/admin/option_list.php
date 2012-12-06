@@ -12,7 +12,7 @@ function optionDelete(id,form){
 	}
 }
 </script>
-<table width="949" border="0" cellspacing="0" cellpadding="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td class="text_1" colspan="4"><div style="padding:5px;"><div id='message'></div><br /></div></div></td>
   </tr>

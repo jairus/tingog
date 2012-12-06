@@ -11,14 +11,14 @@ function brgyDelete(id){
 	}
 }
 </script>
-<table width="949" border="0" cellspacing="0" cellpadding="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td class="text_1" colspan="9"><div style="padding:5px;"><hr /></div></td>
   </tr>
   <tr class="pagination">
     <td class="text_1" colspan="9">
         <div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -73,7 +73,7 @@ function brgyDelete(id){
   <tr class="pagination">
     <td class="text_1" colspan="9">
         <div style="padding:5px;">
-        <table width="949" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td align="left" width="150">Viewing records <b>1-3</b> of <b>3</b></td>
             <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>

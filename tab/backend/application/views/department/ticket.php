@@ -15,6 +15,13 @@
 <script src="/backend/javascript/datepicker/jquery.ui.core.js"></script>
 <script src="/backend/javascript/datepicker/jquery.ui.widget.js"></script>
 <script type="text/javascript" src="/backend/javascript/datepicker/jquery.ui.datepicker.js"></script>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+
+
 <script>
 $(function() {
 	$( "#datepicker" ).datepicker();
@@ -27,6 +34,19 @@ function submitMessage(id){
 	mtype = jQuery('input:radio[name=option]:checked').val();
 	//alert(mtype);
 	if(mtype=='assign'){
+		//alert(jQuery("#personnel_id").val());
+
+		if(jQuery("#datepicker").val()==""){
+			alert("Please enter a Due Date.")
+			jQuery("#btn_message_submit_id").show();
+			return false;
+		}
+		
+		personnel = jQuery("#personnel_id option:selected").text();
+		msg = jQuery("#textarea_message_id").val();
+		msg = "Assigned to: "+personnel+"\n"+msg;
+		jQuery("#textarea_message_id").val(msg);
+		
 		jQuery.ajax({
 			type: 'POST',
 			url: "/backend/department/assign/"+id,
@@ -34,9 +54,11 @@ function submitMessage(id){
 			success: function(html){
 				jQuery("#ninjadiv").html(html);
 				jQuery("#btn_message_submit_id").hide();
+				window.parent.department_tickets();
 			},
 		});
 		window.parent.jQuery('#dialog_thread_id').dialog('close');
+		
 	}
 	else if(mtype=='park'){
 		if(!confirm("Are you sure?")){
@@ -50,6 +72,7 @@ function submitMessage(id){
 			success: function(html){
 				jQuery("#ninjadiv").html(html);
 				jQuery("#btn_message_submit_id").hide();
+				window.parent.department_tickets();
 			},
 		});
 		window.parent.jQuery('#dialog_thread_id').dialog('close');
@@ -66,6 +89,7 @@ function submitMessage(id){
 			success: function(html){
 				jQuery("#ninjadiv").html(html);
 				jQuery("#btn_message_submit_id").hide();
+				window.parent.department_tickets();
 			},
 		});
 		window.parent.jQuery('#dialog_thread_id').dialog('close');
@@ -82,6 +106,24 @@ function submitMessage(id){
 			success: function(html){
 				jQuery("#ninjadiv").html(html);
 				jQuery("#btn_message_submit_id").hide();
+				window.parent.department_tickets();
+			},
+		});
+		window.parent.jQuery('#dialog_thread_id').dialog('close');
+	}
+	else if(mtype=='closed'){
+		if(!confirm("Are you sure you want to close this report?")){
+			jQuery("#btn_message_submit_id").show();
+			return false;
+		}
+		jQuery.ajax({
+			type: 'POST',
+			url: "/backend/department/closeTicket/"+id,
+			data: jQuery("#ticketform").serialize(),
+			success: function(html){
+				jQuery("#ninjadiv").html(html);
+				jQuery("#btn_message_submit_id").hide();
+				window.parent.department_tickets();
 			},
 		});
 		window.parent.jQuery('#dialog_thread_id').dialog('close');
@@ -120,7 +162,7 @@ function submitMessage(id){
 			},
 		});
 	}
-	window.parent.department_tickets();
+	
 }
 
 function viewThread(id){
@@ -191,6 +233,15 @@ function showDropdown(flag){
 		jQuery(".dispatchonly *").attr("disabled", false);
 		jQuery("#textarea_message_id").val("<?php
 		echo "Na-aksyunan na ang inyong TINGOG report ".$_SESSION['municipality'].$ticket['id']." <action taken>";
+		?>");
+		countChars();
+	}
+	//closed
+	else if(flag==4.5){
+		jQuery(".dispatchonly").show();
+		jQuery(".dispatchonly *").attr("disabled", false);
+		jQuery("#textarea_message_id").val("<?php
+		echo "Nakatulong ba ang TINGOG sa inyo? Text TINGOG REP ".$_SESSION['municipality'].$ticket['id']."/<message>. Ex. TINGOG REP TAB123/Salamat sa TINGOG. P1/txt";
 		?>");
 		countChars();
 	}
@@ -280,13 +331,13 @@ function showDropdown(flag){
                         <td align="center"><b>:</b></td>
                         <td>&nbsp;
                             <?php
-							if($ticket['status']=='assigned' || $ticket['status']=='resolved'){
+							if($ticket['status']=='assigned' || $ticket['status']=='resolved' || $ticket['status']=='closed'){
 								echo $issue;
 							}else{
 								$t = count($issues);
 								if($t){
 									echo '<select id="issue_id" name="issue_id" class="input_1" style="width:150px;">';
-									echo "<option value=\"\">-</option>";
+									//echo "<option value=\"\">-</option>";
 									for($i=0; $i<$t; $i++){
 										echo "<option value=\"".$issues[$i]->id."\" ";
 										if($ticket['issue']==$issues[$i]->id) echo "selected;";
@@ -306,7 +357,7 @@ function showDropdown(flag){
                         <td align="center"><b>:</b></td>
                         <td>&nbsp;
                             <?php
-							if($ticket['status']=='assigned' || $ticket['status']=='resolved'){
+							if($ticket['status']=='assigned' || $ticket['status']=='resolved' || $ticket['status']=='closed'){
 								if($personnelcomplete1){
 									//Array ( [id] => 5 [person] => Jason Diaz [department] => 1 [mobile] => 09273779066 )
 									echo $personnelcomplete1['person'];
@@ -324,7 +375,7 @@ function showDropdown(flag){
 								$t = count($personnels);
 								if($t){
 									echo '<select id="personnel_id" name="personnel_id" class="input_1" style="width:150px;">';
-									echo "<option value=\"\">-</option>";
+									//echo "<option value=\"\">-</option>";
 									for($i=0; $i<$t; $i++){
 										echo "<option value=\"".$personnels[$i]->id."\" ";
 										if($ticket['assign1']==$personnels[$i]->id) echo "selected;";
@@ -347,7 +398,7 @@ function showDropdown(flag){
                         <td align="center"><b>:</b></td>
                         <td>&nbsp;
                             <?php
-							if($ticket['status']=='assigned' || $ticket['status']=='resolved'){
+							if($ticket['status']=='assigned' || $ticket['status']=='resolved' || $ticket['status']=='closed'){
 								if($personnelcomplete2){
 									//Array ( [id] => 5 [person] => Jason Diaz [department] => 1 [mobile] => 09273779066 )
 									echo $personnelcomplete2['person'];
@@ -385,7 +436,7 @@ function showDropdown(flag){
                       </tr>
 					  <?php
 					  	#pre($ticket);
-					  	if(($ticket['status']=='resolved' || $ticket['status']=='assigned'  ) ){
+					  	if(($ticket['status']=='resolved' || $ticket['status']=='assigned' || $ticket['status']=='closed'  ) ){
 							if(strtotime($ticket['duedate'])){
 						  ?>
 						  <tr class='dispatchonly'>
@@ -504,66 +555,75 @@ function showDropdown(flag){
         </table>
     </div>
     <div>&nbsp;</div>
-    <div id="message_input" class="text_1">
-      <?php 
-	  	#pre($ticket['status']);
-	  	if(($ticket['status']!='assigned') || ($ticket['status']!='resolved')){
-			if($ticket['status']!='assigned' && ($ticket['status']!='resolved')){
-	  ?>
-	  <input name="option" type="radio" value="assign" checked="checked" onclick="showDropdown(1);" />
-Assign &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  <?php
-	  		}
-			
-			if($ticket['status']!='resolved'){
-	  ?>
-	  <input name="option" type="radio" value="resolve" onclick="showDropdown(4);" />
-Resolve &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <?php
-			}
-		}
-?>
-<input name="option" type="radio" value="return" onclick="showDropdown(0);" />
-Return to dispatcher &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input name="option" type="radio" value="internal" onclick="showDropdown(1);" />
-Internal Note &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<?php
-if(trim(strtolower($ticket['status']))=='assigned'){
+if($ticket['status']!='closed'){
 	?>
-	<input name="option" type="radio" value="internalwsms" onclick="showDropdown(3);" />
-	Internal Note (SMS to assignee) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<div id="message_input" class="text_1">
+		  <?php 
+		#pre($ticket['status']);
+		if($ticket['status']!='assigned' && ($ticket['status']!='resolved')){
+			?>
+			<input name="option" type="radio" value="assign" checked="checked" onclick="showDropdown(1);" />
+			Assign &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<?php
+		}
+		
+		if($ticket['status']!='resolved'){
+			?>
+			<input name="option" type="radio" value="resolve" onclick="showDropdown(4);" />
+			Resolve &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<?php
+		}
+		
+		if($ticket['status']!='closed'){
+			?>
+			<input name="option" type="radio" value="closed" onclick="showDropdown(4.5);" />
+			Close &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<?php
+		}
+	?>
+	<input name="option" type="radio" value="return" onclick="showDropdown(0);" />
+	Return to dispatcher &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input name="option" type="radio" value="internal" onclick="showDropdown(1);" />
+	Internal Note &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<?php
+	if(trim(strtolower($ticket['status']))=='assigned'){
+		?>
+		<input name="option" type="radio" value="internalwsms" onclick="showDropdown(3);" />
+		Internal Note (SMS to assignee) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<?php
+	}
+	?>
+	<input name="option" type="radio" value="reply" onclick="showDropdown(5);" /> 
+	Reply to Sender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	<input name="option" type="radio" value="park" onclick="showDropdown(2); changeMessage();" />
+	Others &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</div>
+		<div>&nbsp;</div>
+		<div class="text_1"></div>
+		<div id="message_input" class="text_1">
+			<table>
+				<tr>
+					<td align="right">
+						<div class='text_1'>Character Count: <input class='text_1' type='text' id='counter' style='width:50px' /></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<textarea id="textarea_message_id" name="message" rows="5" cols="100" class="input_1"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div><center><br><input type="button" id="btn_message_submit_id" name="btn_message_submit" class="btn_3" value="Submit" style="width:130px;" onclick='submitMessage("<?php echo $ticket['id']; ?>");' /></center></div>
+					</td>
+				</tr>
+			</table>
+	  </form>
+	</td></tr>
+	</table>
 	<?php
 }
-?>
-<input name="option" type="radio" value="reply" onclick="showDropdown(5);" /> 
-Reply to Sender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-<input name="option" type="radio" value="park" onclick="showDropdown(2); changeMessage();" />
-Others &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-</div>
-    <div>&nbsp;</div>
-    <div class="text_1"></div>
-    <div id="message_input" class="text_1">
-		<table>
-			<tr>
-				<td align="right">
-					<div class='text_1'>Character Count: <input class='text_1' type='text' id='counter' style='width:50px' /></div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<textarea id="textarea_message_id" name="message" rows="5" cols="100" class="input_1"></textarea>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<div><center><br><input type="button" id="btn_message_submit_id" name="btn_message_submit" class="btn_3" value="Submit" style="width:130px;" onclick='submitMessage("<?php echo $ticket['id']; ?>");' /></center></div>
-				</td>
-			</tr>
-		</table>
-  </form>
-</td></tr>
-</table>
-<?php
 
 ?>
 </body>

@@ -3,9 +3,9 @@
 	#pre($users);
 ?>
 <div class="directory">
-  <table width="949" border="0" cellspacing="0" cellpadding="0" id="parameter_1">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="parameter_1">
   <tr>
-    <td width="820" class="text_1"><div style="padding:5px;">
+    <td class="text_1"><div style="padding:5px;">
         <hr />
       </div></td>
   </tr>

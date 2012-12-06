@@ -34,7 +34,7 @@
 google.load("visualization", "1", {packages:["corechart"]});
 </script>
 <!-- MENU BAR -->
-<script type="text/javascript" src="/backend/javascript/menubar/menu.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function(){
 	$("body div:last").remove();
@@ -46,6 +46,12 @@ $(document).ready(function(){
 <link type="text/css" href="/backend/styles/tab/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
 <script type="text/javascript" src="/backend/javascript/tab/jquery-ui-1.8.16.custom.min.js"></script>
 <script type="text/javascript" src="/backend/javascript/dialogbox/jquery-ui-1.8.17.custom.min.js"></script>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+	
 <script type="text/javascript">
 $(function(){
 	$('#tabs').tabs();
@@ -71,7 +77,7 @@ function openThread() {window.open("thread.php",'thread','width=643px, height=72
 
 <body>
 <div id="outer">
-	<div id="site_content_1">
+	<div id="site_content_1" >
     	<div id="menu">
             <ul class="menu">
 			  <li><a href="/backend/report"><span>Full Report</span></a></li>
@@ -117,7 +123,7 @@ function openThread() {window.open("thread.php",'thread','width=643px, height=72
         </div>
     </div>
     <div id="site_content_2" class="text_3"><?php echo $page_title; ?></div>
-    <div id="site_content_1">
+    <div id="site_content_1"'>
 <?php
 	echo $content;
 ?>

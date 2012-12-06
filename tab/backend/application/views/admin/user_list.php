@@ -1,7 +1,7 @@
-<table width="949" border="0" cellspacing="0" cellpadding="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr class="pagination">
     <td class="text_1" colspan="4"><div style="padding:5px;">
-      <table width="949" border="0" cellspacing="0" cellpadding="0">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td align="left" width="150">Viewing records <b>1-50</b> of <b>150</b></td>
           <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall" class="btn_1" value="view all" /></td>
@@ -37,7 +37,7 @@
     <td class="text_2" align="center"><div style="padding:10px;">
       <input type="button" id="btn_spam_id" name="btn_spam" class="btn_1" value="edit" onclick="window.location='/backend/admin/adminEditAccount/<? echo $r['id']; ?>'" />
       &nbsp;
-      <input type="button" id="btn_tag_id" name="btn_tag" class="btn_1" value="delete"/>
+      <input type="button" id="btn_tag_id" name="btn_tag" class="btn_1" value="delete" onclick="if(confirm('Are you sure you want to delete this user?')){ window.location='/backend/admin/adminDeleteAccount/<? echo $r['id']; ?>' }" />
     </div></td>
   </tr>
   <?
@@ -49,7 +49,7 @@
   </tr>
   <tr class="pagination">
     <td class="text_1" colspan="4"><div style="padding:5px;">
-      <table width="949" border="0" cellspacing="0" cellpadding="0">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td align="left" width="150">Viewing records <b>1-50</b> of <b>150</b></td>
           <td align="left" width="100"><input type="button" id="btn_viewall_id" name="btn_viewall2" class="btn_1" value="view all" /></td>

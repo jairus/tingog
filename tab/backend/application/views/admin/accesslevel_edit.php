@@ -13,7 +13,12 @@ function editSubmit(){
 	});
 }
 </script>
-<table width="949" border="0" cellspacing="0" cellpadding="0">
+<style>
+li{
+	list-style:none;
+}
+</style>
+<table width="100%"" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td class="text_1"></td>
     </tr>
@@ -35,7 +40,7 @@ function editSubmit(){
 			#pre($v);
 			foreach($v['functions'] as $kk => $vv){
 				#pre($k);
-				echo "<li><input name=\"".$v['class']."[".$kk."]\" type=\"checkbox\" id=\"".$v['class']."[".$kk."]\" value=\"".$kk."\" ";
+				echo "<li style='padding:10px 20px 5px;'><input name=\"".$v['class']."[".$kk."]\" type=\"checkbox\" id=\"".$v['class']."[".$kk."]\" value=\"".$kk."\" ";
 				#if(is_array($accesslevel_data) && in_array($kk,$accesslevel_data)) echo 'checked="checked"';
 				foreach($accesslevel_data as $kd => $kv){
 					#pre($kv);

@@ -173,7 +173,10 @@ function viewThread(id){
         </table>
     </div>
     <div>&nbsp;</div>
-    <div id="message_input" class="text_1">
+    <?php
+	/*
+	?>
+	<div id="message_input" class="text_1">
       <input name="option" type="radio" id="option" onclick="showDropdown(0);" value="internal" checked="checked" />
     Internal Note <em></em></div>
     <div>&nbsp;</div>
@@ -189,7 +192,10 @@ function viewThread(id){
 	<div id="message_input"><center><br><input type="button" id="btn_message_submit_id" name="btn_message_submit" class="btn_3" value="OK" style="width:130px;" onclick='submitTag("<?php echo $ticket['id']; ?>");' /></center></div>
 	<?
 		}
+	
+	*/
 	?>
+	
   </form>
 </td></tr>
 </table>
